@@ -192,12 +192,15 @@ int main(int /*argc*/, char** /*argv*/)
     /// Set dimension.
     w_model_om.IOHprofiler_set_number_of_variables(dimension);
 
-    logger.track_problem(w_model_om);
+    logger.track_problem(w_model_om.IOHprofiler_get_problem_id(), 
+                        w_model_om.IOHprofiler_get_number_of_variables(), 
+                        w_model_om.IOHprofiler_get_instance_id(),
+                        w_model_om.IOHprofiler_get_problem_name(),
+                        w_model_om.IOHprofiler_get_optimization_type());
 
 
-
+    
     eoEvalIOHproblem<Bits> evalfunc(w_model_om, logger);
-     
     eoPopLoopEval<Bits> onemax_eval(evalfunc);
 
     auto& foundry = make_foundry(store, onemax_eval);
