@@ -1,0 +1,53 @@
+\hypertarget{structeo_1_1mpi_1_1_is_finished_function}{}\doxysection{Référence du modèle de la structure eo\+::mpi\+::Is\+Finished\+Function$<$ Job\+Data $>$}
+\label{structeo_1_1mpi_1_1_is_finished_function}\index{eo::mpi::IsFinishedFunction$<$ JobData $>$@{eo::mpi::IsFinishedFunction$<$ JobData $>$}}
+
+
+Functor (master side) indicating whether the job is done or not.  
+
+
+
+
+{\ttfamily \#include $<$eo\+Mpi.\+h$>$}
+
+
+
+Graphe d\textquotesingle{}héritage de eo\+::mpi\+::Is\+Finished\+Function$<$ Job\+Data $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{structeo_1_1mpi_1_1_is_finished_function__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de eo\+::mpi\+::Is\+Finished\+Function$<$ Job\+Data $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{structeo_1_1mpi_1_1_is_finished_function__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structeo_1_1mpi_1_1_is_finished_function_ae67e856c11bdc9fc337f152d319ebcda}\label{structeo_1_1mpi_1_1_is_finished_function_ae67e856c11bdc9fc337f152d319ebcda}} 
+{\bfseries Is\+Finished\+Function} (\mbox{\hyperlink{structeo_1_1mpi_1_1_is_finished_function}{Is\+Finished\+Function}}$<$ Job\+Data $>$ $\ast$w=0)
+\end{DoxyCompactItemize}
+\doxysubsection*{Membres hérités additionnels}
+
+
+\doxysubsection{Description détaillée}
+\subsubsection*{template$<$typename Job\+Data$>$\newline
+struct eo\+::mpi\+::\+Is\+Finished\+Function$<$ Job\+Data $>$}
+
+Functor (master side) indicating whether the job is done or not. 
+
+The master loops on this functor to know when to stop. When this functor returns true, the master will wait for the last responses and properly stops the job. Whenever this functor returns false, the master will send tasks, until this functor returns true.
+
+This is a functor implementing bool \mbox{\hyperlink{classeo_f_a8b8f7f70edd96ec765c29357b373913d}{operator()()}}, and also a shared function, containing wrapper on its own type. 
+
+La documentation de cette structure a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+eo/src/mpi/eo\+Mpi.\+h\end{DoxyCompactItemize}

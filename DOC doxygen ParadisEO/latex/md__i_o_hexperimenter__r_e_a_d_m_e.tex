@@ -1,0 +1,85 @@
+This is the {\bfseries{benchmarking platform}} for {\bfseries{I}}terative {\bfseries{O}}ptimization {\bfseries{H}}euristics (I\+O\+Hs).
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Documentation}}\+: \href{https://arxiv.org/abs/1810.05281}{\texttt{ https\+://arxiv.\+org/abs/1810.\+05281}}
+\item {\bfseries{Wiki page}}\+: \href{https://iohprofiler.github.io/}{\texttt{ https\+://iohprofiler.\+github.\+io}}
+\item {\bfseries{General Contact}}\+: \href{iohprofiler@liacs.leidenuniv.nl}{\texttt{ iohprofiler@liacs.\+leidenuniv.\+nl}}
+\item {\bfseries{Mailing List}}\+: \href{https://lists.leidenuniv.nl/mailman/listinfo/iohprofiler}{\texttt{ https\+://lists.\+leidenuniv.\+nl/mailman/listinfo/iohprofiler}}
+\end{DoxyItemize}
+
+{\bfseries{I\+O\+Hexperimenter}} {\itshape provides}\+:
+
+
+\begin{DoxyItemize}
+\item A framework for straightforward benchmarking of any iterative optimization heuristic
+\item A suite consisting of 23 pre-\/made Pseudo-\/\+Boolean benchmarking function, with easily accessible methods for adding custom functions and suites
+\item Logging methods to effortlesly store benchmarking data in a format compatible with {\bfseries{I\+O\+Hanalyzer}}, with future support for additional data logging options
+\item ({\bfseries{Soon to come}}\+:) A framework which significantly simplifies algorithm design
+\end{DoxyItemize}
+
+{\bfseries{I\+O\+Hexperimenter}} is {\itshape built on}\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily C++}
+\end{DoxyItemize}
+
+{\bfseries{I\+O\+Hexperimenter}} is available for\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily C++}
+\item {\ttfamily R} package \href{https://github.com/IOHprofiler/IOHexperimenter/tree/R}{\texttt{ https\+://github.\+com/\+I\+O\+Hprofiler/\+I\+O\+Hexperimenter/tree/R}}
+\item {\ttfamily Python} interface
+\item {\ttfamily Java} interface (soon to come)
+\end{DoxyItemize}\hypertarget{md__i_o_hexperimenter__r_e_a_d_m_e_autotoc_md81}{}\doxysection{Using I\+O\+Hexperimenter}\label{md__i_o_hexperimenter__r_e_a_d_m_e_autotoc_md81}
+\hypertarget{md__i_o_hexperimenter__r_e_a_d_m_e_autotoc_md82}{}\doxysubsection{Running Experiments}\label{md__i_o_hexperimenter__r_e_a_d_m_e_autotoc_md82}
+The {\bfseries{I\+O\+Hexperimenter}} has been built on {\ttfamily C++}.\hypertarget{md__i_o_hexperimenter__r_e_a_d_m_e_autotoc_md83}{}\doxysubsubsection{Using I\+O\+Hexperimenter in C++}\label{md__i_o_hexperimenter__r_e_a_d_m_e_autotoc_md83}
+\href{https://cmake.org}{\texttt{ Cmake}} is used to build this project, please make sure you have it installed.
+
+If you are using the tool for the first time, please download or clone this branch, and run {\ttfamily cmake .} and {\ttfamily make install} at the directory where the project locates.
+\begin{DoxyItemize}
+\item If you want to set up the install directory, please run {\ttfamily cmake -\/D\+C\+M\+A\+K\+E\+\_\+\+I\+N\+S\+T\+A\+L\+L\+\_\+\+P\+R\+E\+F\+IX=your/path .} before installation.
+\item three exectuable files will be generated in {\ttfamily build/\+Cpp} for test.
+\end{DoxyItemize}
+
+After installation, you can compile your project as follow (with linking I\+OH library)\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{g++ \$CMPL\_FLAGS -\/o IOHprofiler\_run\_experiment IOHprofiler\_run\_experiment.cpp -\/lIOH}
+\end{DoxyCode}
+
+
+For more details of how to use the {\ttfamily C++} version, please visit \href{/build/Cpp}{\texttt{ this page}}.\hypertarget{md__i_o_hexperimenter__r_e_a_d_m_e_autotoc_md84}{}\doxysubsubsection{Using I\+O\+Hexperimenter in R}\label{md__i_o_hexperimenter__r_e_a_d_m_e_autotoc_md84}
+To use the I\+O\+Hexperimenter within {\ttfamily R}, please visit the \href{https://github.com/IOHprofiler/IOHexperimenter/tree/R}{\texttt{ R branch}} of this repository.\hypertarget{md__i_o_hexperimenter__r_e_a_d_m_e_autotoc_md85}{}\doxysubsection{Creating test problems}\label{md__i_o_hexperimenter__r_e_a_d_m_e_autotoc_md85}
+Benchmarking problems in {\bfseries{I\+O\+Hexperimenter}} are easy to create yourself. We provide support for any input type and any number of real-\/valued objectives. For a more detailed guidline of how to define a benchmarking problem within I\+O\+Hexperimenter, please visit \href{/src/Problems}{\texttt{ this page}}.\hypertarget{md__i_o_hexperimenter__r_e_a_d_m_e_autotoc_md86}{}\doxysubsection{Configuring test suites}\label{md__i_o_hexperimenter__r_e_a_d_m_e_autotoc_md86}
+Suites are collections of benchmarking problems. By including problems into a suite, it is easier for users to maintain their experiments. If you create a set of similar problems, it is recommended to create a suite to collect them together, which can be done effortlesly within the I\+O\+Hexperimenter. For detailed steps of creating and using suites, please visit \href{/src/Suites}{\texttt{ this page}}.\hypertarget{md__i_o_hexperimenter__r_e_a_d_m_e_autotoc_md87}{}\doxysection{Contact}\label{md__i_o_hexperimenter__r_e_a_d_m_e_autotoc_md87}
+If you have any questions, comments or suggestions, please don\textquotesingle{}t hesitate contacting us \href{mailto:IOHprofiler@liacs.leidenuniv.nl}{\texttt{ I\+O\+Hprofiler@liacs.\+leidenuniv.\+nl}}!\hypertarget{md__i_o_hexperimenter__r_e_a_d_m_e_autotoc_md88}{}\doxysection{Our team}\label{md__i_o_hexperimenter__r_e_a_d_m_e_autotoc_md88}
+
+\begin{DoxyItemize}
+\item \href{https://www.universiteitleiden.nl/en/staffmembers/furong-ye\#tab-1}{\texttt{ Furong Ye}}, {\itshape Leiden Institute of Advanced Computer Science},
+\item Diederick Vermetten, {\itshape Leiden Institute of Advanced Computer Science},
+\item \href{https://www.universiteitleiden.nl/en/staffmembers/hao-wang\#tab-1}{\texttt{ Hao Wang}}, {\itshape Leiden Institute of Advanced Computer Science},
+\item \href{http://www-desir.lip6.fr/~doerr/}{\texttt{ Carola Doerr}}, {\itshape C\+N\+RS and Sorbonne University},
+\item \href{https://www.universiteitleiden.nl/en/staffmembers/thomas-back\#tab-1}{\texttt{ Thomas Bäck}}, {\itshape Leiden Institute of Advanced Computer Science},
+\end{DoxyItemize}
+
+When using I\+O\+Hprofiler and parts thereof, please kindly cite this work as
+
+Carola Doerr, Hao Wang, Furong Ye, Sander van Rijn, Thomas Bäck\+: {\itshape I\+O\+Hprofiler\+: A Benchmarking and Profiling Tool for Iterative Optimization Heuristics}, ar\+Xiv e-\/prints\+:1810.\+05281, 2018.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{@ARTICLE\{IOHprofiler,}
+\DoxyCodeLine{  author = \{Carola Doerr and Hao Wang and Furong Ye and Sander van Rijn and Thomas B\{\(\backslash\)"a\}ck\},}
+\DoxyCodeLine{  title = \{\{IOHprofiler: A Benchmarking and Profiling Tool for Iterative Optimization Heuristics\}\},}
+\DoxyCodeLine{  journal = \{arXiv e-\/prints:1810.05281\},}
+\DoxyCodeLine{  archivePrefix = "arXiv",}
+\DoxyCodeLine{  eprint = \{1810.05281\},}
+\DoxyCodeLine{  year = 2018,}
+\DoxyCodeLine{  month = oct,}
+\DoxyCodeLine{  keywords = \{Computer Science -\/ Neural and Evolutionary Computing\},}
+\DoxyCodeLine{  url = \{https://arxiv.org/abs/1810.05281\}}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+ 

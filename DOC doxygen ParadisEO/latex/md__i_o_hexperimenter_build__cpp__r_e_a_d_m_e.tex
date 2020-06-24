@@ -1,0 +1,189 @@
+There are three main ways to use {\bfseries{I\+O\+Hexperimenter}} benchmark algorithms\+:
+\begin{DoxyItemize}
+\item \href{\#problems}{\texttt{ Test on individual problems}}
+\item \href{\#suites}{\texttt{ Test on suites, which are predefined collections of problems}}
+\item \href{\#experimenter}{\texttt{ Test using an experiment with a configuration file ({\bfseries{recommended}})}}
+\end{DoxyItemize}
+
+\label{_problems}%
+ \hypertarget{md__i_o_hexperimenter_build__cpp__r_e_a_d_m_e_autotoc_md71}{}\doxysection{Test on individual problems}\label{md__i_o_hexperimenter_build__cpp__r_e_a_d_m_e_autotoc_md71}
+To use {\bfseries{I\+O\+Hexperimenter}} to run benchmarking on a specific problem, the template-\/file {\ttfamily I\+O\+Hprofiler\+\_\+run\+\_\+problem.\+cpp} is provided. Since all problems within the {\bfseries{I\+O\+Hexperimenter}} are defined as specific derived {\ttfamily class} inheriting problem {\ttfamily \mbox{\hyperlink{class_i_o_hprofiler__problem}{I\+O\+Hprofiler\+\_\+problem}}} class, it is quite straightforward to use them.
+
+An example testing evolutionary algorithm with mutation operator on {\bfseries{\mbox{\hyperlink{class_one_max}{One\+Max}}}} is implemented in {\ttfamily I\+O\+Hprofiler\+\_\+run\+\_\+problem.\+cpp}. To use a different function, modify the include-\/statement to include the problem to use, and use the corresponding class-\/name instead of {\bfseries{\mbox{\hyperlink{class_one_max}{One\+Max}}}}.
+
+For this example, a {\ttfamily \mbox{\hyperlink{class_one_max}{One\+Max}}} class is declared and initialized with dimension 1000 on the default instance of the probelem. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_one_max}{OneMax}} om;}
+\DoxyCodeLine{\textcolor{keywordtype}{int} dimension = 1000;}
+\DoxyCodeLine{om.Initilize\_problem(dimension);}
+\end{DoxyCode}
+
+
+During the optimization process, the algorithm can acquire the fitness value through {\itshape evaluate()} function. In the example below, {\itshape om.\+evaluate(x)} returns the fitness of {\ttfamily x}. Another option is the statement {\itshape om.\+evaluate(x,y)}, which stores the fitness of {\ttfamily x} in {\ttfamily y}. {\ttfamily logger} is an {\bfseries{\mbox{\hyperlink{class_i_o_hprofiler__csv__logger}{I\+O\+Hprofiler\+\_\+csv\+\_\+logger}}}} class, which stores function evaluations in a format compatible with {\bfseries{I\+O\+Hanalyzer}}. {\itshape logger.\+write\+\_\+line(om.\+logger\+Info())} deliveries the lastest information of tested {\ttfamily om} to the {\ttfamily logger}. In addition, {\itshape om.\+I\+O\+Hprofiler\+\_\+hit\+\_\+optimal()} is an indicator you can use to check if the optimum has been found. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{while} (!om.\mbox{\hyperlink{class_i_o_hprofiler__problem_a626cd82f5361e62f4e4f9f64041754b6}{IOHprofiler\_hit\_optimal}}()) \{}
+\DoxyCodeLine{  x = x\_star;}
+\DoxyCodeLine{  \textcolor{keywordflow}{if} (mutation(x, mutation\_rate)) \{}
+\DoxyCodeLine{    y = om.\mbox{\hyperlink{class_i_o_hprofiler__problem_a936af495556300e02cc7d30bf6cf2ae0}{evaluate}}(x);}
+\DoxyCodeLine{    logger.write\_line(om.loggerInfo());}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{  \textcolor{keywordflow}{if} (y[0] > best\_value) \{}
+\DoxyCodeLine{    best\_value = y;}
+\DoxyCodeLine{    x\_star = x;}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+If, for your experiment, you want to generate data to be used in the {\bfseries{I\+O\+Hanalyzer}}, a {\ttfamily \mbox{\hyperlink{class_i_o_hprofiler__csv__logger}{I\+O\+Hprofiler\+\_\+csv\+\_\+logger}}} should be added to the problem you are testing on. The arguments of {\ttfamily \mbox{\hyperlink{class_i_o_hprofiler__csv__logger}{I\+O\+Hprofiler\+\_\+csv\+\_\+logger}}} are directory of result folder, name of result folder, name of the algorithm and infomation of the algorithm. With different setting of triggers (observer), mutilple data files are to be generated for each experiment. More details on the available triggers are available \href{/IOHexperimenter/Loggers/Observer}{\texttt{ here}}. Before optimizing a problem, {\ttfamily logger} must be targeted with the problem using the statement {\itshape logger.\+target\+\_\+problem()}, with which arguments are problem id, dimension, instance id, problem name, and the type of optimization (maximization or minimization).
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{std::vector<int> time\_points\{1,2,5\};}
+\DoxyCodeLine{std::shared\_ptr<IOHprofiler\_csv\_logger> logger(\textcolor{keyword}{new} \mbox{\hyperlink{class_i_o_hprofiler__csv__logger}{IOHprofiler\_csv\_logger}}(\textcolor{stringliteral}{"./"},\textcolor{stringliteral}{"run\_problem"},\textcolor{stringliteral}{"EA"},\textcolor{stringliteral}{"EA"}));}
+\DoxyCodeLine{logger-\/>set\_complete\_flag(\textcolor{keyword}{true});}
+\DoxyCodeLine{logger-\/>set\_interval(0);}
+\DoxyCodeLine{logger-\/>set\_time\_points(time\_points,10);}
+\DoxyCodeLine{logger-\/>activate\_logger();}
+\DoxyCodeLine{logger.target\_problem(om.IOHprofiler\_get\_problem\_id(), }
+\DoxyCodeLine{                      om.IOHprofiler\_get\_number\_of\_variables(), }
+\DoxyCodeLine{                      om.IOHprofiler\_get\_instance\_id(),}
+\DoxyCodeLine{                      om.IOHprofiler\_get\_problem\_name(),}
+\DoxyCodeLine{                      om.IOHprofiler\_get\_optimization\_type());}
+\end{DoxyCode}
+
+
+\label{_suites}%
+ \hypertarget{md__i_o_hexperimenter_build__cpp__r_e_a_d_m_e_autotoc_md72}{}\doxysection{Test on suites}\label{md__i_o_hexperimenter_build__cpp__r_e_a_d_m_e_autotoc_md72}
+Suites are collections of test problems. The idea behind a suite is that packing problems with similar properties toghther makes it easier to test algorithms on a class of problems. Currently, two pre-\/defined suites are available\+: \href{Benchmark/}{\texttt{ {\bfseries{P\+BO}}}}, consisting of 23 {\bfseries{pseudo Boolean problems}}, and \href{https://coco.gforge.inria.fr/downloads/download16.00/bbobdocfunctions.pdf}{\texttt{ {\bfseries{B\+B\+OB}}}}, consisting of 24 {\bfseries{real-\/valued problems}}. To find out how to create your own suites, please visit \href{/IOHexperimenter/Adding-Functions/}{\texttt{ this page}}.
+
+An example of testing an evolutionary algorithm with mutation operator on the {\bfseries{P\+BO}} suite is implemented in {\ttfamily I\+O\+Hprofiler\+\_\+run\+\_\+suite.\+cpp}. {\bfseries{P\+BO}} suite includes pointers to 23 problems. To instantiate problems you want to test, the vectors of problem id, instances and dimensions need to be given as follows\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{std::vector<int> problem\_id = \{1,2\};}
+\DoxyCodeLine{std::vector<int> instance\_id =\{1,2\};}
+\DoxyCodeLine{std::vector<int> dimension = \{100,200,300\};}
+\DoxyCodeLine{\mbox{\hyperlink{class_p_b_o__suite}{PBO\_suite}} pbo(problem\_id,instance\_id,dimension);}
+\end{DoxyCode}
+
+
+With the suite, you can test problems of the suite one by one, until all problems have been tested. In this example, the order of problem is as follow, and an {\ttfamily evlutionary\+\_\+algorithm} is applied\+:
+
+
+\begin{DoxyEnumerate}
+\item problem id 1, instance 1, dimension 100
+\item problem id 1, instance 2, dimension 100
+\item problem id 1, instance 1, dimension 200
+\item problem id 1, instance 2, dimension 200
+\item problem id 1, instance 1, dimension 300
+\item problem id 1, instance 2, dimension 300
+\item problem id 2, instance 1, dimension 100
+\item problem id 2, instance 2, dimension 100
+\item problem id 2, instance 1, dimension 200
+\item problem id 2, instance 2, dimension 200
+\item problem id 2, instance 1, dimension 300
+\item problem id 2, instance 2, dimension 300
+\end{DoxyEnumerate}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{while} (problem = pbo.get\_next\_problem()) \{}
+\DoxyCodeLine{  evolutionary\_algorithm(problem);}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+If, for your experiment, you want to generate data to be used in the {\bfseries{I\+O\+Hanalyzer}}, a {\ttfamily \mbox{\hyperlink{class_i_o_hprofiler__csv__logger}{I\+O\+Hprofiler\+\_\+csv\+\_\+logger}}} should be added to the suite. The arguments of {\ttfamily \mbox{\hyperlink{class_i_o_hprofiler__csv__logger}{I\+O\+Hprofiler\+\_\+csv\+\_\+logger}}} are the directory of result folder, name of result folder, name of the algorithm and infomation of the algorithm. In addition, you can set up mutilple triggers of recording evaluations. For the details of triggers, please visit the introduction of \href{/IOHexperimenter/Loggers/}{\texttt{ I\+O\+Hprofiler\+\_\+observer}}. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{std::vector<int> time\_points\{1,2,5\};}
+\DoxyCodeLine{std::shared\_ptr<IOHprofiler\_csv\_logger> logger(\textcolor{keyword}{new} \mbox{\hyperlink{class_i_o_hprofiler__csv__logger}{IOHprofiler\_csv\_logger}}(\textcolor{stringliteral}{"./"},\textcolor{stringliteral}{"run\_suite"},\textcolor{stringliteral}{"EA"},\textcolor{stringliteral}{"EA"}));}
+\DoxyCodeLine{logger-\/>set\_complete\_flag(\textcolor{keyword}{true});}
+\DoxyCodeLine{logger-\/>set\_interval(2);}
+\DoxyCodeLine{logger-\/>set\_time\_points(time\_points,3);}
+\DoxyCodeLine{logger-\/>activate\_logger();}
+\DoxyCodeLine{logger-\/>target\_suite(pbo.IOHprofiler\_suite\_get\_suite\_name());}
+\end{DoxyCode}
+
+
+\label{_experimenter}%
+ \hypertarget{md__i_o_hexperimenter_build__cpp__r_e_a_d_m_e_autotoc_md73}{}\doxysection{Test using an experiment with a configuration file}\label{md__i_o_hexperimenter_build__cpp__r_e_a_d_m_e_autotoc_md73}
+By using the provided {\ttfamily I\+O\+Hprofiler\+\_\+experiment} class, you can use a configuration file to configure both the suite and the logger for csv files.
+
+To use the provided experiment structure, you need to provide both the path to the configuration file and the pointer to your optimization algorithm to the {\itshape experimenter.\+\_\+run()} function, which will execute all tasks of the experiment.
+
+In addition, you can set the number of repetitions for all problems by using {\itshape experimenter.\+\_\+set\+\_\+independent\+\_\+runs(2)}. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{std::string configName = \textcolor{stringliteral}{"./configuration.ini"};}
+\DoxyCodeLine{\mbox{\hyperlink{class_i_o_hprofiler__experimenter}{IOHprofiler\_experimenter<int>}} experimenter(configName,evolutionary\_algorithm);}
+\DoxyCodeLine{experimenter.\_set\_independent\_runs(2);}
+\DoxyCodeLine{experimenter.\_run();}
+\end{DoxyCode}
+
+
+For the content of configuration file, it consists of three sections\+:
+
+{\bfseries{suite}} configures the problems to be tested.
+\begin{DoxyItemize}
+\item {\bfseries{suite\+\_\+name}}, is the name of the suite to be used. Please make sure that the suite with the corresponding name is registered.
+\item {\bfseries{problem\+\_\+id}}, configures problems to be tested. Note that id of problems are configured by the suite, please make sure that id is within the valid range.
+\item {\bfseries{instance\+\_\+id}}, configures the transformation methods applied on problems. For {\ttfamily P\+BO}\+:
+\begin{DoxyItemize}
+\item {\ttfamily 1} \+: no transformer operations on the problem.
+\item {\ttfamily 2-\/50} \+: X\+OR and S\+H\+I\+FT operations are applied on the problem.
+\item {\ttfamily 51-\/100}\+: S\+I\+G\+MA and S\+H\+I\+FT operations are applied on the problem.
+\end{DoxyItemize}
+\item {\bfseries{dimension}}, configures dimension of problems to be tested. Note that allowed dimension is not larger than 20000.
+\end{DoxyItemize}
+
+{\bfseries{logger}} configures the setting of output csv files.
+\begin{DoxyItemize}
+\item {\bfseries{result\+\_\+foler}} is the directory of the folder where sotres output files.
+\item {\bfseries{algorithm\+\_\+name}}, is the name of the algorithm, which is used when generating \textquotesingle{}.info\textquotesingle{} files.
+\item {\bfseries{algorithm\+\_\+info}}, is additional information of the algorithm, which is used when generating \textquotesingle{}.info\textquotesingle{} files.
+\end{DoxyItemize}
+
+{\bfseries{observer}} configures parameters of {\ttfamily I\+O\+Hprofiler\+\_\+server}, which is used in {\ttfamily \mbox{\hyperlink{class_i_o_hprofiler__csv__logger}{I\+O\+Hprofiler\+\_\+csv\+\_\+logger}}},
+\begin{DoxyItemize}
+\item {\bfseries{complete\+\_\+triggers}} is the switch of {\ttfamily .cdat} files, which works with {\bfseries{complete tracking}} strategy. Set it as {\ttfamily T\+R\+UE} or {\ttfamily true} if you want to output {\ttfamily .cdat} files.
+\item {\bfseries{update\+\_\+triggers}} is the switch of {\ttfamily .dat} files, which works with {\bfseries{target-\/based strategy}} strategy. Set it as {\ttfamily T\+R\+UE} or {\ttfamily true} if you want to output {\itshape .dat}{\ttfamily files.}
+\item {\ttfamily \+\_\+\+\_\+number\+\_\+interval\+\_\+triggers\+\_\+\+\_\+ configures the}.idat{\ttfamily files, which works with \+\_\+\+\_\+interval tracking\+\_\+\+\_\+ number\+\_\+target\+\_\+triggers sets the value of the frequecny. If you do not want to generate}.idat{\ttfamily files, set}number\+\_\+target\+\_\+triggers{\ttfamily as 0.}
+\item {\ttfamily \+\_\+\+\_\+number\+\_\+target\+\_\+triggers\+\_\+\+\_\+ configures the}.tdat{\ttfamily files, which works with \+\_\+\+\_\+time-\/based tracking\+\_\+\+\_\+ strategy.}
+\item {\ttfamily \+\_\+\+\_\+base\+\_\+evaluation\+\_\+triggers\+\_\+\+\_\+ configures the}.tdat{\ttfamily files, which works with \+\_\+\+\_\+time-\/based tracking\+\_\+\+\_\+ strategy. To switch off}.tdat\`{} files, set both {\bfseries{number\+\_\+target\+\_\+triggers}} and {\bfseries{base\+\_\+evaluation\+\_\+triggers}} as 0.
+\end{DoxyItemize}
+
+\label{_memberfunctions}%
+ \hypertarget{md__i_o_hexperimenter_build__cpp__r_e_a_d_m_e_autotoc_md74}{}\doxysection{Useful functions}\label{md__i_o_hexperimenter_build__cpp__r_e_a_d_m_e_autotoc_md74}
+{\ttfamily \mbox{\hyperlink{class_i_o_hprofiler__problem}{I\+O\+Hprofiler\+\_\+problem}}} and {\ttfamily \mbox{\hyperlink{class_i_o_hprofiler__suite}{I\+O\+Hprofiler\+\_\+suite}}} provide public member functions so that the optimizer can acquire useful information during optimization process.
+
+A list of useful member functions of {\ttfamily \mbox{\hyperlink{class_i_o_hprofiler__problem}{I\+O\+Hprofiler\+\_\+problem}}} is below\+:
+\begin{DoxyItemize}
+\item {\itshape evaluate(x)}, returns a fitness values. The argument {\bfseries{x}} is a vector of variables.
+\item {\itshape evaluate(x,y)}, updates {\bfseries{y}} with a fitness values, and {\bfseries{x}} is a vector of variables.
+\item {\itshape reset\+\_\+problem()}, reset the history information of problem evaluations. You should call this function at first when you plan to do another test on the same problem class.
+\item {\itshape I\+O\+Hprofiler\+\_\+hit\+\_\+optimal()}, returns true if the optimum of the problem has been found.
+\item {\itshape I\+O\+Hprofiler\+\_\+get\+\_\+number\+\_\+of\+\_\+variables(number\+\_\+of\+\_\+variables)}, returns dimension of the problem.
+\item {\itshape I\+O\+Hprofiler\+\_\+get\+\_\+evaluations()}, returns the number of function evaluations that has been used.
+\item {\itshape logger\+Info}, returns a vector of information of function evaluations, which consists of evaluations, current found raw objective, best so far found raw objective, current found transformed objective, and best of far best found transformed objective.
+\item {\itshape logger\+C\+O\+C\+O\+Info}, returns a vector of information of function evaluations, which consists of evaluations, precision of current found objective, best so far found precision, current found objective, and best so far found objective.
+\item {\itshape I\+O\+Hprofiler\+\_\+get\+\_\+problem\+\_\+id()}
+\item {\itshape I\+O\+Hprofiler\+\_\+get\+\_\+instance\+\_\+id()}
+\item {\itshape I\+O\+Hprofiler\+\_\+get\+\_\+problem\+\_\+name()}
+\item {\itshape I\+O\+Hprofiler\+\_\+get\+\_\+problem\+\_\+type()}
+\item {\itshape I\+O\+Hprofiler\+\_\+get\+\_\+lowerbound()}
+\item {\itshape I\+O\+Hprofiler\+\_\+get\+\_\+upperbound()}
+\item {\itshape I\+O\+Hprofiler\+\_\+get\+\_\+number\+\_\+of\+\_\+objectives()}
+\item {\itshape I\+O\+Hprofiler\+\_\+get\+\_\+optimization\+\_\+type()}
+\end{DoxyItemize}
+
+A list of useful member functions of {\ttfamily \mbox{\hyperlink{class_i_o_hprofiler__suite}{I\+O\+Hprofiler\+\_\+suite}}} is below\+:
+\begin{DoxyItemize}
+\item {\itshape get\+\_\+next\+\_\+problem}, return a shared point of problems of the suite in order.
+\item {\itshape get\+\_\+current\+\_\+problem()}, returns current problem and reset it.
+\item {\itshape get\+\_\+problem(problem\+\_\+name,instance,dimension)}, returns the specific problem.
+\item {\itshape I\+O\+Hprofiler\+\_\+suite\+\_\+get\+\_\+number\+\_\+of\+\_\+problems}
+\item {\itshape I\+O\+Hprofiler\+\_\+suite\+\_\+get\+\_\+number\+\_\+of\+\_\+instances}
+\item {\itshape I\+O\+Hprofiler\+\_\+suite\+\_\+get\+\_\+number\+\_\+of\+\_\+dimensions}
+\item {\itshape I\+O\+Hprofiler\+\_\+suite\+\_\+get\+\_\+problem\+\_\+id}
+\item {\itshape I\+O\+Hprofiler\+\_\+suite\+\_\+get\+\_\+instance\+\_\+id()}
+\item {\itshape I\+O\+Hprofiler\+\_\+suite\+\_\+get\+\_\+dimension()}
+\item {\itshape I\+O\+Hprofiler\+\_\+suite\+\_\+get\+\_\+suite\+\_\+name()} 
+\end{DoxyItemize}

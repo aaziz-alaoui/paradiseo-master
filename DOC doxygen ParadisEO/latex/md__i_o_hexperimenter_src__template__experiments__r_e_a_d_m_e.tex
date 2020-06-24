@@ -1,0 +1,46 @@
+{\bfseries{I\+O\+Hexperimenters}} provides interface of using configuration files. After setting the path of the configuration file and giving an algorithm, the {\ttfamily \mbox{\hyperlink{class_i_o_hprofiler__experimenter}{I\+O\+Hprofiler\+\_\+experimenter}}} can organize experiments automatically.
+
+{\ttfamily \mbox{\hyperlink{class_i_o_hprofiler__configuration}{I\+O\+Hprofiler\+\_\+configuration}}} reads configuration information from a given file, and these information can be used in {\ttfamily \mbox{\hyperlink{class_i_o_hprofiler__experimenter}{I\+O\+Hprofiler\+\_\+experimenter}}} to generate {\bfseries{\mbox{\hyperlink{class_i_o_hprofiler__suite}{I\+O\+Hprofiler\+\_\+suite}}}} and {\bfseries{\mbox{\hyperlink{class_i_o_hprofiler__csv__logger}{I\+O\+Hprofiler\+\_\+csv\+\_\+logger}}}}.
+
+For the content of configuration file, it consists of three sections\+:
+
+{\bfseries{suite}} configures the problems to be tested.
+\begin{DoxyItemize}
+\item {\bfseries{suite\+\_\+name}}, is the name of the suite to be used. Please make sure that the suite with the corresponding name is registered.
+\item {\bfseries{problem\+\_\+id}}, configures problems to be tested. Note that id of problems are configured by the suite, please make sure that id is within the valid range.
+\item {\bfseries{instance\+\_\+id}}, configures the transformation methods applied on problems. For {\ttfamily P\+BO}\+:
+\begin{DoxyItemize}
+\item {\ttfamily 1} \+: no transformer operations on the problem.
+\item {\ttfamily 2-\/50} \+: X\+OR and S\+H\+I\+FT operations are applied on the problem.
+\item {\ttfamily 51-\/100}\+: S\+I\+G\+MA and S\+H\+I\+FT operations are applied on the problem.
+\end{DoxyItemize}
+\item {\bfseries{dimension}}, configures dimension of problems to be tested. Note that allowed dimension is not larger than 20000.
+\end{DoxyItemize}
+
+{\bfseries{logger}} configures the setting of output csv files.
+\begin{DoxyItemize}
+\item {\bfseries{result\+\_\+foler}} is the directory of the folder where sotres output files.
+\item {\bfseries{algorithm\+\_\+name}}, is the name of the algorithm, which is used when generating \textquotesingle{}.info\textquotesingle{} files.
+\item {\bfseries{algorithm\+\_\+info}}, is additional information of the algorithm, which is used when generating \textquotesingle{}.info\textquotesingle{} files.
+\end{DoxyItemize}
+
+{\bfseries{observer}} configures parameters of {\ttfamily I\+O\+Hprofiler\+\_\+server}, which is used in {\ttfamily \mbox{\hyperlink{class_i_o_hprofiler__csv__logger}{I\+O\+Hprofiler\+\_\+csv\+\_\+logger}}},
+\begin{DoxyItemize}
+\item {\bfseries{complete\+\_\+triggers}} is the switch of {\ttfamily .cdat} files, which works with {\bfseries{complete tracking}} strategy. Set it as {\ttfamily T\+R\+UE} or {\ttfamily true} if you want to output {\ttfamily .cdat} files.
+\item {\bfseries{update\+\_\+triggers}} is the switch of {\ttfamily .dat} files, which works with {\bfseries{target-\/based strategy}} strategy. Set it as {\ttfamily T\+R\+UE} or {\ttfamily true} if you want to output {\itshape .dat}{\ttfamily files.}
+\item {\ttfamily \+\_\+\+\_\+number\+\_\+interval\+\_\+triggers\+\_\+\+\_\+ configures the}.idat{\ttfamily files, which works with \+\_\+\+\_\+interval tracking\+\_\+\+\_\+ number\+\_\+target\+\_\+triggers sets the value of the frequecny. If you do not want to generate}.idat{\ttfamily files, set}number\+\_\+target\+\_\+triggers{\ttfamily as 0.}
+\item {\ttfamily \+\_\+\+\_\+number\+\_\+target\+\_\+triggers\+\_\+\+\_\+ configures the}.tdat{\ttfamily files, which works with \+\_\+\+\_\+time-\/based tracking\+\_\+\+\_\+ strategy.}
+\item {\ttfamily \+\_\+\+\_\+base\+\_\+evaluation\+\_\+triggers\+\_\+\+\_\+ configures the}.tdat{\ttfamily files, which works with \+\_\+\+\_\+time-\/based tracking\+\_\+\+\_\+ strategy. To switch off}.tdat\`{} files, set both {\bfseries{number\+\_\+target\+\_\+triggers}} and {\bfseries{base\+\_\+evaluation\+\_\+triggers}} as 0. For the detail of {\bfseries{time-\/based tracking}}, please with the \href{https://iohprofiler.github.io/IOHexperimenter/Loggers/Observer/}{\texttt{ wiki page}}.
+\end{DoxyItemize}
+
+And for the function of algorithms, a shared smart pointer of {\ttfamily \mbox{\hyperlink{class_i_o_hprofiler__problem}{I\+O\+Hprofiler\+\_\+problem}}} should be one and the only one argument of it. An example of declaration of an evolutionary algorithm is as follow, 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{void} evolutionary\_algorithm(std::shared\_ptr<\mbox{\hyperlink{class_i_o_hprofiler__problem}{IOHprofiler\_problem<int>}}> problem)}
+\end{DoxyCode}
+
+
+In addition, {\ttfamily \mbox{\hyperlink{class_i_o_hprofiler__experimenter}{I\+O\+Hprofiler\+\_\+experimenter}}} allows to test each problem mutliple times by using the following statements. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{experimenter.\_set\_independent\_runs(1);}
+\end{DoxyCode}
+ 

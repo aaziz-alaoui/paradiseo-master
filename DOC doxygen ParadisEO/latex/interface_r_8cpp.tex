@@ -1,0 +1,152 @@
+\hypertarget{interface_r_8cpp}{}\doxysection{Référence du fichier I\+O\+Hexperimenter/build/\+R/src/interfaceR.cpp}
+\label{interface_r_8cpp}\index{IOHexperimenter/build/R/src/interfaceR.cpp@{IOHexperimenter/build/R/src/interfaceR.cpp}}
+
+
+Implementation of interface functions for R version.  
+
+
+{\ttfamily \#include $<$Rcpp.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Headers/\+I\+O\+Hprofiler\+\_\+all\+\_\+suites.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Headers/\+I\+O\+Hprofiler\+\_\+csv\+\_\+logger.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de interface\+R.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interface_r_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{interface_r_8cpp_a821d553d55aee4e281148918549c84de}\label{interface_r_8cpp_a821d553d55aee4e281148918549c84de}} 
+int {\bfseries cpp\+\_\+init\+\_\+suite} (String suite\+\_\+name, const std\+::vector$<$ int $>$ \&problem\+\_\+id, const std\+::vector$<$ int $>$ \&instance\+\_\+id, const std\+::vector$<$ int $>$ \&dimension)
+\item 
+\mbox{\Hypertarget{interface_r_8cpp_a7bad038dc71084a602a70718b8956807}\label{interface_r_8cpp_a7bad038dc71084a602a70718b8956807}} 
+int {\bfseries cpp\+\_\+init\+\_\+logger} (String output\+\_\+directory, String result\+\_\+folder, String algorithm\+\_\+name, String algorithm\+\_\+info, bool dat, bool cdat, int tdat, int idat)
+\item 
+\mbox{\Hypertarget{interface_r_8cpp_ad7f33f69c78d4b32600327c4ffb0dd1b}\label{interface_r_8cpp_ad7f33f69c78d4b32600327c4ffb0dd1b}} 
+Integer\+Vector {\bfseries cpp\+\_\+get\+\_\+problem\+\_\+list} ()
+\item 
+\mbox{\Hypertarget{interface_r_8cpp_a0091e75802e9034344062a915d54b64d}\label{interface_r_8cpp_a0091e75802e9034344062a915d54b64d}} 
+Integer\+Vector {\bfseries cpp\+\_\+get\+\_\+dimension\+\_\+list} ()
+\item 
+\mbox{\Hypertarget{interface_r_8cpp_a306a1ad2f3c66c8841d336387d5ba63c}\label{interface_r_8cpp_a306a1ad2f3c66c8841d336387d5ba63c}} 
+Integer\+Vector {\bfseries cpp\+\_\+get\+\_\+instance\+\_\+list} ()
+\item 
+\mbox{\Hypertarget{interface_r_8cpp_a7c7180608e53b3e01d4d3c98c238dd64}\label{interface_r_8cpp_a7c7180608e53b3e01d4d3c98c238dd64}} 
+List {\bfseries cpp\+\_\+get\+\_\+suite\+\_\+info} ()
+\item 
+\mbox{\Hypertarget{interface_r_8cpp_a362e38d8b0d25c4848eeb6649cedbeb3}\label{interface_r_8cpp_a362e38d8b0d25c4848eeb6649cedbeb3}} 
+List {\bfseries cpp\+\_\+get\+\_\+problem\+\_\+info} ()
+\item 
+\mbox{\Hypertarget{interface_r_8cpp_ab8a95a6bac1651a20c2eca540092b0d6}\label{interface_r_8cpp_ab8a95a6bac1651a20c2eca540092b0d6}} 
+List {\bfseries cpp\+\_\+get\+\_\+next\+\_\+problem} ()
+\item 
+\mbox{\Hypertarget{interface_r_8cpp_a2bcf53ae02e93cdf48179fb277e5384b}\label{interface_r_8cpp_a2bcf53ae02e93cdf48179fb277e5384b}} 
+List {\bfseries cpp\+\_\+reset\+\_\+problem} ()
+\item 
+\mbox{\Hypertarget{interface_r_8cpp_a879180aeaed9be626cb755e69e4332a6}\label{interface_r_8cpp_a879180aeaed9be626cb755e69e4332a6}} 
+double {\bfseries cpp\+\_\+int\+\_\+evaluate} (const std\+::vector$<$ int $>$ \&x)
+\item 
+\mbox{\Hypertarget{interface_r_8cpp_a8a0c8415b472355bbfe9283e5899f737}\label{interface_r_8cpp_a8a0c8415b472355bbfe9283e5899f737}} 
+double {\bfseries cpp\+\_\+double\+\_\+evaluate} (const std\+::vector$<$ double $>$ \&x)
+\item 
+\mbox{\Hypertarget{interface_r_8cpp_a31067d91dab594034106da5580056fa8}\label{interface_r_8cpp_a31067d91dab594034106da5580056fa8}} 
+Numeric\+Vector {\bfseries cpp\+\_\+logger\+C\+O\+C\+O\+Info} ()
+\item 
+\mbox{\Hypertarget{interface_r_8cpp_a3bc02ced6a4945aa3325f1ef8bff9e94}\label{interface_r_8cpp_a3bc02ced6a4945aa3325f1ef8bff9e94}} 
+Numeric\+Vector {\bfseries cpp\+\_\+logger\+Info} ()
+\item 
+\mbox{\Hypertarget{interface_r_8cpp_afcc10fdbcc1058a10fab804fc67e91c4}\label{interface_r_8cpp_afcc10fdbcc1058a10fab804fc67e91c4}} 
+int {\bfseries cpp\+\_\+write\+\_\+line} (const std\+::vector$<$ double $>$ \&line\+\_\+info)
+\item 
+\mbox{\Hypertarget{interface_r_8cpp_a179900a0e2b9b6ba68153a5e67e057d7}\label{interface_r_8cpp_a179900a0e2b9b6ba68153a5e67e057d7}} 
+int {\bfseries cpp\+\_\+logger\+\_\+target\+\_\+suite} ()
+\item 
+\mbox{\Hypertarget{interface_r_8cpp_a03b0ed056f87b87d92cbebeac74c5b05}\label{interface_r_8cpp_a03b0ed056f87b87d92cbebeac74c5b05}} 
+int {\bfseries cpp\+\_\+set\+\_\+parameters\+\_\+name} (const std\+::vector$<$ std\+::string $>$ \&parameters\+\_\+name)
+\item 
+\mbox{\Hypertarget{interface_r_8cpp_ab9318de3b336f9afebbc191258e97978}\label{interface_r_8cpp_ab9318de3b336f9afebbc191258e97978}} 
+int {\bfseries cpp\+\_\+set\+\_\+parameters\+\_\+value} (const std\+::vector$<$ double $>$ \&\mbox{\hyperlink{structparameters}{parameters}})
+\item 
+\mbox{\Hypertarget{interface_r_8cpp_ac883b84ac2589d09be632cc9adddd31a}\label{interface_r_8cpp_ac883b84ac2589d09be632cc9adddd31a}} 
+bool {\bfseries cpp\+\_\+is\+\_\+target\+\_\+hit} ()
+\item 
+\mbox{\Hypertarget{interface_r_8cpp_a6ba9a03a6b68d05e4fdd9f45338de2f5}\label{interface_r_8cpp_a6ba9a03a6b68d05e4fdd9f45338de2f5}} 
+int {\bfseries cpp\+\_\+get\+\_\+evaluations} ()
+\item 
+\mbox{\Hypertarget{interface_r_8cpp_a378b5fe8ab514f8353f2f3952e88b574}\label{interface_r_8cpp_a378b5fe8ab514f8353f2f3952e88b574}} 
+double {\bfseries cpp\+\_\+get\+\_\+optimal} ()
+\item 
+\mbox{\Hypertarget{interface_r_8cpp_a0c8ad9f2d9159dba901484f5ed7bb103}\label{interface_r_8cpp_a0c8ad9f2d9159dba901484f5ed7bb103}} 
+Numeric\+Vector {\bfseries cpp\+\_\+get\+\_\+double\+\_\+upper\+\_\+bounds} ()
+\item 
+\mbox{\Hypertarget{interface_r_8cpp_aee15b137411f135b313478f17b6b7b92}\label{interface_r_8cpp_aee15b137411f135b313478f17b6b7b92}} 
+Numeric\+Vector {\bfseries cpp\+\_\+get\+\_\+double\+\_\+lower\+\_\+bounds} ()
+\item 
+\mbox{\Hypertarget{interface_r_8cpp_a9dd0396712535104736d540378ad30d5}\label{interface_r_8cpp_a9dd0396712535104736d540378ad30d5}} 
+Integer\+Vector {\bfseries cpp\+\_\+get\+\_\+int\+\_\+upper\+\_\+bounds} ()
+\item 
+\mbox{\Hypertarget{interface_r_8cpp_a602693bbd38110c4aded283ad672f77b}\label{interface_r_8cpp_a602693bbd38110c4aded283ad672f77b}} 
+Integer\+Vector {\bfseries cpp\+\_\+get\+\_\+int\+\_\+lower\+\_\+bounds} ()
+\item 
+\mbox{\Hypertarget{interface_r_8cpp_a13111394faa273372b1da6d822a69ee7}\label{interface_r_8cpp_a13111394faa273372b1da6d822a69ee7}} 
+int \mbox{\hyperlink{interface_r_8cpp_a13111394faa273372b1da6d822a69ee7}{cpp\+\_\+get\+\_\+optimization\+\_\+type}} ()
+\begin{DoxyCompactList}\small\item\em Return 1 if it is maximization. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{interface_r_8cpp_af325543c80982027660f536b26455b8e}\label{interface_r_8cpp_af325543c80982027660f536b26455b8e}} 
+void {\bfseries cpp\+\_\+clear\+\_\+int\+\_\+problem} ()
+\item 
+\mbox{\Hypertarget{interface_r_8cpp_a1885772f883e4dee2ea1531d7dc577f1}\label{interface_r_8cpp_a1885772f883e4dee2ea1531d7dc577f1}} 
+void {\bfseries cpp\+\_\+clear\+\_\+double\+\_\+problem} ()
+\item 
+\mbox{\Hypertarget{interface_r_8cpp_abcf5a010bdb27eb9ad5d4cff0f31bbc5}\label{interface_r_8cpp_abcf5a010bdb27eb9ad5d4cff0f31bbc5}} 
+void {\bfseries cpp\+\_\+clear\+\_\+problem} ()
+\item 
+\mbox{\Hypertarget{interface_r_8cpp_a8b2869e56242e27f308152c4be7b6d5a}\label{interface_r_8cpp_a8b2869e56242e27f308152c4be7b6d5a}} 
+void {\bfseries cpp\+\_\+clear\+\_\+int\+\_\+suite} ()
+\item 
+\mbox{\Hypertarget{interface_r_8cpp_ade786e0040f85fa36d8a7fe3b34a014f}\label{interface_r_8cpp_ade786e0040f85fa36d8a7fe3b34a014f}} 
+void {\bfseries cpp\+\_\+clear\+\_\+double\+\_\+suite} ()
+\item 
+\mbox{\Hypertarget{interface_r_8cpp_acb32ad7a8bd15e09543bbedf531f1d7a}\label{interface_r_8cpp_acb32ad7a8bd15e09543bbedf531f1d7a}} 
+void {\bfseries cpp\+\_\+clear\+\_\+suite} ()
+\item 
+\mbox{\Hypertarget{interface_r_8cpp_acd785b01356b08c9ad0ee16e66248fdc}\label{interface_r_8cpp_acd785b01356b08c9ad0ee16e66248fdc}} 
+void {\bfseries cpp\+\_\+clear\+\_\+logger} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{interface_r_8cpp_a0f6639fe8b145627b61fc453118a9f8e}\label{interface_r_8cpp_a0f6639fe8b145627b61fc453118a9f8e}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_o_hprofiler__suite}{I\+O\+Hprofiler\+\_\+suite}}$<$ int $>$ $>$ {\bfseries current\+Int\+Suite}
+\item 
+\mbox{\Hypertarget{interface_r_8cpp_a34d061b42919b8fbf9f14f4dba41818b}\label{interface_r_8cpp_a34d061b42919b8fbf9f14f4dba41818b}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_o_hprofiler__problem}{I\+O\+Hprofiler\+\_\+problem}}$<$ int $>$ $>$ {\bfseries current\+Int\+Problem}
+\item 
+\mbox{\Hypertarget{interface_r_8cpp_a26ac6536d66a5a1ff2d9d06047be3419}\label{interface_r_8cpp_a26ac6536d66a5a1ff2d9d06047be3419}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_o_hprofiler__suite}{I\+O\+Hprofiler\+\_\+suite}}$<$ double $>$ $>$ {\bfseries current\+Double\+Suite}
+\item 
+\mbox{\Hypertarget{interface_r_8cpp_a69049b1bd388dd5b7ee4c47e9f6e121f}\label{interface_r_8cpp_a69049b1bd388dd5b7ee4c47e9f6e121f}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_o_hprofiler__problem}{I\+O\+Hprofiler\+\_\+problem}}$<$ double $>$ $>$ {\bfseries current\+Double\+Problem}
+\item 
+\mbox{\Hypertarget{interface_r_8cpp_ae37ad2c2612f3dcbb752f4d337d91225}\label{interface_r_8cpp_ae37ad2c2612f3dcbb752f4d337d91225}} 
+std\+::string {\bfseries current\+Suite\+Name}
+\item 
+\mbox{\Hypertarget{interface_r_8cpp_a4c97407cd8e49af2f934682d18640e8f}\label{interface_r_8cpp_a4c97407cd8e49af2f934682d18640e8f}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_o_hprofiler__csv__logger}{I\+O\+Hprofiler\+\_\+csv\+\_\+logger}} $>$ {\bfseries current\+Logger}
+\item 
+\mbox{\Hypertarget{interface_r_8cpp_a568f5f56d34f1347e4a13f879c7457f5}\label{interface_r_8cpp_a568f5f56d34f1347e4a13f879c7457f5}} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ double $>$ $>$ {\bfseries current\+Parameters}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Implementation of interface functions for R version. 
+
+\begin{DoxyAuthor}{Auteur}
+Furong Ye 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2019-\/10-\/08 
+\end{DoxyDate}

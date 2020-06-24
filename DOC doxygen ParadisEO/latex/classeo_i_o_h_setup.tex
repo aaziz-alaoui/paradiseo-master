@@ -1,0 +1,53 @@
+\hypertarget{classeo_i_o_h_setup}{}\doxysection{Référence du modèle de la classe eo\+I\+O\+H\+Setup$<$ E\+OT $>$}
+\label{classeo_i_o_h_setup}\index{eoIOHSetup$<$ EOT $>$@{eoIOHSetup$<$ EOT $>$}}
+
+
+{\ttfamily \#include $<$eo\+Eval\+I\+O\+H.\+h$>$}
+
+
+
+Graphe d\textquotesingle{}héritage de eo\+I\+O\+H\+Setup$<$ E\+OT $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classeo_i_o_h_setup__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de eo\+I\+O\+H\+Setup$<$ E\+OT $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{classeo_i_o_h_setup__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classeo_i_o_h_setup_a96d37b830bbf8dab69c89274180c2d28}\label{classeo_i_o_h_setup_a96d37b830bbf8dab69c89274180c2d28}} 
+using {\bfseries Atom\+Type} = typename E\+O\+T\+::\+Atom\+Type
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classeo_i_o_h_setup_a4285d5582d56a81314a21c930d87972d}\label{classeo_i_o_h_setup_a4285d5582d56a81314a21c930d87972d}} 
+virtual void {\bfseries operator()} (\mbox{\hyperlink{classeo_pop}{eo\+Pop}}$<$ \mbox{\hyperlink{struct_dummy}{E\+OT}} $>$ \&pop, typename \mbox{\hyperlink{class_i_o_hprofiler__suite}{I\+O\+Hprofiler\+\_\+suite}}$<$ Atom\+Type $>$\+::Problem\+\_\+ptr pb)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+\subsubsection*{template$<$class E\+OT$>$\newline
+class eo\+I\+O\+H\+Setup$<$ E\+O\+T $>$}
+
+Operator that is called before search for each problem within an I\+OH suite.
+
+You most probably need to reinstanciate some operators within your algorithm\+: at least the operators depending on the dimension, as it will change between two calls.
+
+By providing an operator using this interface, you can have access to all the information needed to do so. 
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+problems/eval/eo\+Eval\+I\+O\+H.\+h\end{DoxyCompactItemize}

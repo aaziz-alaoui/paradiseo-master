@@ -1,0 +1,107 @@
+\hypertarget{_i_o_hprofiler__ecdf__logger_8h}{}\doxysection{Référence du fichier I\+O\+Hexperimenter/src/\+Template/\+Loggers/\+I\+O\+Hprofiler\+\_\+ecdf\+\_\+logger.h}
+\label{_i_o_hprofiler__ecdf__logger_8h}\index{IOHexperimenter/src/Template/Loggers/IOHprofiler\_ecdf\_logger.h@{IOHexperimenter/src/Template/Loggers/IOHprofiler\_ecdf\_logger.h}}
+
+
+Header file for classes\+: \mbox{\hyperlink{class_i_o_hprofiler__ecdf__logger}{I\+O\+Hprofiler\+\_\+ecdf\+\_\+logger}}, I\+O\+Hprofiler\+\_\+\+Range$\ast$, I\+O\+Hprofiler\+\_\+ecdf\+\_\+$\ast$.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include \char`\"{}I\+O\+Hprofiler\+\_\+observer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}I\+O\+Hprofiler\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}I\+O\+Hprofiler\+\_\+problem.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}I\+O\+Hprofiler\+\_\+ecdf\+\_\+logger.\+hpp\char`\"{}}\newline
+Graphe des dépendances par inclusion de I\+O\+Hprofiler\+\_\+ecdf\+\_\+logger.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_i_o_hprofiler__ecdf__logger_8h__incl}
+\end{center}
+\end{figure}
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{_i_o_hprofiler__ecdf__logger_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_i_o_hprofiler___range}{I\+O\+Hprofiler\+\_\+\+Range$<$ R $>$}}
+\item 
+class \mbox{\hyperlink{class_i_o_hprofiler___range_linear}{I\+O\+Hprofiler\+\_\+\+Range\+Linear$<$ R $>$}}
+\item 
+class \mbox{\hyperlink{class_i_o_hprofiler___range_log}{I\+O\+Hprofiler\+\_\+\+Range\+Log$<$ R $>$}}
+\item 
+class \mbox{\hyperlink{class_i_o_hprofiler__ecdf__logger}{I\+O\+Hprofiler\+\_\+ecdf\+\_\+logger$<$ T $>$}}
+\item 
+struct \mbox{\hyperlink{struct_i_o_hprofiler__ecdf__logger_1_1_problem}{I\+O\+Hprofiler\+\_\+ecdf\+\_\+logger$<$ T $>$\+::\+Problem}}
+\item 
+class \mbox{\hyperlink{class_i_o_hprofiler__ecdf__stat}{I\+O\+Hprofiler\+\_\+ecdf\+\_\+stat$<$ T $>$}}
+\item 
+class \mbox{\hyperlink{class_i_o_hprofiler__ecdf__sum}{I\+O\+Hprofiler\+\_\+ecdf\+\_\+sum}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{_i_o_hprofiler__ecdf__logger_8h_a509ecc027a5e342c61dff6c69dad448e}{I\+O\+Hprofiler\+\_\+\+Attain\+Mat}} = std\+::vector$<$ std\+::vector$<$ bool $>$ $>$
+\item 
+using \mbox{\hyperlink{_i_o_hprofiler__ecdf__logger_8h_a0122aee983d5b84e65c32e6fd19b1678}{I\+O\+Hprofiler\+\_\+\+Attain\+Suite}} = std\+::map$<$ size\+\_\+t, std\+::map$<$ size\+\_\+t, std\+::map$<$ size\+\_\+t, \mbox{\hyperlink{_i_o_hprofiler__ecdf__logger_8h_a509ecc027a5e342c61dff6c69dad448e}{I\+O\+Hprofiler\+\_\+\+Attain\+Mat}} $>$ $>$$>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{_i_o_hprofiler__ecdf__logger_8h_a7a12b1f897bb2197a7636fc2bae4eb52}{operator$<$$<$}} (std\+::ostream \&out, const \mbox{\hyperlink{_i_o_hprofiler__ecdf__logger_8h_a509ecc027a5e342c61dff6c69dad448e}{I\+O\+Hprofiler\+\_\+\+Attain\+Mat}} \&mat)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Header file for classes\+: \mbox{\hyperlink{class_i_o_hprofiler__ecdf__logger}{I\+O\+Hprofiler\+\_\+ecdf\+\_\+logger}}, I\+O\+Hprofiler\+\_\+\+Range$\ast$, I\+O\+Hprofiler\+\_\+ecdf\+\_\+$\ast$. 
+
+Header file for class \mbox{\hyperlink{class_i_o_hprofiler__ecdf__logger}{I\+O\+Hprofiler\+\_\+ecdf\+\_\+logger}}.
+
+\begin{DoxyAuthor}{Auteur}
+Johann Dreo
+
+Johann Dreo 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2020-\/02-\/04 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentation des définitions de type}
+\mbox{\Hypertarget{_i_o_hprofiler__ecdf__logger_8h_a509ecc027a5e342c61dff6c69dad448e}\label{_i_o_hprofiler__ecdf__logger_8h_a509ecc027a5e342c61dff6c69dad448e}} 
+\index{IOHprofiler\_ecdf\_logger.h@{IOHprofiler\_ecdf\_logger.h}!IOHprofiler\_AttainMat@{IOHprofiler\_AttainMat}}
+\index{IOHprofiler\_AttainMat@{IOHprofiler\_AttainMat}!IOHprofiler\_ecdf\_logger.h@{IOHprofiler\_ecdf\_logger.h}}
+\doxysubsubsection{\texorpdfstring{IOHprofiler\_AttainMat}{IOHprofiler\_AttainMat}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_i_o_hprofiler__ecdf__logger_8h_a509ecc027a5e342c61dff6c69dad448e}{I\+O\+Hprofiler\+\_\+\+Attain\+Mat}} =  std\+::vector$<$ std\+::vector$<$ bool $>$ $>$}
+
+Type used to store a single run attainment bi-\/dimensional function.
+
+First dimension is error targets, second dimension function evaluations targets.
+
+\begin{DoxyNote}{Note}
+One expect to have a lot of those matrix in a real-\/life setting, and the more general case is to have objective-\/function bounded computation times. It is thus chosen to reduce the memory footprint, using the infamous bool vector specialization instead of the (supposedly) faster vector of char. 
+\end{DoxyNote}
+\mbox{\Hypertarget{_i_o_hprofiler__ecdf__logger_8h_a0122aee983d5b84e65c32e6fd19b1678}\label{_i_o_hprofiler__ecdf__logger_8h_a0122aee983d5b84e65c32e6fd19b1678}} 
+\index{IOHprofiler\_ecdf\_logger.h@{IOHprofiler\_ecdf\_logger.h}!IOHprofiler\_AttainSuite@{IOHprofiler\_AttainSuite}}
+\index{IOHprofiler\_AttainSuite@{IOHprofiler\_AttainSuite}!IOHprofiler\_ecdf\_logger.h@{IOHprofiler\_ecdf\_logger.h}}
+\doxysubsubsection{\texorpdfstring{IOHprofiler\_AttainSuite}{IOHprofiler\_AttainSuite}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_i_o_hprofiler__ecdf__logger_8h_a0122aee983d5b84e65c32e6fd19b1678}{I\+O\+Hprofiler\+\_\+\+Attain\+Suite}} =  std\+::map$<$ size\+\_\+t, std\+::map$<$ size\+\_\+t, std\+::map$<$ size\+\_\+t, \mbox{\hyperlink{_i_o_hprofiler__ecdf__logger_8h_a509ecc027a5e342c61dff6c69dad448e}{I\+O\+Hprofiler\+\_\+\+Attain\+Mat}} $>$ $>$$>$}
+
+Type used to store all bi-\/dimensional attainment functions.
+
+First dimension is the problem id, second dimension is the dimension id, last dimension is the instance id. Every item is an I\+O\+Hprofiler\+\_\+\+Attain\+Mat. 
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{_i_o_hprofiler__ecdf__logger_8h_a7a12b1f897bb2197a7636fc2bae4eb52}\label{_i_o_hprofiler__ecdf__logger_8h_a7a12b1f897bb2197a7636fc2bae4eb52}} 
+\index{IOHprofiler\_ecdf\_logger.h@{IOHprofiler\_ecdf\_logger.h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!IOHprofiler\_ecdf\_logger.h@{IOHprofiler\_ecdf\_logger.h}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \mbox{\hyperlink{_i_o_hprofiler__ecdf__logger_8h_a509ecc027a5e342c61dff6c69dad448e}{I\+O\+Hprofiler\+\_\+\+Attain\+Mat}} \&}]{mat }\end{DoxyParamCaption})}
+
+Print an attainment matrix on an output stream. 

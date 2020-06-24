@@ -1,0 +1,25 @@
+\mbox{[}This folder\mbox{]} includes common used codes of {\bfseries{I\+O\+Hexperimenter}}. For details of {\ttfamily \mbox{\hyperlink{class_i_o_hprofiler__problem}{I\+O\+Hprofiler\+\_\+problem}}} and {\ttfamily \mbox{\hyperlink{class_i_o_hprofiler__suite}{I\+O\+Hprofiler\+\_\+suite}}}, please visit \href{/src/Problems/}{\texttt{ problem page}} and \href{/src/Suites}{\texttt{ suite page}}.\hypertarget{md__i_o_hexperimenter_src__template__r_e_a_d_m_e_autotoc_md95}{}\doxysubsection{I\+O\+Hprofiler\+\_\+transformation}\label{md__i_o_hexperimenter_src__template__r_e_a_d_m_e_autotoc_md95}
+\mbox{\hyperlink{class_i_o_hprofiler__transformation}{I\+O\+Hprofiler\+\_\+transformation}}{\ttfamily defines methods of transformation applied on}I\+O\+Hprofiler\+\_\+problem\`{}. For the definition of methods, please visit \href{https://iohprofiler.github.io/Benchmark/Transformation/}{\texttt{ wikipage}}\hypertarget{md__i_o_hexperimenter_src__template__r_e_a_d_m_e_autotoc_md96}{}\doxysubsection{I\+O\+Hprofiler\+\_\+random}\label{md__i_o_hexperimenter_src__template__r_e_a_d_m_e_autotoc_md96}
+{\bfseries{I\+O\+Hexperimenter}} supplies methods of generating random numbers, which can be used to reproduce same experiments with the same random seed.
+
+{\ttfamily \mbox{\hyperlink{class_i_o_hprofiler__random}{I\+O\+Hprofiler\+\_\+random}}} is a {\ttfamily class} of random methods, you can construct it with a specified random seed as\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_i_o_hprofiler__random}{IOHprofiler\_random}}(\textcolor{keywordtype}{long} seed);}
+\end{DoxyCode}
+
+
+And two random number generator methods are as follow.
+\begin{DoxyItemize}
+\item {\itshape double I\+O\+Hprofiler\+\_\+uniform\+\_\+rand()}, returns a random number from standard uniform distribution.
+\item {\itshape double I\+O\+Hprofiler\+\_\+normal\+\_\+rand()}, returns a random number from standard normal distribution.
+\end{DoxyItemize}\hypertarget{md__i_o_hexperimenter_src__template__r_e_a_d_m_e_autotoc_md97}{}\doxysubsection{I\+O\+Hprofiler\+\_\+observer}\label{md__i_o_hexperimenter_src__template__r_e_a_d_m_e_autotoc_md97}
+{\ttfamily \mbox{\hyperlink{class_i_o_hprofiler__observer}{I\+O\+Hprofiler\+\_\+observer}}} defines triggers of recording evaluations, and {\bfseries{logger}} classes inherit it to set up the time of recording.
+
+Four strategies of recording evaluations are available,
+\begin{DoxyItemize}
+\item {\bfseries{complete tracking}}, provides the highest granularity, by storing information for each function evaluation. Use {\itshape set\+\_\+complete\+\_\+flag(true)} to enable this strategy,
+\item {\bfseries{interval tracking}}, stores information for each \$\textbackslash{}tau\$-\/th function evaluation. Use {\itshape set\+\_\+interval()} to set \$\textbackslash{}tau $>$ 0\$ to enable this stragety.
+\item {\bfseries{target-\/based tracking}}, stores information for each iteration in which the best-\/so-\/far fitness improved. Use {\itshape set\+\_\+update\+\_\+flag(true)} to enbale this stragety.
+\item {\bfseries{time-\/based tracking}}, stores information when the user-\/specified running time budgets are reached. These budget are evenly spaced in log-\/10 scale.
+\end{DoxyItemize}\hypertarget{md__i_o_hexperimenter_src__template__r_e_a_d_m_e_autotoc_md98}{}\doxysubsection{I\+O\+Hprofier\+\_\+class\+\_\+generator}\label{md__i_o_hexperimenter_src__template__r_e_a_d_m_e_autotoc_md98}
+{\ttfamily I\+O\+Hprofiler\+\_\+class\+\_\+generator} supplied methods of registering and creating {\ttfamily \mbox{\hyperlink{class_i_o_hprofiler__problem}{I\+O\+Hprofiler\+\_\+problem}}} and {\ttfamily \mbox{\hyperlink{class_i_o_hprofiler__suite}{I\+O\+Hprofiler\+\_\+suite}}}. 

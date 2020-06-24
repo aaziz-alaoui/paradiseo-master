@@ -1,0 +1,89 @@
+\hypertarget{classmo_equal_sol_neighbor_comparator}{}\doxysection{Référence du modèle de la classe mo\+Equal\+Sol\+Neighbor\+Comparator$<$ Neighbor $>$}
+\label{classmo_equal_sol_neighbor_comparator}\index{moEqualSolNeighborComparator$<$ Neighbor $>$@{moEqualSolNeighborComparator$<$ Neighbor $>$}}
+
+
+{\ttfamily \#include $<$mo\+Equal\+Sol\+Neighbor\+Comparator.\+h$>$}
+
+
+
+Graphe d\textquotesingle{}héritage de mo\+Equal\+Sol\+Neighbor\+Comparator$<$ Neighbor $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmo_equal_sol_neighbor_comparator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de mo\+Equal\+Sol\+Neighbor\+Comparator$<$ Neighbor $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmo_equal_sol_neighbor_comparator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmo_equal_sol_neighbor_comparator_a08aa04fa6b8844ff453f563fba02e0f8}\label{classmo_equal_sol_neighbor_comparator_a08aa04fa6b8844ff453f563fba02e0f8}} 
+typedef \mbox{\hyperlink{classeo_bit}{Neighbor\+::\+E\+OT}} {\bfseries E\+OT}
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classmo_equal_sol_neighbor_comparator_a95f5116bc3f594619df3230b88b324e1}{operator()}} (const \mbox{\hyperlink{classeo_bit}{E\+OT}} \&\+\_\+sol, const \mbox{\hyperlink{classmo_bit_neighbor}{Neighbor}} \&\+\_\+neighbor)
+\item 
+virtual std\+::string \mbox{\hyperlink{classmo_equal_sol_neighbor_comparator_a0c23006d3421aca44951db0b6fc8d714}{class\+Name}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Membres hérités additionnels}
+
+
+\doxysubsection{Description détaillée}
+\subsubsection*{template$<$class Neighbor$>$\newline
+class mo\+Equal\+Sol\+Neighbor\+Comparator$<$ Neighbor $>$}
+
+Comparator of a solution and its neighbor \+: a neighbor is better if the fitness is higher or equal 
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{classmo_equal_sol_neighbor_comparator_a0c23006d3421aca44951db0b6fc8d714}\label{classmo_equal_sol_neighbor_comparator_a0c23006d3421aca44951db0b6fc8d714}} 
+\index{moEqualSolNeighborComparator$<$ Neighbor $>$@{moEqualSolNeighborComparator$<$ Neighbor $>$}!className@{className}}
+\index{className@{className}!moEqualSolNeighborComparator$<$ Neighbor $>$@{moEqualSolNeighborComparator$<$ Neighbor $>$}}
+\doxysubsubsection{\texorpdfstring{className()}{className()}}
+{\footnotesize\ttfamily template$<$class Neighbor $>$ \\
+virtual std\+::string \mbox{\hyperlink{classmo_equal_sol_neighbor_comparator}{mo\+Equal\+Sol\+Neighbor\+Comparator}}$<$ \mbox{\hyperlink{classmo_bit_neighbor}{Neighbor}} $>$\+::class\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Return the class Name \begin{DoxyReturn}{Renvoie}
+the class name as a std\+::string 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de \mbox{\hyperlink{classmo_sol_neighbor_comparator_adf31ca2894c8ad2d591318e40319cfdb}{mo\+Sol\+Neighbor\+Comparator$<$ Neighbor $>$}}.
+
+\mbox{\Hypertarget{classmo_equal_sol_neighbor_comparator_a95f5116bc3f594619df3230b88b324e1}\label{classmo_equal_sol_neighbor_comparator_a95f5116bc3f594619df3230b88b324e1}} 
+\index{moEqualSolNeighborComparator$<$ Neighbor $>$@{moEqualSolNeighborComparator$<$ Neighbor $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!moEqualSolNeighborComparator$<$ Neighbor $>$@{moEqualSolNeighborComparator$<$ Neighbor $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily template$<$class Neighbor $>$ \\
+virtual bool \mbox{\hyperlink{classmo_equal_sol_neighbor_comparator}{mo\+Equal\+Sol\+Neighbor\+Comparator}}$<$ \mbox{\hyperlink{classmo_bit_neighbor}{Neighbor}} $>$\+::operator() (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classeo_bit}{E\+OT}} \&}]{\+\_\+sol,  }\item[{const \mbox{\hyperlink{classmo_bit_neighbor}{Neighbor}} \&}]{\+\_\+neighbor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Compare two neighbors 
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+sol} & the solution \\
+\hline
+{\em \+\_\+neighbor} & the neighbor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true if the neighbor is better or equal than sol 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de \mbox{\hyperlink{classmo_sol_neighbor_comparator_abe31dddd88221321669e5900a14a71cc}{mo\+Sol\+Neighbor\+Comparator$<$ Neighbor $>$}}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+mo/src/comparator/mo\+Equal\+Sol\+Neighbor\+Comparator.\+h\end{DoxyCompactItemize}

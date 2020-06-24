@@ -1,0 +1,64 @@
+\hypertarget{classmoeo_contribution_metric}{}\doxysection{Référence du modèle de la classe moeo\+Contribution\+Metric$<$ Objective\+Vector $>$}
+\label{classmoeo_contribution_metric}\index{moeoContributionMetric$<$ ObjectiveVector $>$@{moeoContributionMetric$<$ ObjectiveVector $>$}}
+
+
+{\ttfamily \#include $<$moeo\+Contribution\+Metric.\+h$>$}
+
+
+
+Graphe d\textquotesingle{}héritage de moeo\+Contribution\+Metric$<$ Objective\+Vector $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmoeo_contribution_metric__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de moeo\+Contribution\+Metric$<$ Objective\+Vector $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmoeo_contribution_metric__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classmoeo_contribution_metric_a491610f6557874c2989eaa7a75117dcb}{operator()}} (const std\+::vector$<$ \mbox{\hyperlink{classmoeo_real_objective_vector}{Objective\+Vector}} $>$ \&\+\_\+set1, const std\+::vector$<$ \mbox{\hyperlink{classmoeo_real_objective_vector}{Objective\+Vector}} $>$ \&\+\_\+set2)
+\end{DoxyCompactItemize}
+\doxysubsection*{Membres hérités additionnels}
+
+
+\doxysubsection{Description détaillée}
+\subsubsection*{template$<$class Objective\+Vector$>$\newline
+class moeo\+Contribution\+Metric$<$ Objective\+Vector $>$}
+
+The contribution metric evaluates the proportion of non-\/dominated solutions given by a Pareto set relatively to another Pareto set (Meunier, Talbi, Reininger\+: \textquotesingle{}A multiobjective genetic algorithm for radio network optimization\textquotesingle{}, in Proc. of the 2000 Congress on Evolutionary Computation, I\+E\+EE Press, pp. 317-\/324) 
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{classmoeo_contribution_metric_a491610f6557874c2989eaa7a75117dcb}\label{classmoeo_contribution_metric_a491610f6557874c2989eaa7a75117dcb}} 
+\index{moeoContributionMetric$<$ ObjectiveVector $>$@{moeoContributionMetric$<$ ObjectiveVector $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!moeoContributionMetric$<$ ObjectiveVector $>$@{moeoContributionMetric$<$ ObjectiveVector $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily template$<$class Objective\+Vector $>$ \\
+double \mbox{\hyperlink{classmoeo_contribution_metric}{moeo\+Contribution\+Metric}}$<$ \mbox{\hyperlink{classmoeo_real_objective_vector}{Objective\+Vector}} $>$\+::operator() (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classmoeo_real_objective_vector}{Objective\+Vector}} $>$ \&}]{\+\_\+set1,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{classmoeo_real_objective_vector}{Objective\+Vector}} $>$ \&}]{\+\_\+set2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Returns the contribution of the Pareto set \textquotesingle{}\+\_\+set1\textquotesingle{} relatively to the Pareto set \textquotesingle{}\+\_\+set2\textquotesingle{} 
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+set1} & the first Pareto set \\
+\hline
+{\em \+\_\+set2} & the second Pareto set \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \mbox{\hyperlink{classeo_b_f_aa03c40b95210569b826df79a2237a0d0}{eo\+B\+F$<$ const std\+::vector$<$ Objective\+Vector $>$ \&, const std\+::vector$<$ Objective\+Vector $>$ \&, double $>$}}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+moeo/src/metric/moeo\+Contribution\+Metric.\+h\end{DoxyCompactItemize}

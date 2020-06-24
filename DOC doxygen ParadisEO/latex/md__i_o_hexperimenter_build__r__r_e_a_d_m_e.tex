@@ -1,0 +1,56 @@
+\hypertarget{md__i_o_hexperimenter_build__r__r_e_a_d_m_e_autotoc_md75}{}\doxysection{R-\/package  $<$a name=\char`\"{}package\char`\"{}$>$$<$/a$>$}\label{md__i_o_hexperimenter_build__r__r_e_a_d_m_e_autotoc_md75}
+This branch of the I\+O\+Hexperimenter consists of the R-\/implementation of the experimenter, built using Rcpp. To use this package, either clone this repository and install locally, or use the following commands to use devtools to install the package directely\+:
+
+If devtools is not yet installed, please first use 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{install.packages('devtools')}
+\end{DoxyCode}
+
+
+Error messages will be shown in your R console if there is any installation issue. Now, the I\+O\+Hexperimenter package can be installed and loaded using the following commands\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{devtools::install\_github('IOHprofiler/IOHexperimenter@R')}
+\DoxyCodeLine{library('IOHexperimenter')}
+\end{DoxyCode}
+
+
+This will install the package and all required dependencies.\hypertarget{md__i_o_hexperimenter_build__r__r_e_a_d_m_e_autotoc_md76}{}\doxysection{Getting Started $<$a name=\char`\"{}\+Getting-\/\+Started\char`\"{}$>$$<$/a$>$}\label{md__i_o_hexperimenter_build__r__r_e_a_d_m_e_autotoc_md76}
+0. Install the package using one of the methods mentioned \href{\#package}{\texttt{ {\itshape package}}} above.
+
+
+\begin{DoxyEnumerate}
+\item Create you own algorithm, or use the example algorithm provided in the documentation accessed by\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{?benchmark\_algorithm}
+\end{DoxyCode}
+
+\end{DoxyEnumerate}
+
+Note that your algorithm will need to accept exactly one parameter\+: An I\+O\+Hproblem object, which contains the following information about the current problem\+:
+
+
+\begin{DoxyItemize}
+\item dimension
+\item function\+\_\+id
+\item instance
+\item fopt (if known)
+\item xopt (if known)
+\end{DoxyItemize}
+
+And the following functions\+:
+
+
+\begin{DoxyItemize}
+\item obj\+\_\+func()
+\item target\+\_\+hit()
+\item set\+\_\+parameters()
+\end{DoxyItemize}
+
+Several example algorithms have been implemented in the {\ttfamily algorithms.\+R} file.
+
+
+\begin{DoxyEnumerate}
+\item Run the benchmarks using the function \textquotesingle{}benchmark\+\_\+algorithm\textquotesingle{}
+\item Analyze your results using the I\+O\+Hanalyzer by visiting the \href{https://github.com/IOHprofiler/IOHAnalyzer}{\texttt{ I\+O\+H\+Analyzer page}}
+\end{DoxyEnumerate}\hypertarget{md__i_o_hexperimenter_build__r__r_e_a_d_m_e_autotoc_md77}{}\doxysection{Using C or Python $<$a name=\char`\"{}\+Using-\/\+C\char`\"{}$>$$<$/a$>$}\label{md__i_o_hexperimenter_build__r__r_e_a_d_m_e_autotoc_md77}
+To use the I\+O\+Hexperimenter in C++ or python, please look at the other branches in \href{https://github.com/IOHprofiler/IOHexperimenter}{\texttt{ this repository}} 

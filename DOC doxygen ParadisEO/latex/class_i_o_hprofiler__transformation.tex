@@ -1,0 +1,146 @@
+\hypertarget{class_i_o_hprofiler__transformation}{}\doxysection{Référence de la classe I\+O\+Hprofiler\+\_\+transformation}
+\label{class_i_o_hprofiler__transformation}\index{IOHprofiler\_transformation@{IOHprofiler\_transformation}}
+
+
+A class consisting of transformation methods.  
+
+
+
+
+{\ttfamily \#include $<$I\+O\+Hprofiler\+\_\+transformation.\+hpp$>$}
+
+
+
+Graphe d\textquotesingle{}héritage de I\+O\+Hprofiler\+\_\+transformation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{class_i_o_hprofiler__transformation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de I\+O\+Hprofiler\+\_\+transformation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{class_i_o_hprofiler__transformation__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_i_o_hprofiler__transformation_ae323629c497dbbc770bae3aa1a287cfa}{variables\+\_\+transformation}} (std\+::vector$<$ int $>$ \&x, const int problem\+\_\+id, const int instance\+\_\+id, const std\+::string problem\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Transformation operations on variables. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__transformation_a20a9259ce57d5d4553b44326314ac5c2}\label{class_i_o_hprofiler__transformation_a20a9259ce57d5d4553b44326314ac5c2}} 
+void {\bfseries variables\+\_\+transformation} (std\+::vector$<$ double $>$ \&x, const int problem\+\_\+id, const int instance\+\_\+id, const std\+::string problem\+\_\+type)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__transformation_a2763abeb4ef595fec58fbc9358531c87}\label{class_i_o_hprofiler__transformation_a2763abeb4ef595fec58fbc9358531c87}} 
+void \mbox{\hyperlink{class_i_o_hprofiler__transformation_a2763abeb4ef595fec58fbc9358531c87}{objectives\+\_\+transformation}} (const std\+::vector$<$ int $>$ \&x, std\+::vector$<$ double $>$ \&y, const int problem\+\_\+id, const int instance\+\_\+id, const std\+::string problem\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Transformation operations on objectives (a $\ast$ f(x) + b). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__transformation_a656de64438f04e704f76a7c584a21c98}\label{class_i_o_hprofiler__transformation_a656de64438f04e704f76a7c584a21c98}} 
+void {\bfseries objectives\+\_\+transformation} (const std\+::vector$<$ double $>$ \&x, std\+::vector$<$ double $>$ \&y, const int problem\+\_\+id, const int instance\+\_\+id, const std\+::string problem\+\_\+type)
+\item 
+void \mbox{\hyperlink{class_i_o_hprofiler__transformation_a29821ae5fab6846bce1d095c6ca51a6f}{transform\+\_\+vars\+\_\+xor}} (std\+::vector$<$ int $>$ \&x, const int seed)
+\item 
+void \mbox{\hyperlink{class_i_o_hprofiler__transformation_a3a36209bbb9ec2fb909cc08b67fd7a96}{transform\+\_\+vars\+\_\+sigma}} (std\+::vector$<$ int $>$ \&x, const int seed)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__transformation_a83a9c7bd9f43758d1d319e79db007262}\label{class_i_o_hprofiler__transformation_a83a9c7bd9f43758d1d319e79db007262}} 
+void \mbox{\hyperlink{class_i_o_hprofiler__transformation_a83a9c7bd9f43758d1d319e79db007262}{transform\+\_\+obj\+\_\+scale}} (std\+::vector$<$ double $>$ \&y, const int seed)
+\begin{DoxyCompactList}\small\item\em transformation \textquotesingle{}a $\ast$ f(x)\textquotesingle{}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__transformation_a94c7e398d3615118fe1a57d0b33e894a}\label{class_i_o_hprofiler__transformation_a94c7e398d3615118fe1a57d0b33e894a}} 
+void \mbox{\hyperlink{class_i_o_hprofiler__transformation_a94c7e398d3615118fe1a57d0b33e894a}{transform\+\_\+obj\+\_\+shift}} (std\+::vector$<$ double $>$ \&y, const int seed)
+\begin{DoxyCompactList}\small\item\em transformation \textquotesingle{}f(x) + b\textquotesingle{}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__transformation_a2dea7bcb8b40061d98513e4370e75802}\label{class_i_o_hprofiler__transformation_a2dea7bcb8b40061d98513e4370e75802}} 
+void {\bfseries transform\+\_\+obj\+\_\+scale} (double \&y, const int seed)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__transformation_a0b0e4702d9ed0adc7a571d74b7f4e327}\label{class_i_o_hprofiler__transformation_a0b0e4702d9ed0adc7a571d74b7f4e327}} 
+void {\bfseries transform\+\_\+obj\+\_\+shift} (double \&y, const int seed)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__transformation_ae323629c497dbbc770bae3aa1a287cfa}\label{class_i_o_hprofiler__transformation_ae323629c497dbbc770bae3aa1a287cfa}} 
+void {\bfseries variables\+\_\+transformation} (std\+::vector$<$ int $>$ \&x, const int problem\+\_\+id, const int instance\+\_\+id, const std\+::string problem\+\_\+type)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__transformation_a20a9259ce57d5d4553b44326314ac5c2}\label{class_i_o_hprofiler__transformation_a20a9259ce57d5d4553b44326314ac5c2}} 
+void {\bfseries variables\+\_\+transformation} (std\+::vector$<$ double $>$ \&x, const int problem\+\_\+id, const int instance\+\_\+id, const std\+::string problem\+\_\+type)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__transformation_a2763abeb4ef595fec58fbc9358531c87}\label{class_i_o_hprofiler__transformation_a2763abeb4ef595fec58fbc9358531c87}} 
+void {\bfseries objectives\+\_\+transformation} (const std\+::vector$<$ int $>$ \&x, std\+::vector$<$ double $>$ \&y, const int problem\+\_\+id, const int instance\+\_\+id, const std\+::string problem\+\_\+type)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__transformation_a656de64438f04e704f76a7c584a21c98}\label{class_i_o_hprofiler__transformation_a656de64438f04e704f76a7c584a21c98}} 
+void {\bfseries objectives\+\_\+transformation} (const std\+::vector$<$ double $>$ \&x, std\+::vector$<$ double $>$ \&y, const int problem\+\_\+id, const int instance\+\_\+id, const std\+::string problem\+\_\+type)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__transformation_a6381edb3c543648128c57d84fb342665}\label{class_i_o_hprofiler__transformation_a6381edb3c543648128c57d84fb342665}} 
+void {\bfseries transform\+\_\+vars\+\_\+xor} (std\+::vector$<$ int $>$ \&x, const int seed)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__transformation_a99df819bb77de5afe3cee140277bc3c7}\label{class_i_o_hprofiler__transformation_a99df819bb77de5afe3cee140277bc3c7}} 
+void {\bfseries transform\+\_\+vars\+\_\+sigma} (std\+::vector$<$ int $>$ \&x, const int seed)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__transformation_a83a9c7bd9f43758d1d319e79db007262}\label{class_i_o_hprofiler__transformation_a83a9c7bd9f43758d1d319e79db007262}} 
+void {\bfseries transform\+\_\+obj\+\_\+scale} (std\+::vector$<$ double $>$ \&y, const int seed)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__transformation_a94c7e398d3615118fe1a57d0b33e894a}\label{class_i_o_hprofiler__transformation_a94c7e398d3615118fe1a57d0b33e894a}} 
+void {\bfseries transform\+\_\+obj\+\_\+shift} (std\+::vector$<$ double $>$ \&y, const int seed)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__transformation_a2dea7bcb8b40061d98513e4370e75802}\label{class_i_o_hprofiler__transformation_a2dea7bcb8b40061d98513e4370e75802}} 
+void {\bfseries transform\+\_\+obj\+\_\+scale} (double \&y, const int seed)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__transformation_a0b0e4702d9ed0adc7a571d74b7f4e327}\label{class_i_o_hprofiler__transformation_a0b0e4702d9ed0adc7a571d74b7f4e327}} 
+void {\bfseries transform\+\_\+obj\+\_\+shift} (double \&y, const int seed)
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_i_o_hprofiler__transformation_a65912e8656f228e3e821bf0a14967a8c}{xor\+\_\+compute}} (const int x1, const int x2)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__transformation_a0e83b861e4c7145bd5dc293872c48b8b}\label{class_i_o_hprofiler__transformation_a0e83b861e4c7145bd5dc293872c48b8b}} 
+static int {\bfseries sigma\+\_\+compute} (const std\+::vector$<$ int $>$ \&x, const int pos)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__transformation_a6f3cfbc9bc19260df144c39f48065a17}\label{class_i_o_hprofiler__transformation_a6f3cfbc9bc19260df144c39f48065a17}} 
+static int {\bfseries xor\+\_\+compute} (const int x1, const int x2)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__transformation_a22f40035783e41f6bf7a00dad80c5d5c}\label{class_i_o_hprofiler__transformation_a22f40035783e41f6bf7a00dad80c5d5c}} 
+static int {\bfseries sigma\+\_\+compute} (const std\+::vector$<$ int $>$ \&x, const int pos)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+A class consisting of transformation methods. 
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_i_o_hprofiler__transformation_a3a36209bbb9ec2fb909cc08b67fd7a96}\label{class_i_o_hprofiler__transformation_a3a36209bbb9ec2fb909cc08b67fd7a96}} 
+\index{IOHprofiler\_transformation@{IOHprofiler\_transformation}!transform\_vars\_sigma@{transform\_vars\_sigma}}
+\index{transform\_vars\_sigma@{transform\_vars\_sigma}!IOHprofiler\_transformation@{IOHprofiler\_transformation}}
+\doxysubsubsection{\texorpdfstring{transform\_vars\_sigma()}{transform\_vars\_sigma()}}
+{\footnotesize\ttfamily I\+O\+Hprofiler\+\_\+transformation\+::transform\+\_\+vars\+\_\+sigma (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$ \&}]{x,  }\item[{const int}]{seed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Disrupting the order of x. \mbox{\Hypertarget{class_i_o_hprofiler__transformation_a29821ae5fab6846bce1d095c6ca51a6f}\label{class_i_o_hprofiler__transformation_a29821ae5fab6846bce1d095c6ca51a6f}} 
+\index{IOHprofiler\_transformation@{IOHprofiler\_transformation}!transform\_vars\_xor@{transform\_vars\_xor}}
+\index{transform\_vars\_xor@{transform\_vars\_xor}!IOHprofiler\_transformation@{IOHprofiler\_transformation}}
+\doxysubsubsection{\texorpdfstring{transform\_vars\_xor()}{transform\_vars\_xor()}}
+{\footnotesize\ttfamily I\+O\+Hprofiler\+\_\+transformation\+::transform\+\_\+vars\+\_\+xor (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$ \&}]{x,  }\item[{const int}]{seed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Applying xor operations on x with a uniformly random bit string. \mbox{\Hypertarget{class_i_o_hprofiler__transformation_ae323629c497dbbc770bae3aa1a287cfa}\label{class_i_o_hprofiler__transformation_ae323629c497dbbc770bae3aa1a287cfa}} 
+\index{IOHprofiler\_transformation@{IOHprofiler\_transformation}!variables\_transformation@{variables\_transformation}}
+\index{variables\_transformation@{variables\_transformation}!IOHprofiler\_transformation@{IOHprofiler\_transformation}}
+\doxysubsubsection{\texorpdfstring{variables\_transformation()}{variables\_transformation()}}
+{\footnotesize\ttfamily void I\+O\+Hprofiler\+\_\+transformation\+::variables\+\_\+transformation (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$ \&}]{x,  }\item[{const int}]{problem\+\_\+id,  }\item[{const int}]{instance\+\_\+id,  }\item[{const std\+::string}]{problem\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Transformation operations on variables. 
+
+For instance\+\_\+id in \mbox{]}1,50\mbox{]}, xor operation is applied. For instance\+\_\+id in \mbox{]}50,100\mbox{]}, sigma function is applied. \mbox{\Hypertarget{class_i_o_hprofiler__transformation_a65912e8656f228e3e821bf0a14967a8c}\label{class_i_o_hprofiler__transformation_a65912e8656f228e3e821bf0a14967a8c}} 
+\index{IOHprofiler\_transformation@{IOHprofiler\_transformation}!xor\_compute@{xor\_compute}}
+\index{xor\_compute@{xor\_compute}!IOHprofiler\_transformation@{IOHprofiler\_transformation}}
+\doxysubsubsection{\texorpdfstring{xor\_compute()}{xor\_compute()}}
+{\footnotesize\ttfamily I\+O\+Hprofiler\+\_\+transformation\+::xor\+\_\+compute (\begin{DoxyParamCaption}\item[{const int}]{x1,  }\item[{const int}]{x2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Exclusive or operation on x1, x2. x1 and x2 should either 0 or 1. 
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+I\+O\+Hexperimenter/build/\+R/src/\+Headers/\mbox{\hyperlink{_i_o_hprofiler__transformation_8hpp}{I\+O\+Hprofiler\+\_\+transformation.\+hpp}}\item 
+I\+O\+Hexperimenter/src/\+Template/I\+O\+Hprofiler\+\_\+transformation.\+h\item 
+I\+O\+Hexperimenter/src/\+Template/\mbox{\hyperlink{_i_o_hprofiler__transformation_8cpp}{I\+O\+Hprofiler\+\_\+transformation.\+cpp}}\end{DoxyCompactItemize}

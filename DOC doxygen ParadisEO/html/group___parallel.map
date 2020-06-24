@@ -1,0 +1,7 @@
+<map id="Parallel" name="Parallel">
+<area shape="rect" id="node1" href="$group___logging.html" title=" " alt="" coords="329,5,403,31"/>
+<area shape="rect" id="node2" title=" " alt="" coords="128,55,199,80"/>
+<area shape="rect" id="node3" href="$group___random.html" title=" " alt="" coords="264,55,468,80"/>
+<area shape="rect" id="node5" href="$group___m_p_i.html" title="See namespace eo::mpi to have all explanations about this module." alt="" coords="269,104,463,129"/>
+<area shape="rect" id="node4" href="$group___utilities.html" title="Classes that may help you write elegant code." alt="" coords="5,55,79,80"/>
+</map>

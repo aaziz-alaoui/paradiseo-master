@@ -1,0 +1,107 @@
+\hypertarget{classmoeo_v_n_s}{}\doxysection{Référence du modèle de la classe moeo\+V\+NS$<$ M\+O\+E\+OT $>$}
+\label{classmoeo_v_n_s}\index{moeoVNS$<$ MOEOT $>$@{moeoVNS$<$ MOEOT $>$}}
+
+
+Variable Neighbors Search (V\+NS)  
+
+
+
+
+{\ttfamily \#include $<$moeo\+V\+N\+S.\+h$>$}
+
+
+
+Graphe d\textquotesingle{}héritage de moeo\+V\+NS$<$ M\+O\+E\+OT $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{classmoeo_v_n_s__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de moeo\+V\+NS$<$ M\+O\+E\+OT $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{classmoeo_v_n_s__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmoeo_v_n_s_a46ff613cc1be3e1dfd0287c16a7c27b4}\label{classmoeo_v_n_s_a46ff613cc1be3e1dfd0287c16a7c27b4}} 
+typedef M\+O\+E\+O\+T\+::\+Objective\+Vector {\bfseries Objective\+Vector}
+\item 
+\mbox{\Hypertarget{classmoeo_v_n_s_abdce4b5ef1d631604f4faab5a855df89}\label{classmoeo_v_n_s_abdce4b5ef1d631604f4faab5a855df89}} 
+typedef M\+O\+E\+O\+T\+::\+Fitness {\bfseries Fitness}
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmoeo_v_n_s_a997abb07bc530dddf26a3fd6d23e8f9d}{moeo\+V\+NS}} (mo\+Expl$<$ M\+O\+E\+OT $>$ \&\+\_\+explorer, \mbox{\hyperlink{classmoeo_single_objectivization}{moeo\+Single\+Objectivization}}$<$ M\+O\+E\+OT $>$ \&\+\_\+full\+\_\+evaluation)
+\begin{DoxyCompactList}\small\item\em Generic constructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmoeo_v_n_s_ab7bfc0e20e7c5533704116919717238c}{operator()}} (M\+O\+E\+OT \&\+\_\+solution)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_function}{Function}} which launches the V\+NS. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+\subsubsection*{template$<$class M\+O\+E\+OT$>$\newline
+class moeo\+V\+N\+S$<$ M\+O\+E\+O\+T $>$}
+
+Variable Neighbors Search (V\+NS) 
+
+Class which describes the algorithm for a Variable Neighbors Search. Adapts the \mbox{\hyperlink{classmo_v_n_s}{mo\+V\+NS}} for a multi-\/objective problem using a \mbox{\hyperlink{classmoeo_single_objectivization}{moeo\+Single\+Objectivization}}. M is for Move 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{classmoeo_v_n_s_a997abb07bc530dddf26a3fd6d23e8f9d}\label{classmoeo_v_n_s_a997abb07bc530dddf26a3fd6d23e8f9d}} 
+\index{moeoVNS$<$ MOEOT $>$@{moeoVNS$<$ MOEOT $>$}!moeoVNS@{moeoVNS}}
+\index{moeoVNS@{moeoVNS}!moeoVNS$<$ MOEOT $>$@{moeoVNS$<$ MOEOT $>$}}
+\doxysubsubsection{\texorpdfstring{moeoVNS()}{moeoVNS()}}
+{\footnotesize\ttfamily template$<$class M\+O\+E\+OT $>$ \\
+\mbox{\hyperlink{classmoeo_v_n_s}{moeo\+V\+NS}}$<$ M\+O\+E\+OT $>$\+::\mbox{\hyperlink{classmoeo_v_n_s}{moeo\+V\+NS}} (\begin{DoxyParamCaption}\item[{mo\+Expl$<$ M\+O\+E\+OT $>$ \&}]{\+\_\+explorer,  }\item[{\mbox{\hyperlink{classmoeo_single_objectivization}{moeo\+Single\+Objectivization}}$<$ M\+O\+E\+OT $>$ \&}]{\+\_\+full\+\_\+evaluation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Generic constructor. 
+
+Generic constructor using a mo\+Expl
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+explorer} & Vector of Neighborhoods. \\
+\hline
+{\em \+\_\+full\+\_\+evaluation} & The single\+Objectivization containing a full eval. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{classmoeo_v_n_s_ab7bfc0e20e7c5533704116919717238c}\label{classmoeo_v_n_s_ab7bfc0e20e7c5533704116919717238c}} 
+\index{moeoVNS$<$ MOEOT $>$@{moeoVNS$<$ MOEOT $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!moeoVNS$<$ MOEOT $>$@{moeoVNS$<$ MOEOT $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily template$<$class M\+O\+E\+OT $>$ \\
+bool \mbox{\hyperlink{classmoeo_v_n_s}{moeo\+V\+NS}}$<$ M\+O\+E\+OT $>$\+::operator() (\begin{DoxyParamCaption}\item[{M\+O\+E\+OT \&}]{\+\_\+solution }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{struct_function}{Function}} which launches the V\+NS. 
+
+The V\+NS has to improve a current solution.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+solution} & a current solution to improve. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true. 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+moeo/src/scalar\+Stuffs/algo/moeo\+V\+N\+S.\+h\end{DoxyCompactItemize}

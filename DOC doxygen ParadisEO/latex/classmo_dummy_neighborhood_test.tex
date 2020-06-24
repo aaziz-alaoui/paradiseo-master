@@ -1,0 +1,117 @@
+\hypertarget{classmo_dummy_neighborhood_test}{}\doxysection{Référence de la classe mo\+Dummy\+Neighborhood\+Test}
+\label{classmo_dummy_neighborhood_test}\index{moDummyNeighborhoodTest@{moDummyNeighborhoodTest}}
+
+
+Graphe d\textquotesingle{}héritage de mo\+Dummy\+Neighborhood\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{classmo_dummy_neighborhood_test__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de mo\+Dummy\+Neighborhood\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{classmo_dummy_neighborhood_test__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmo_dummy_neighborhood_test_a656ace7afeac47ec1a0de2ce3b2045c9}\label{classmo_dummy_neighborhood_test_a656ace7afeac47ec1a0de2ce3b2045c9}} 
+typedef \mbox{\hyperlink{classmo_dummy_neighbor_test}{mo\+Dummy\+Neighbor\+Test}} {\bfseries Neighbor}
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classmo_dummy_neighborhood_test_a680b577b4a8d99eda9c0236ee4ac8ee6}{has\+Neighbor}} (\mbox{\hyperlink{classmo_neighborhood_a9b0ab01b1c9034657754257a90726d14}{E\+OT}} \&\+\_\+solution)
+\item 
+virtual void \mbox{\hyperlink{classmo_dummy_neighborhood_test_a5dbb68dcfec225f7333e85855b645630}{init}} (\mbox{\hyperlink{classmo_neighborhood_a9b0ab01b1c9034657754257a90726d14}{E\+OT}} \&\+\_\+solution, \mbox{\hyperlink{classmo_dummy_neighbor_test}{Neighbor}} \&\+\_\+current)
+\item 
+virtual void \mbox{\hyperlink{classmo_dummy_neighborhood_test_a7b2358c010d81ac8317edbf7882659b2}{next}} (\mbox{\hyperlink{classmo_neighborhood_a9b0ab01b1c9034657754257a90726d14}{E\+OT}} \&\+\_\+solution, \mbox{\hyperlink{classmo_dummy_neighbor_test}{Neighbor}} \&\+\_\+current)
+\item 
+virtual bool \mbox{\hyperlink{classmo_dummy_neighborhood_test_a4ba4ec977aa65c5b9acb750986e74b62}{cont}} (\mbox{\hyperlink{classmo_neighborhood_a9b0ab01b1c9034657754257a90726d14}{E\+OT}} \&\+\_\+solution)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{classmo_dummy_neighborhood_test_a4ba4ec977aa65c5b9acb750986e74b62}\label{classmo_dummy_neighborhood_test_a4ba4ec977aa65c5b9acb750986e74b62}} 
+\index{moDummyNeighborhoodTest@{moDummyNeighborhoodTest}!cont@{cont}}
+\index{cont@{cont}!moDummyNeighborhoodTest@{moDummyNeighborhoodTest}}
+\doxysubsubsection{\texorpdfstring{cont()}{cont()}}
+{\footnotesize\ttfamily virtual bool mo\+Dummy\+Neighborhood\+Test\+::cont (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmo_neighborhood_a9b0ab01b1c9034657754257a90726d14}{E\+OT}} \&}]{\+\_\+solution }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\hyperlink{struct_test}{Test}} if there is again a neighbor 
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+solution} & the solution to explore \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true if there is again a neighbor not explored 
+\end{DoxyReturn}
+
+
+Implémente \mbox{\hyperlink{classmo_neighborhood_a4093914507138339f3756ff5edaf6531}{mo\+Neighborhood$<$ mo\+Dummy\+Neighbor\+Test $>$}}.
+
+\mbox{\Hypertarget{classmo_dummy_neighborhood_test_a680b577b4a8d99eda9c0236ee4ac8ee6}\label{classmo_dummy_neighborhood_test_a680b577b4a8d99eda9c0236ee4ac8ee6}} 
+\index{moDummyNeighborhoodTest@{moDummyNeighborhoodTest}!hasNeighbor@{hasNeighbor}}
+\index{hasNeighbor@{hasNeighbor}!moDummyNeighborhoodTest@{moDummyNeighborhoodTest}}
+\doxysubsubsection{\texorpdfstring{hasNeighbor()}{hasNeighbor()}}
+{\footnotesize\ttfamily virtual bool mo\+Dummy\+Neighborhood\+Test\+::has\+Neighbor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmo_neighborhood_a9b0ab01b1c9034657754257a90726d14}{E\+OT}} \&}]{\+\_\+solution }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\hyperlink{struct_test}{Test}} if a solution has (again) a Neighbor 
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+solution} & the related solution \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true if \+\_\+solution has a Neighbor 
+\end{DoxyReturn}
+
+
+Implémente \mbox{\hyperlink{classmo_neighborhood_a9a4b6ca2bcf76697145509eb35baf3be}{mo\+Neighborhood$<$ mo\+Dummy\+Neighbor\+Test $>$}}.
+
+\mbox{\Hypertarget{classmo_dummy_neighborhood_test_a5dbb68dcfec225f7333e85855b645630}\label{classmo_dummy_neighborhood_test_a5dbb68dcfec225f7333e85855b645630}} 
+\index{moDummyNeighborhoodTest@{moDummyNeighborhoodTest}!init@{init}}
+\index{init@{init}!moDummyNeighborhoodTest@{moDummyNeighborhoodTest}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily virtual void mo\+Dummy\+Neighborhood\+Test\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmo_neighborhood_a9b0ab01b1c9034657754257a90726d14}{E\+OT}} \&}]{\+\_\+solution,  }\item[{\mbox{\hyperlink{classmo_dummy_neighbor_test}{Neighbor}} \&}]{\+\_\+current }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Initialization of the neighborhood 
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+solution} & the solution to explore \\
+\hline
+{\em \+\_\+current} & the first neighbor \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \mbox{\hyperlink{classmo_neighborhood_a0022065ea8d42fa00768896648badf5c}{mo\+Neighborhood$<$ mo\+Dummy\+Neighbor\+Test $>$}}.
+
+\mbox{\Hypertarget{classmo_dummy_neighborhood_test_a7b2358c010d81ac8317edbf7882659b2}\label{classmo_dummy_neighborhood_test_a7b2358c010d81ac8317edbf7882659b2}} 
+\index{moDummyNeighborhoodTest@{moDummyNeighborhoodTest}!next@{next}}
+\index{next@{next}!moDummyNeighborhoodTest@{moDummyNeighborhoodTest}}
+\doxysubsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily virtual void mo\+Dummy\+Neighborhood\+Test\+::next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmo_neighborhood_a9b0ab01b1c9034657754257a90726d14}{E\+OT}} \&}]{\+\_\+solution,  }\item[{\mbox{\hyperlink{classmo_dummy_neighbor_test}{Neighbor}} \&}]{\+\_\+current }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Give the next neighbor 
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+solution} & the solution to explore \\
+\hline
+{\em \+\_\+current} & the next neighbor \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \mbox{\hyperlink{classmo_neighborhood_a984c484c44c9852d0f971856d12092ed}{mo\+Neighborhood$<$ mo\+Dummy\+Neighbor\+Test $>$}}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+mo/test/mo\+Test\+Class.\+h\end{DoxyCompactItemize}

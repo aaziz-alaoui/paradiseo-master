@@ -1,0 +1,276 @@
+\hypertarget{class_i_o_hprofiler__ecdf__logger}{}\doxysection{Référence du modèle de la classe I\+O\+Hprofiler\+\_\+ecdf\+\_\+logger$<$ T $>$}
+\label{class_i_o_hprofiler__ecdf__logger}\index{IOHprofiler\_ecdf\_logger$<$ T $>$@{IOHprofiler\_ecdf\_logger$<$ T $>$}}
+
+
+{\ttfamily \#include $<$I\+O\+Hprofiler\+\_\+ecdf\+\_\+logger.\+h$>$}
+
+
+
+Graphe d\textquotesingle{}héritage de I\+O\+Hprofiler\+\_\+ecdf\+\_\+logger$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{class_i_o_hprofiler__ecdf__logger__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de I\+O\+Hprofiler\+\_\+ecdf\+\_\+logger$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_i_o_hprofiler__ecdf__logger__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_i_o_hprofiler__ecdf__logger_1_1_problem}{Problem}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{class_i_o_hprofiler__ecdf__logger_a6b439c0b66b56f4576dc7f28fb1642de}{Input\+Type}} = typename \mbox{\hyperlink{class_i_o_hprofiler__observer}{I\+O\+Hprofiler\+\_\+observer}}$<$ T $>$\+::\mbox{\hyperlink{class_i_o_hprofiler__observer_a215868fe839c4c4dc723aee0d67cb273}{Input\+Type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_i_o_hprofiler__ecdf__logger_ab1e430490a26463004b783712708452c}{I\+O\+Hprofiler\+\_\+ecdf\+\_\+logger}} (const double error\+\_\+min, const double error\+\_\+max, const size\+\_\+t error\+\_\+buckets, const size\+\_\+t evals\+\_\+min, const size\+\_\+t evals\+\_\+max, const size\+\_\+t evals\+\_\+buckets)
+\item 
+\mbox{\hyperlink{class_i_o_hprofiler__ecdf__logger_af9130391d8688d46cd3b33b352a110aa}{I\+O\+Hprofiler\+\_\+ecdf\+\_\+logger}} (\mbox{\hyperlink{class_i_o_hprofiler___range}{I\+O\+Hprofiler\+\_\+\+Range}}$<$ double $>$ \&error\+\_\+buckets, \mbox{\hyperlink{class_i_o_hprofiler___range}{I\+O\+Hprofiler\+\_\+\+Range}}$<$ size\+\_\+t $>$ \&evals\+\_\+buckets)
+\end{DoxyCompactItemize}
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_i_o_hprofiler__ecdf__logger_a7350a662a3115406a0353172f5fad2d6}{activate\+\_\+logger}} ()
+\begin{DoxyCompactList}\small\item\em Not used, but part of the interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__ecdf__logger_ab4f8fd478d690f6bbbedca0b391d9960}\label{class_i_o_hprofiler__ecdf__logger_ab4f8fd478d690f6bbbedca0b391d9960}} 
+void \mbox{\hyperlink{class_i_o_hprofiler__ecdf__logger_ab4f8fd478d690f6bbbedca0b391d9960}{track\+\_\+suite}} (const \mbox{\hyperlink{class_i_o_hprofiler__suite}{I\+O\+Hprofiler\+\_\+suite}}$<$ T $>$ \&)
+\begin{DoxyCompactList}\small\item\em Not used, but part of the interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__ecdf__logger_ac7dc6b361479135372746628d892e6dc}\label{class_i_o_hprofiler__ecdf__logger_ac7dc6b361479135372746628d892e6dc}} 
+void \mbox{\hyperlink{class_i_o_hprofiler__ecdf__logger_ac7dc6b361479135372746628d892e6dc}{track\+\_\+problem}} (const \mbox{\hyperlink{class_i_o_hprofiler__problem}{I\+O\+Hprofiler\+\_\+problem}}$<$ T $>$ \&pb)
+\begin{DoxyCompactList}\small\item\em Initialize on the given problem. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_o_hprofiler__ecdf__logger_ac162f3d48f6fa032b61a1e50ec6107a1}{do\+\_\+log}} (const std\+::vector$<$ double $>$ \&infos)
+\end{DoxyCompactItemize}
+
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{_i_o_hprofiler__ecdf__logger_8h_a0122aee983d5b84e65c32e6fd19b1678}{I\+O\+Hprofiler\+\_\+\+Attain\+Suite}} \& \mbox{\hyperlink{class_i_o_hprofiler__ecdf__logger_aa6ba4c6b2809b05deed68988bb31f64e}{data}} ()
+\item 
+const \mbox{\hyperlink{_i_o_hprofiler__ecdf__logger_8h_a509ecc027a5e342c61dff6c69dad448e}{I\+O\+Hprofiler\+\_\+\+Attain\+Mat}} \& \mbox{\hyperlink{class_i_o_hprofiler__ecdf__logger_acde524be357b7a4bc8a0b9f98a95ee12}{at}} (size\+\_\+t problem\+\_\+id, size\+\_\+t instance\+\_\+id, size\+\_\+t dim\+\_\+id) const
+\item 
+std\+::tuple$<$ size\+\_\+t, size\+\_\+t, size\+\_\+t $>$ \mbox{\hyperlink{class_i_o_hprofiler__ecdf__logger_a17ef0a4cb1c6f0515867e0942c18f09d}{size}} ()
+\item 
+\mbox{\hyperlink{class_i_o_hprofiler___range}{I\+O\+Hprofiler\+\_\+\+Range}}$<$ double $>$ \mbox{\hyperlink{class_i_o_hprofiler__ecdf__logger_aa4f8907aba876ee6838a58c2d12643f9}{error\+\_\+range}} ()
+\item 
+\mbox{\hyperlink{class_i_o_hprofiler___range}{I\+O\+Hprofiler\+\_\+\+Range}}$<$ size\+\_\+t $>$ \mbox{\hyperlink{class_i_o_hprofiler__ecdf__logger_a1ac0221048e71b09119dca857bfbbba9}{eval\+\_\+range}} ()
+\end{DoxyCompactItemize}
+
+\doxysubsection*{Fonctions membres protégées}
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_i_o_hprofiler__ecdf__logger_a2f275f8dcb5a809f03d936a9b891e9a6}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Clear all previously computed data structure. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__ecdf__logger_acf54cd88c9f60fb557831d862a7d57d5}\label{class_i_o_hprofiler__ecdf__logger_acf54cd88c9f60fb557831d862a7d57d5}} 
+void \mbox{\hyperlink{class_i_o_hprofiler__ecdf__logger_acf54cd88c9f60fb557831d862a7d57d5}{init\+\_\+ecdf}} (const \mbox{\hyperlink{struct_i_o_hprofiler__ecdf__logger_1_1_problem}{Problem}} \&cur)
+\begin{DoxyCompactList}\small\item\em Create maps and matrix for this problem. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__ecdf__logger_aabdbfba9eb360ec3154db0c4934c8c9e}\label{class_i_o_hprofiler__ecdf__logger_aabdbfba9eb360ec3154db0c4934c8c9e}} 
+\mbox{\hyperlink{_i_o_hprofiler__ecdf__logger_8h_a509ecc027a5e342c61dff6c69dad448e}{I\+O\+Hprofiler\+\_\+\+Attain\+Mat}} \& \mbox{\hyperlink{class_i_o_hprofiler__ecdf__logger_aabdbfba9eb360ec3154db0c4934c8c9e}{current\+\_\+ecdf}} ()
+\begin{DoxyCompactList}\small\item\em Returns the current attainment matrix. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_o_hprofiler__ecdf__logger_a915d3dba6fa799a479819023eed60479}{fill\+\_\+up}} (size\+\_\+t i\+\_\+error, size\+\_\+t j\+\_\+evals)
+\end{DoxyCompactItemize}
+
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_i_o_hprofiler___range}{I\+O\+Hprofiler\+\_\+\+Range}}$<$ double $>$ \& \mbox{\hyperlink{class_i_o_hprofiler__ecdf__logger_aed5ee73a222189d7e066f4336e37df5d}{\+\_\+range\+\_\+error}}
+\begin{DoxyCompactList}\small\item\em Range for the errors axis. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__ecdf__logger_a64bc57ede9cfe3eabba8953c667a13f9}\label{class_i_o_hprofiler__ecdf__logger_a64bc57ede9cfe3eabba8953c667a13f9}} 
+\mbox{\hyperlink{class_i_o_hprofiler___range}{I\+O\+Hprofiler\+\_\+\+Range}}$<$ size\+\_\+t $>$ \& \mbox{\hyperlink{class_i_o_hprofiler__ecdf__logger_a64bc57ede9cfe3eabba8953c667a13f9}{\+\_\+range\+\_\+evals}}
+\begin{DoxyCompactList}\small\item\em Range for the evaluations axis. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__ecdf__logger_a6974c56d4d93d69525c3310e2eff9b96}\label{class_i_o_hprofiler__ecdf__logger_a6974c56d4d93d69525c3310e2eff9b96}} 
+\mbox{\hyperlink{struct_i_o_hprofiler__ecdf__logger_1_1_problem}{Problem}} \mbox{\hyperlink{class_i_o_hprofiler__ecdf__logger_a6974c56d4d93d69525c3310e2eff9b96}{\+\_\+current}}
+\begin{DoxyCompactList}\small\item\em Currently targeted problem metadata. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__ecdf__logger_a1238b5f5aa52503d91c662bd23f9f273}\label{class_i_o_hprofiler__ecdf__logger_a1238b5f5aa52503d91c662bd23f9f273}} 
+\mbox{\hyperlink{_i_o_hprofiler__ecdf__logger_8h_a509ecc027a5e342c61dff6c69dad448e}{I\+O\+Hprofiler\+\_\+\+Attain\+Mat}} \mbox{\hyperlink{class_i_o_hprofiler__ecdf__logger_a1238b5f5aa52503d91c662bd23f9f273}{\+\_\+empty}}
+\begin{DoxyCompactList}\small\item\em An attainment matrix filled with zeros, copied for each new problem/instance/dim. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__ecdf__logger_ab8632a85813f9508feb1a17376544a88}\label{class_i_o_hprofiler__ecdf__logger_ab8632a85813f9508feb1a17376544a88}} 
+\mbox{\hyperlink{_i_o_hprofiler__ecdf__logger_8h_a0122aee983d5b84e65c32e6fd19b1678}{I\+O\+Hprofiler\+\_\+\+Attain\+Suite}} \mbox{\hyperlink{class_i_o_hprofiler__ecdf__logger_ab8632a85813f9508feb1a17376544a88}{\+\_\+ecdf\+\_\+suite}}
+\begin{DoxyCompactList}\small\item\em The whole main data structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+\subsubsection*{template$<$class T$>$\newline
+class I\+O\+Hprofiler\+\_\+ecdf\+\_\+logger$<$ T $>$}
+
+An observer which stores bi-\/dimensional error/evaluations discretized attainment matrices.
+
+A matrix is stored for each triplet (problem,dimension,instance), everything being identified by its index. Attainment matrices are boolean 2D tables, in which a 1 indicates that an error target (row index) have been attained at an evaluation target (column index).
+
+The whole set of matrices can be accessed by the {\ttfamily get} accessor. A single one can be accessed by the {\ttfamily at} accessor. Ranges can be get back by {\ttfamily $\ast$\+\_\+range} accessors, which give access to the corresponding {\ttfamily min} and {\ttfamily max} functions (\begin{DoxySeeAlso}{Voir également}
+\mbox{\hyperlink{class_i_o_hprofiler___range}{I\+O\+Hprofiler\+\_\+\+Range}}).
+\end{DoxySeeAlso}
+Example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{using} Logger = \mbox{\hyperlink{class_i_o_hprofiler__ecdf__logger}{IOHprofiler\_ecdf\_logger<BBOB\_suite::Input\_type>}};}
+\DoxyCodeLine{\mbox{\hyperlink{class_b_b_o_b__suite}{BBOB\_suite}} bench(\{1,2\},\{1,2\},\{2,10\});}
+\DoxyCodeLine{Logger logger(0,4e7,0, 0,100,20);}
+\DoxyCodeLine{}
+\DoxyCodeLine{BBOB\_suite::Problem\_ptr pb;}
+\DoxyCodeLine{\textcolor{keywordflow}{while}(pb = bench.get\_next\_problem()) \{}
+\DoxyCodeLine{    logger.target\_problem(*pb);}
+\DoxyCodeLine{    \textcolor{comment}{// Make a `sol`}}
+\DoxyCodeLine{    \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} i=0; i<100; ++i) \{ \textcolor{comment}{// 100 evaluations}}
+\DoxyCodeLine{        \textcolor{keywordtype}{double} f = pb-\/>evaluate(sol);}
+\DoxyCodeLine{        logger.write\_line(pb-\/>loggerInfo());}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{std::clog << logger.at(1,2,2) << std::endl;}
+\end{DoxyCode}
+ 
+
+\doxysubsection{Documentation des définitions de type membres}
+\mbox{\Hypertarget{class_i_o_hprofiler__ecdf__logger_a6b439c0b66b56f4576dc7f28fb1642de}\label{class_i_o_hprofiler__ecdf__logger_a6b439c0b66b56f4576dc7f28fb1642de}} 
+\index{IOHprofiler\_ecdf\_logger$<$ T $>$@{IOHprofiler\_ecdf\_logger$<$ T $>$}!InputType@{InputType}}
+\index{InputType@{InputType}!IOHprofiler\_ecdf\_logger$<$ T $>$@{IOHprofiler\_ecdf\_logger$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{InputType}{InputType}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+using \mbox{\hyperlink{class_i_o_hprofiler__ecdf__logger}{I\+O\+Hprofiler\+\_\+ecdf\+\_\+logger}}$<$ T $>$\+::\mbox{\hyperlink{class_i_o_hprofiler__observer_a215868fe839c4c4dc723aee0d67cb273}{Input\+Type}} =  typename \mbox{\hyperlink{class_i_o_hprofiler__observer}{I\+O\+Hprofiler\+\_\+observer}}$<$T$>$\+::\mbox{\hyperlink{class_i_o_hprofiler__observer_a215868fe839c4c4dc723aee0d67cb273}{Input\+Type}}}
+
+Scalar type of the solutions encoding the underlying (suite of) problems. 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_i_o_hprofiler__ecdf__logger_ab1e430490a26463004b783712708452c}\label{class_i_o_hprofiler__ecdf__logger_ab1e430490a26463004b783712708452c}} 
+\index{IOHprofiler\_ecdf\_logger$<$ T $>$@{IOHprofiler\_ecdf\_logger$<$ T $>$}!IOHprofiler\_ecdf\_logger@{IOHprofiler\_ecdf\_logger}}
+\index{IOHprofiler\_ecdf\_logger@{IOHprofiler\_ecdf\_logger}!IOHprofiler\_ecdf\_logger$<$ T $>$@{IOHprofiler\_ecdf\_logger$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{IOHprofiler\_ecdf\_logger()}{IOHprofiler\_ecdf\_logger()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_i_o_hprofiler__ecdf__logger}{I\+O\+Hprofiler\+\_\+ecdf\+\_\+logger}}$<$ T $>$\+::\mbox{\hyperlink{class_i_o_hprofiler__ecdf__logger}{I\+O\+Hprofiler\+\_\+ecdf\+\_\+logger}} (\begin{DoxyParamCaption}\item[{const double}]{error\+\_\+min,  }\item[{const double}]{error\+\_\+max,  }\item[{const size\+\_\+t}]{error\+\_\+buckets,  }\item[{const size\+\_\+t}]{evals\+\_\+min,  }\item[{const size\+\_\+t}]{evals\+\_\+max,  }\item[{const size\+\_\+t}]{evals\+\_\+buckets }\end{DoxyParamCaption})}
+
+Simple constructor that defaults to log-\/log scale. \mbox{\Hypertarget{class_i_o_hprofiler__ecdf__logger_af9130391d8688d46cd3b33b352a110aa}\label{class_i_o_hprofiler__ecdf__logger_af9130391d8688d46cd3b33b352a110aa}} 
+\index{IOHprofiler\_ecdf\_logger$<$ T $>$@{IOHprofiler\_ecdf\_logger$<$ T $>$}!IOHprofiler\_ecdf\_logger@{IOHprofiler\_ecdf\_logger}}
+\index{IOHprofiler\_ecdf\_logger@{IOHprofiler\_ecdf\_logger}!IOHprofiler\_ecdf\_logger$<$ T $>$@{IOHprofiler\_ecdf\_logger$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{IOHprofiler\_ecdf\_logger()}{IOHprofiler\_ecdf\_logger()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_i_o_hprofiler__ecdf__logger}{I\+O\+Hprofiler\+\_\+ecdf\+\_\+logger}}$<$ T $>$\+::\mbox{\hyperlink{class_i_o_hprofiler__ecdf__logger}{I\+O\+Hprofiler\+\_\+ecdf\+\_\+logger}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_o_hprofiler___range}{I\+O\+Hprofiler\+\_\+\+Range}}$<$ double $>$ \&}]{error\+\_\+buckets,  }\item[{\mbox{\hyperlink{class_i_o_hprofiler___range}{I\+O\+Hprofiler\+\_\+\+Range}}$<$ size\+\_\+t $>$ \&}]{evals\+\_\+buckets }\end{DoxyParamCaption})}
+
+Complete constructor, with which you can define linear or semi-\/log scale.
+
+\begin{DoxySeeAlso}{Voir également}
+\mbox{\hyperlink{class_i_o_hprofiler___range_linear}{I\+O\+Hprofiler\+\_\+\+Range\+Linear}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_i_o_hprofiler__ecdf__logger_a7350a662a3115406a0353172f5fad2d6}\label{class_i_o_hprofiler__ecdf__logger_a7350a662a3115406a0353172f5fad2d6}} 
+\index{IOHprofiler\_ecdf\_logger$<$ T $>$@{IOHprofiler\_ecdf\_logger$<$ T $>$}!activate\_logger@{activate\_logger}}
+\index{activate\_logger@{activate\_logger}!IOHprofiler\_ecdf\_logger$<$ T $>$@{IOHprofiler\_ecdf\_logger$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{activate\_logger()}{activate\_logger()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_i_o_hprofiler__ecdf__logger}{I\+O\+Hprofiler\+\_\+ecdf\+\_\+logger}}$<$ T $>$\+::activate\+\_\+logger}
+
+
+
+Not used, but part of the interface. 
+
+Observer interface \mbox{\Hypertarget{class_i_o_hprofiler__ecdf__logger_acde524be357b7a4bc8a0b9f98a95ee12}\label{class_i_o_hprofiler__ecdf__logger_acde524be357b7a4bc8a0b9f98a95ee12}} 
+\index{IOHprofiler\_ecdf\_logger$<$ T $>$@{IOHprofiler\_ecdf\_logger$<$ T $>$}!at@{at}}
+\index{at@{at}!IOHprofiler\_ecdf\_logger$<$ T $>$@{IOHprofiler\_ecdf\_logger$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+const \mbox{\hyperlink{_i_o_hprofiler__ecdf__logger_8h_a509ecc027a5e342c61dff6c69dad448e}{I\+O\+Hprofiler\+\_\+\+Attain\+Mat}} \& \mbox{\hyperlink{class_i_o_hprofiler__ecdf__logger}{I\+O\+Hprofiler\+\_\+ecdf\+\_\+logger}}$<$ T $>$\+::at (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{problem\+\_\+id,  }\item[{size\+\_\+t}]{instance\+\_\+id,  }\item[{size\+\_\+t}]{dim\+\_\+id }\end{DoxyParamCaption}) const}
+
+Access a single attainment matrix.
+
+\begin{DoxyNote}{Note}
+Use the same indices order than \mbox{\hyperlink{class_i_o_hprofiler__problem}{I\+O\+Hprofiler\+\_\+problem}}.
+\end{DoxyNote}
+First index\+: problem id, second index\+: instance id, third index\+: dimension id. \mbox{\Hypertarget{class_i_o_hprofiler__ecdf__logger_aa6ba4c6b2809b05deed68988bb31f64e}\label{class_i_o_hprofiler__ecdf__logger_aa6ba4c6b2809b05deed68988bb31f64e}} 
+\index{IOHprofiler\_ecdf\_logger$<$ T $>$@{IOHprofiler\_ecdf\_logger$<$ T $>$}!data@{data}}
+\index{data@{data}!IOHprofiler\_ecdf\_logger$<$ T $>$@{IOHprofiler\_ecdf\_logger$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+const \mbox{\hyperlink{_i_o_hprofiler__ecdf__logger_8h_a0122aee983d5b84e65c32e6fd19b1678}{I\+O\+Hprofiler\+\_\+\+Attain\+Suite}} \& \mbox{\hyperlink{class_i_o_hprofiler__ecdf__logger}{I\+O\+Hprofiler\+\_\+ecdf\+\_\+logger}}$<$ T $>$\+::data}
+
+Accessors Access all the data computed by this observer. \mbox{\Hypertarget{class_i_o_hprofiler__ecdf__logger_ac162f3d48f6fa032b61a1e50ec6107a1}\label{class_i_o_hprofiler__ecdf__logger_ac162f3d48f6fa032b61a1e50ec6107a1}} 
+\index{IOHprofiler\_ecdf\_logger$<$ T $>$@{IOHprofiler\_ecdf\_logger$<$ T $>$}!do\_log@{do\_log}}
+\index{do\_log@{do\_log}!IOHprofiler\_ecdf\_logger$<$ T $>$@{IOHprofiler\_ecdf\_logger$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{do\_log()}{do\_log()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_i_o_hprofiler__ecdf__logger}{I\+O\+Hprofiler\+\_\+ecdf\+\_\+logger}}$<$ T $>$\+::do\+\_\+log (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{infos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Actually store information about the last evaluation.
+
+Should be called right after \mbox{\hyperlink{class_i_o_hprofiler__problem_a936af495556300e02cc7d30bf6cf2ae0}{I\+O\+Hprofiler\+\_\+problem\+::evaluate}}, passing I\+O\+Hprofiler\+\_\+problem\+::logger\+Info(). 
+
+Implémente \mbox{\hyperlink{class_i_o_hprofiler__observer}{I\+O\+Hprofiler\+\_\+observer$<$ T $>$}}.
+
+\mbox{\Hypertarget{class_i_o_hprofiler__ecdf__logger_aa4f8907aba876ee6838a58c2d12643f9}\label{class_i_o_hprofiler__ecdf__logger_aa4f8907aba876ee6838a58c2d12643f9}} 
+\index{IOHprofiler\_ecdf\_logger$<$ T $>$@{IOHprofiler\_ecdf\_logger$<$ T $>$}!error\_range@{error\_range}}
+\index{error\_range@{error\_range}!IOHprofiler\_ecdf\_logger$<$ T $>$@{IOHprofiler\_ecdf\_logger$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{error\_range()}{error\_range()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_i_o_hprofiler___range}{I\+O\+Hprofiler\+\_\+\+Range}}$<$ double $>$ \mbox{\hyperlink{class_i_o_hprofiler__ecdf__logger}{I\+O\+Hprofiler\+\_\+ecdf\+\_\+logger}}$<$ T $>$\+::error\+\_\+range}
+
+Accessor to the range used for error targets in this logger instance. \mbox{\Hypertarget{class_i_o_hprofiler__ecdf__logger_a1ac0221048e71b09119dca857bfbbba9}\label{class_i_o_hprofiler__ecdf__logger_a1ac0221048e71b09119dca857bfbbba9}} 
+\index{IOHprofiler\_ecdf\_logger$<$ T $>$@{IOHprofiler\_ecdf\_logger$<$ T $>$}!eval\_range@{eval\_range}}
+\index{eval\_range@{eval\_range}!IOHprofiler\_ecdf\_logger$<$ T $>$@{IOHprofiler\_ecdf\_logger$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{eval\_range()}{eval\_range()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_i_o_hprofiler___range}{I\+O\+Hprofiler\+\_\+\+Range}}$<$ size\+\_\+t $>$ \mbox{\hyperlink{class_i_o_hprofiler__ecdf__logger}{I\+O\+Hprofiler\+\_\+ecdf\+\_\+logger}}$<$ T $>$\+::eval\+\_\+range}
+
+Accessor to the range used for evaluations targets in this logger instance. \mbox{\Hypertarget{class_i_o_hprofiler__ecdf__logger_a915d3dba6fa799a479819023eed60479}\label{class_i_o_hprofiler__ecdf__logger_a915d3dba6fa799a479819023eed60479}} 
+\index{IOHprofiler\_ecdf\_logger$<$ T $>$@{IOHprofiler\_ecdf\_logger$<$ T $>$}!fill\_up@{fill\_up}}
+\index{fill\_up@{fill\_up}!IOHprofiler\_ecdf\_logger$<$ T $>$@{IOHprofiler\_ecdf\_logger$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{fill\_up()}{fill\_up()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_i_o_hprofiler__ecdf__logger}{I\+O\+Hprofiler\+\_\+ecdf\+\_\+logger}}$<$ T $>$\+::fill\+\_\+up (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{i\+\_\+error,  }\item[{size\+\_\+t}]{j\+\_\+evals }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Fill up the upper/upper quadrant of the attainment matrix with ones.
+
+Take care of not losing time overwriting existing quadrants. \mbox{\Hypertarget{class_i_o_hprofiler__ecdf__logger_a2f275f8dcb5a809f03d936a9b891e9a6}\label{class_i_o_hprofiler__ecdf__logger_a2f275f8dcb5a809f03d936a9b891e9a6}} 
+\index{IOHprofiler\_ecdf\_logger$<$ T $>$@{IOHprofiler\_ecdf\_logger$<$ T $>$}!reset@{reset}}
+\index{reset@{reset}!IOHprofiler\_ecdf\_logger$<$ T $>$@{IOHprofiler\_ecdf\_logger$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_i_o_hprofiler__ecdf__logger}{I\+O\+Hprofiler\+\_\+ecdf\+\_\+logger}}$<$ T $>$\+::reset\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Clear all previously computed data structure. 
+
+Internal methods \mbox{\Hypertarget{class_i_o_hprofiler__ecdf__logger_a17ef0a4cb1c6f0515867e0942c18f09d}\label{class_i_o_hprofiler__ecdf__logger_a17ef0a4cb1c6f0515867e0942c18f09d}} 
+\index{IOHprofiler\_ecdf\_logger$<$ T $>$@{IOHprofiler\_ecdf\_logger$<$ T $>$}!size@{size}}
+\index{size@{size}!IOHprofiler\_ecdf\_logger$<$ T $>$@{IOHprofiler\_ecdf\_logger$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+std\+::tuple$<$ size\+\_\+t, size\+\_\+t, size\+\_\+t $>$ \mbox{\hyperlink{class_i_o_hprofiler__ecdf__logger}{I\+O\+Hprofiler\+\_\+ecdf\+\_\+logger}}$<$ T $>$\+::size}
+
+Returns the size of the computed data, in its internal order.
+
+\begin{DoxyNote}{Note}
+\+: the order of the indices is not the one used by I\+O\+Hprofiler\+\_\+logger interface!
+\end{DoxyNote}
+First index\+: number of problems, second index\+: number of dimensions, third index\+: number of instances. 
+
+\doxysubsection{Documentation des données membres}
+\mbox{\Hypertarget{class_i_o_hprofiler__ecdf__logger_aed5ee73a222189d7e066f4336e37df5d}\label{class_i_o_hprofiler__ecdf__logger_aed5ee73a222189d7e066f4336e37df5d}} 
+\index{IOHprofiler\_ecdf\_logger$<$ T $>$@{IOHprofiler\_ecdf\_logger$<$ T $>$}!\_range\_error@{\_range\_error}}
+\index{\_range\_error@{\_range\_error}!IOHprofiler\_ecdf\_logger$<$ T $>$@{IOHprofiler\_ecdf\_logger$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\_range\_error}{\_range\_error}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_i_o_hprofiler___range}{I\+O\+Hprofiler\+\_\+\+Range}}$<$double$>$\& \mbox{\hyperlink{class_i_o_hprofiler__ecdf__logger}{I\+O\+Hprofiler\+\_\+ecdf\+\_\+logger}}$<$ T $>$\+::\+\_\+range\+\_\+error\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Range for the errors axis. 
+
+Internal members 
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+I\+O\+Hexperimenter/src/\+Template/\+Loggers/\mbox{\hyperlink{_i_o_hprofiler__ecdf__logger_8h}{I\+O\+Hprofiler\+\_\+ecdf\+\_\+logger.\+h}}\item 
+I\+O\+Hexperimenter/src/\+Template/\+Loggers/I\+O\+Hprofiler\+\_\+ecdf\+\_\+logger.\+hpp\end{DoxyCompactItemize}

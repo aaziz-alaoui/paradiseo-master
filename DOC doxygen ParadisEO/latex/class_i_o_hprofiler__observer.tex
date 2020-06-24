@@ -1,0 +1,181 @@
+\hypertarget{class_i_o_hprofiler__observer}{}\doxysection{Référence du modèle de la classe I\+O\+Hprofiler\+\_\+observer$<$ T $>$}
+\label{class_i_o_hprofiler__observer}\index{IOHprofiler\_observer$<$ T $>$@{IOHprofiler\_observer$<$ T $>$}}
+
+
+A class of methods of setting triggers recording evaluations.  
+
+
+
+
+{\ttfamily \#include $<$I\+O\+Hprofiler\+\_\+observer.\+hpp$>$}
+
+
+
+Graphe d\textquotesingle{}héritage de I\+O\+Hprofiler\+\_\+observer$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_i_o_hprofiler__observer__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__observer_aa01cbb8c95f3dca0c1c94ecf05fc3ac2}\label{class_i_o_hprofiler__observer_aa01cbb8c95f3dca0c1c94ecf05fc3ac2}} 
+{\bfseries I\+O\+Hprofiler\+\_\+observer} (const \mbox{\hyperlink{class_i_o_hprofiler__observer}{I\+O\+Hprofiler\+\_\+observer}} \&)=delete
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__observer_a22f607ac4768a790472551bd801e4822}\label{class_i_o_hprofiler__observer_a22f607ac4768a790472551bd801e4822}} 
+\mbox{\hyperlink{class_i_o_hprofiler__observer}{I\+O\+Hprofiler\+\_\+observer}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_i_o_hprofiler__observer}{I\+O\+Hprofiler\+\_\+observer}} \&)=delete
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__observer_ace9b3fc1c04d75763e9ab9449689df5f}\label{class_i_o_hprofiler__observer_ace9b3fc1c04d75763e9ab9449689df5f}} 
+void {\bfseries set\+\_\+complete\+\_\+flag} (bool complete\+\_\+flag)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__observer_aaf5ecc16435b1ffa5cddb776143f4e79}\label{class_i_o_hprofiler__observer_aaf5ecc16435b1ffa5cddb776143f4e79}} 
+bool {\bfseries complete\+\_\+status} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__observer_abd418a84cc70a224716a42d7d853419f}\label{class_i_o_hprofiler__observer_abd418a84cc70a224716a42d7d853419f}} 
+bool {\bfseries complete\+\_\+trigger} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__observer_a1d3f08c7896b588aefd2248f2073edae}\label{class_i_o_hprofiler__observer_a1d3f08c7896b588aefd2248f2073edae}} 
+void {\bfseries set\+\_\+interval} (int interval)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__observer_a79652064312087a768a58e980d043515}\label{class_i_o_hprofiler__observer_a79652064312087a768a58e980d043515}} 
+bool {\bfseries interval\+\_\+status} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__observer_a016c039378c43ac204285891d14333f5}\label{class_i_o_hprofiler__observer_a016c039378c43ac204285891d14333f5}} 
+bool {\bfseries interval\+\_\+trigger} (size\+\_\+t evaluations) const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__observer_abce5387fb63f2a499ae8341858ce8299}\label{class_i_o_hprofiler__observer_abce5387fb63f2a499ae8341858ce8299}} 
+void {\bfseries set\+\_\+update\+\_\+flag} (bool update\+\_\+flag)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__observer_a80c064ffd08ccf7cbf30a534c11c9653}\label{class_i_o_hprofiler__observer_a80c064ffd08ccf7cbf30a534c11c9653}} 
+bool {\bfseries update\+\_\+status} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__observer_aae339fc5d6388ffba8153a96a7371b8a}\label{class_i_o_hprofiler__observer_aae339fc5d6388ffba8153a96a7371b8a}} 
+bool {\bfseries update\+\_\+trigger} (double fitness, int optimization\+\_\+type)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__observer_a3725cc08a576840943fb9af90e35a422}\label{class_i_o_hprofiler__observer_a3725cc08a576840943fb9af90e35a422}} 
+void {\bfseries set\+\_\+time\+\_\+points} (const std\+::vector$<$ int $>$ \&time\+\_\+points, const int number\+\_\+of\+\_\+evaluations, const int time\+\_\+points\+\_\+exp\+\_\+base1=10, const int time\+\_\+points\+\_\+exp\+\_\+base2=10)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__observer_ab9fc321c7995b28c032902a7453af2cb}\label{class_i_o_hprofiler__observer_ab9fc321c7995b28c032902a7453af2cb}} 
+bool {\bfseries time\+\_\+points\+\_\+status} () const
+\item 
+bool \mbox{\hyperlink{class_i_o_hprofiler__observer_a9c4468affceaac660ff03ae3fc9d4027}{time\+\_\+points\+\_\+trigger}} (size\+\_\+t evaluations)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__observer_afdf6af6bcb78dee0f0f41e0979cb2a96}\label{class_i_o_hprofiler__observer_afdf6af6bcb78dee0f0f41e0979cb2a96}} 
+void {\bfseries reset\+\_\+observer} (const int optimization\+\_\+type)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{class_i_o_hprofiler__observer_a215868fe839c4c4dc723aee0d67cb273}{Input\+Type}} = T
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__observer_a46b678664f43b91940621fce9ff7810c}\label{class_i_o_hprofiler__observer_a46b678664f43b91940621fce9ff7810c}} 
+virtual void {\bfseries track\+\_\+problem} (const \mbox{\hyperlink{class_i_o_hprofiler__problem}{I\+O\+Hprofiler\+\_\+problem}}$<$ \mbox{\hyperlink{class_i_o_hprofiler__observer_a215868fe839c4c4dc723aee0d67cb273}{Input\+Type}} $>$ \&problem)=0
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__observer_aa8fa186ea2b1e0f046adcd76a4e9e492}\label{class_i_o_hprofiler__observer_aa8fa186ea2b1e0f046adcd76a4e9e492}} 
+virtual void {\bfseries track\+\_\+suite} (const \mbox{\hyperlink{class_i_o_hprofiler__suite}{I\+O\+Hprofiler\+\_\+suite}}$<$ T $>$ \&suite)=0
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__observer_a04460aa207c76d679556e2ca7cca9fbe}\label{class_i_o_hprofiler__observer_a04460aa207c76d679556e2ca7cca9fbe}} 
+virtual void {\bfseries do\+\_\+log} (const std\+::vector$<$ double $>$ \&log\+\_\+info)=0
+\item 
+\mbox{\hyperlink{class_i_o_hprofiler__observer_a21b56c3a8368ec7933a7d857f22a2c07}{I\+O\+Hprofiler\+\_\+observer}} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__observer_aa01cbb8c95f3dca0c1c94ecf05fc3ac2}\label{class_i_o_hprofiler__observer_aa01cbb8c95f3dca0c1c94ecf05fc3ac2}} 
+{\bfseries I\+O\+Hprofiler\+\_\+observer} (const \mbox{\hyperlink{class_i_o_hprofiler__observer}{I\+O\+Hprofiler\+\_\+observer}} \&)=delete
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__observer_a22f607ac4768a790472551bd801e4822}\label{class_i_o_hprofiler__observer_a22f607ac4768a790472551bd801e4822}} 
+\mbox{\hyperlink{class_i_o_hprofiler__observer}{I\+O\+Hprofiler\+\_\+observer}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_i_o_hprofiler__observer}{I\+O\+Hprofiler\+\_\+observer}} \&)=delete
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__observer_ace9b3fc1c04d75763e9ab9449689df5f}\label{class_i_o_hprofiler__observer_ace9b3fc1c04d75763e9ab9449689df5f}} 
+void {\bfseries set\+\_\+complete\+\_\+flag} (bool complete\+\_\+flag)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__observer_aaf5ecc16435b1ffa5cddb776143f4e79}\label{class_i_o_hprofiler__observer_aaf5ecc16435b1ffa5cddb776143f4e79}} 
+bool {\bfseries complete\+\_\+status} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__observer_abd418a84cc70a224716a42d7d853419f}\label{class_i_o_hprofiler__observer_abd418a84cc70a224716a42d7d853419f}} 
+bool {\bfseries complete\+\_\+trigger} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__observer_a1d3f08c7896b588aefd2248f2073edae}\label{class_i_o_hprofiler__observer_a1d3f08c7896b588aefd2248f2073edae}} 
+void {\bfseries set\+\_\+interval} (int interval)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__observer_a79652064312087a768a58e980d043515}\label{class_i_o_hprofiler__observer_a79652064312087a768a58e980d043515}} 
+bool {\bfseries interval\+\_\+status} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__observer_a016c039378c43ac204285891d14333f5}\label{class_i_o_hprofiler__observer_a016c039378c43ac204285891d14333f5}} 
+bool {\bfseries interval\+\_\+trigger} (size\+\_\+t evaluations) const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__observer_abce5387fb63f2a499ae8341858ce8299}\label{class_i_o_hprofiler__observer_abce5387fb63f2a499ae8341858ce8299}} 
+void {\bfseries set\+\_\+update\+\_\+flag} (bool update\+\_\+flag)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__observer_aa5f2fc96966ce63399b4fbd30cda83d9}\label{class_i_o_hprofiler__observer_aa5f2fc96966ce63399b4fbd30cda83d9}} 
+bool {\bfseries update\+\_\+trigger} (double fitness, I\+O\+H\+\_\+optimization\+\_\+type optimization\+\_\+type)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__observer_a80c064ffd08ccf7cbf30a534c11c9653}\label{class_i_o_hprofiler__observer_a80c064ffd08ccf7cbf30a534c11c9653}} 
+bool {\bfseries update\+\_\+status} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__observer_a3725cc08a576840943fb9af90e35a422}\label{class_i_o_hprofiler__observer_a3725cc08a576840943fb9af90e35a422}} 
+void {\bfseries set\+\_\+time\+\_\+points} (const std\+::vector$<$ int $>$ \&time\+\_\+points, const int number\+\_\+of\+\_\+evaluations, const int time\+\_\+points\+\_\+exp\+\_\+base1=10, const int time\+\_\+points\+\_\+exp\+\_\+base2=10)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__observer_ab9fc321c7995b28c032902a7453af2cb}\label{class_i_o_hprofiler__observer_ab9fc321c7995b28c032902a7453af2cb}} 
+bool {\bfseries time\+\_\+points\+\_\+status} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__observer_a9c4468affceaac660ff03ae3fc9d4027}\label{class_i_o_hprofiler__observer_a9c4468affceaac660ff03ae3fc9d4027}} 
+bool {\bfseries time\+\_\+points\+\_\+trigger} (size\+\_\+t evaluations)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__observer_a87f397bf94910a22dbdc4d20eda5858d}\label{class_i_o_hprofiler__observer_a87f397bf94910a22dbdc4d20eda5858d}} 
+void {\bfseries reset\+\_\+observer} (const I\+O\+H\+\_\+optimization\+\_\+type optimization\+\_\+type)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+\subsubsection*{template$<$class T$>$\newline
+class I\+O\+Hprofiler\+\_\+observer$<$ T $>$}
+
+A class of methods of setting triggers recording evaluations. 
+
+Four methods is introduced here\+:
+\begin{DoxyEnumerate}
+\item Recording evaluations by a static interval.
+\item Recording complete evaluations.
+\item Recording evaluations as the best found solution is updated.
+\item Recording evaluations at pre-\/defined points or/and with a static number for each exponential bucket. 
+\end{DoxyEnumerate}
+
+\doxysubsection{Documentation des définitions de type membres}
+\mbox{\Hypertarget{class_i_o_hprofiler__observer_a215868fe839c4c4dc723aee0d67cb273}\label{class_i_o_hprofiler__observer_a215868fe839c4c4dc723aee0d67cb273}} 
+\index{IOHprofiler\_observer$<$ T $>$@{IOHprofiler\_observer$<$ T $>$}!InputType@{InputType}}
+\index{InputType@{InputType}!IOHprofiler\_observer$<$ T $>$@{IOHprofiler\_observer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{InputType}{InputType}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+using \mbox{\hyperlink{class_i_o_hprofiler__observer}{I\+O\+Hprofiler\+\_\+observer}}$<$ T $>$\+::\mbox{\hyperlink{class_i_o_hprofiler__observer_a215868fe839c4c4dc723aee0d67cb273}{Input\+Type}} =  T}
+
+A\+PI for subclasses 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_i_o_hprofiler__observer_a21b56c3a8368ec7933a7d857f22a2c07}\label{class_i_o_hprofiler__observer_a21b56c3a8368ec7933a7d857f22a2c07}} 
+\index{IOHprofiler\_observer$<$ T $>$@{IOHprofiler\_observer$<$ T $>$}!IOHprofiler\_observer@{IOHprofiler\_observer}}
+\index{IOHprofiler\_observer@{IOHprofiler\_observer}!IOHprofiler\_observer$<$ T $>$@{IOHprofiler\_observer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{IOHprofiler\_observer()}{IOHprofiler\_observer()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_i_o_hprofiler__observer}{I\+O\+Hprofiler\+\_\+observer}}$<$ T $>$\+::\mbox{\hyperlink{class_i_o_hprofiler__observer}{I\+O\+Hprofiler\+\_\+observer}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\}@ 
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_i_o_hprofiler__observer_a9c4468affceaac660ff03ae3fc9d4027}\label{class_i_o_hprofiler__observer_a9c4468affceaac660ff03ae3fc9d4027}} 
+\index{IOHprofiler\_observer$<$ T $>$@{IOHprofiler\_observer$<$ T $>$}!time\_points\_trigger@{time\_points\_trigger}}
+\index{time\_points\_trigger@{time\_points\_trigger}!IOHprofiler\_observer$<$ T $>$@{IOHprofiler\_observer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{time\_points\_trigger()}{time\_points\_trigger()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{class_i_o_hprofiler__observer}{I\+O\+Hprofiler\+\_\+observer}}$<$ T $>$\+::time\+\_\+points\+\_\+trigger (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{evaluations }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+evaluations\+\_\+values is to be set by 10$^\wedge$n $\ast$ elements of observer\+\_\+time\+\_\+points. For example, observer\+\_\+time\+\_\+points = \{1,2,5\}, the trigger returns true at 1, 2, 5, 10$\ast$1, 10$\ast$2, 10$\ast$5, 100$\ast$1, 100$\ast$2, 100$\ast$5,... ~\newline
+
+
+evaluations\+\_\+value2 = floor(10$^\wedge$(i/n), n is observer\+\_\+number\+\_\+of\+\_\+evaluations. It maintains that in each \mbox{[}10$^\wedge$m, 10$^\wedge$(m+1)\mbox{]}, there will be observer\+\_\+number\+\_\+of\+\_\+evaluations evaluations are stored.
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+I\+O\+Hexperimenter/build/\+R/src/\+Headers/\mbox{\hyperlink{build_2_r_2src_2_headers_2_i_o_hprofiler__observer_8hpp}{I\+O\+Hprofiler\+\_\+observer.\+hpp}}\item 
+I\+O\+Hexperimenter/src/\+Template/\mbox{\hyperlink{_i_o_hprofiler__observer_8h}{I\+O\+Hprofiler\+\_\+observer.\+h}}\end{DoxyCompactItemize}
