@@ -27,7 +27,6 @@
 #include "eoAlgoFoundryEA.h"
 #include "eoInit.h"
 #include "eoPopEvalFunc.h"
-#include <IOH.h>
 
 /** Evaluate an algorithm assembled by an eoAlgoFoundryEA, encoded as a numeric vector.
  *
@@ -138,6 +137,7 @@ public:
             _foundry(pop);
 
             sol.fitness( pop.best_element().fitness() );
+            // sol.fitness(_sum(_logger.data()));
         } else {
             sol.fitness( _penalization ); // penalization
         }
@@ -149,6 +149,8 @@ protected:
     eoAlgoFoundryEA<SUB>& _foundry;
     const typename EOT::Fitness _penalization;
     const size_t _pop_size;
+    IOHprofiler_ecdf_stat<double>& _sum;
+    IOHprofiler_ecdf_logger<int>& _logger;
 };
 
 /** Helper function to instanciate an eoEvalFoundryEA without having to indicate the template for the sub-problem encoding.

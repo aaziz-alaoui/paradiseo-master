@@ -41,6 +41,7 @@
 // #include <IOH/ALL/IOHprofiler_suite.hpp>
 #include <IOH/ALL/IOHprofiler_ecdf_logger.h>
 #include "IOH/ALL/eoEvalIOH.h"
+#include "IOH/ALL/eoEvalFoundryEA.h"
 
 // #include "IOH/ALL/IOHprofiler_observer.h"
 // #include "IOH/ALL/IOHprofiler_common.h"
