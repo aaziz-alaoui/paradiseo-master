@@ -66,45 +66,45 @@ eoAlgoFoundryEA<Bits>& make_foundry(eoFunctorStore& store, eoPopEvalFunc<Bits>& 
 }
 
 // A basic PSO algorithm.
-// std::pair< eoAlgo<Particle>*, eoPop<Particle>* >
-//     make_pso(eoFunctorStore& store, eoEvalFoundryEA<Particle,Bits>& eval_foundry, size_t dim)
-// {
-//     auto& gen_pos = store.pack< eoUniformGenerator<double> >(0.1,0.9);
-//     auto& random_pos = store.pack< eoInitFixedLength<Particle> >(dim, gen_pos);
+std::pair< eoAlgo<Particle>*, eoPop<Particle>* >
+    make_pso(eoFunctorStore& store, eoEvalFoundryEA<Particle,Bits>& eval_foundry, size_t dim)
+{
+    auto& gen_pos = store.pack< eoUniformGenerator<double> >(0.1,0.9);
+    auto& random_pos = store.pack< eoInitFixedLength<Particle> >(dim, gen_pos);
 
-//     auto pop = new eoPop<Particle>();
-//     pop->append(10, random_pos); // pop size
+    auto pop = new eoPop<Particle>();
+    pop->append(10, random_pos); // pop size
 
-//     auto& gen_minus = store.pack< eoUniformGenerator<double> >(-0.05, 0.05);
-//     auto& random_velo = store.pack< eoVelocityInitFixedLength<Particle> >(dim, gen_minus);
+    auto& gen_minus = store.pack< eoUniformGenerator<double> >(-0.05, 0.05);
+    auto& random_velo = store.pack< eoVelocityInitFixedLength<Particle> >(dim, gen_minus);
 
-//     auto& local_init = store.pack< eoFirstIsBestInit<Particle> >();
+    auto& local_init = store.pack< eoFirstIsBestInit<Particle> >();
 
-//     auto topology = new eoLinearTopology<Particle>(5); // neighborhood size
+    auto topology = new eoLinearTopology<Particle>(5); // neighborhood size
 
-//     auto& init = store.pack< eoInitializer<Particle> >(eval_foundry, random_velo, local_init, *topology, *pop);
-//     init();
+    auto& init = store.pack< eoInitializer<Particle> >(eval_foundry, random_velo, local_init, *topology, *pop);
+    init();
 
-//     auto bounds = new eoRealVectorBounds(dim, 0, 0.999999);
+    auto bounds = new eoRealVectorBounds(dim, 0, 0.999999);
 
-//     auto& velocity = store.pack< eoStandardVelocity<Particle> >(*topology, 1, 1.6, 2, *bounds);
+    auto& velocity = store.pack< eoStandardVelocity<Particle> >(*topology, 1, 1.6, 2, *bounds);
 
-//     auto& flight = store.pack< eoStandardFlight<Particle> >();
+    auto& flight = store.pack< eoStandardFlight<Particle> >();
 
-//     auto& cont_gen = store.pack< eoGenContinue<Particle> >(10);
-//     auto& cont = store.pack< eoCombinedContinue<Particle> >(cont_gen);
+    auto& cont_gen = store.pack< eoGenContinue<Particle> >(10);
+    auto& cont = store.pack< eoCombinedContinue<Particle> >(cont_gen);
 
-//     auto& checkpoint = store.pack< eoCheckPoint<Particle> >(cont);
-//     auto& best = store.pack< eoBestFitnessStat<Particle> >();
-//     checkpoint.add(best);
-//     auto& monitor = store.pack< eoOStreamMonitor >(std::clog);
-//     monitor.add(best);
-//     checkpoint.add(monitor);
+    auto& checkpoint = store.pack< eoCheckPoint<Particle> >(cont);
+    auto& best = store.pack< eoBestFitnessStat<Particle> >();
+    checkpoint.add(best);
+    auto& monitor = store.pack< eoOStreamMonitor >(std::clog);
+    monitor.add(best);
+    checkpoint.add(monitor);
 
-//     auto& pso = store.pack< eoEasyPSO<Particle> >(init, checkpoint, eval_foundry, velocity, flight);
+    auto& pso = store.pack< eoEasyPSO<Particle> >(init, checkpoint, eval_foundry, velocity, flight);
 
-//     return std::make_pair(&pso,pop);
-// }    
+    return std::make_pair(&pso,pop);
+}    
 
 
 int main(int /*argc*/, char** /*argv*/)
@@ -194,6 +194,7 @@ int main(int /*argc*/, char** /*argv*/)
 
     logger.track_problem(w_model_om);
 
+    IOHprofiler_ecdf_sum sum;
 
     eoEvalIOHproblem<Bits> evalfunc(w_model_om, logger);
      
@@ -209,17 +210,21 @@ int main(int /*argc*/, char** /*argv*/)
     eoInitFixedLength<Bits> onemax_init(/*bitstring size=*/50, gen);
     eoEvalFoundryEA<Particle,Bits> eval_foundry(foundry,
             onemax_init, /*pop_size=*/ 10,
-            onemax_eval, /*penalization=*/ 0)   ;
+            onemax_eval, /*penalization=*/ 0,
+            sum, logger)   ;
 
 
     /***** return statistic on the algorithm *****/
 
-
+    
 
 
 
 
     
+
+
+
 
 
 

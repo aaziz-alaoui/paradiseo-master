@@ -27,6 +27,7 @@
 #include "eoAlgoFoundryEA.h"
 #include "eoInit.h"
 #include "eoPopEvalFunc.h"
+#include <eo>
 
 /** Evaluate an algorithm assembled by an eoAlgoFoundryEA, encoded as a numeric vector.
  *
@@ -56,7 +57,9 @@ public:
             eoInit<SUB>& subpb_init,
             const size_t pop_size,
             eoPopEvalFunc<SUB>& subpb_eval,
-            const typename SUB::Fitness penalization
+            const typename SUB::Fitness penalization,
+            IOHprofiler_ecdf_stat<double>& sum,
+            IOHprofiler_ecdf_logger<int>& logger
         ) :
             _subpb_init(subpb_init),
             _subpb_eval(subpb_eval),
@@ -67,7 +70,11 @@ public:
             i_cros(foundry.crossovers.index()),
             i_muta(foundry.mutations.index()),
             i_sele(foundry.selectors.index()),
-            i_repl(foundry.replacements.index())
+            i_repl(foundry.replacements.index()),
+            _sum(sum),
+            _logger(logger)
+
+
     { }
 
 protected:
@@ -136,8 +143,8 @@ public:
             // Actually perform a search
             _foundry(pop);
 
-            sol.fitness( pop.best_element().fitness() );
-            // sol.fitness(_sum(_logger.data()));
+            // sol.fitness( pop.best_element().fitness() );
+            sol.fitness(_sum(_logger.data()));
         } else {
             sol.fitness( _penalization ); // penalization
         }

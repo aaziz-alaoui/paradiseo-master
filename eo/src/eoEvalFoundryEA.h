@@ -1,4 +1,3 @@
-
 /*
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Lesser General Public
@@ -29,6 +28,7 @@
 #include "eoPopEvalFunc.h"
 #include <IOH.h>
 
+
 /** Evaluate an algorithm assembled by an eoAlgoFoundryEA, encoded as a numeric vector.
  *
  * Allows to plug another search algorithm on top of an eoAlgoFoundryEA,
@@ -57,7 +57,9 @@ public:
             eoInit<SUB>& subpb_init,
             const size_t pop_size,
             eoPopEvalFunc<SUB>& subpb_eval,
-            const typename SUB::Fitness penalization
+            const typename SUB::Fitness penalization,
+            IOHprofiler_ecdf_stat<size_t>& sum,
+            IOHprofiler_ecdf_logger<int>& logger
         ) :
             _subpb_init(subpb_init),
             _subpb_eval(subpb_eval),
@@ -68,7 +70,11 @@ public:
             i_cros(foundry.crossovers.index()),
             i_muta(foundry.mutations.index()),
             i_sele(foundry.selectors.index()),
-            i_repl(foundry.replacements.index())
+            i_repl(foundry.replacements.index()),
+            _sum(sum),
+            _logger(logger)
+
+
     { }
 
 protected:
@@ -137,7 +143,8 @@ public:
             // Actually perform a search
             _foundry(pop);
 
-            sol.fitness( pop.best_element().fitness() );
+            // sol.fitness( pop.best_element().fitness() );
+            sol.fitness(_sum(_logger.data()));
         } else {
             sol.fitness( _penalization ); // penalization
         }
@@ -149,6 +156,8 @@ protected:
     eoAlgoFoundryEA<SUB>& _foundry;
     const typename EOT::Fitness _penalization;
     const size_t _pop_size;
+    IOHprofiler_ecdf_stat<size_t>& _sum;
+    IOHprofiler_ecdf_logger<int>& _logger;
 };
 
 /** Helper function to instanciate an eoEvalFoundryEA without having to indicate the template for the sub-problem encoding.
