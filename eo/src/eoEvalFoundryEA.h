@@ -144,6 +144,7 @@ public:
             _foundry(pop);
 
             // sol.fitness( pop.best_element().fitness() );
+            // the logger is linked with the foundry
             sol.fitness(_sum(_logger.data()));
         } else {
             sol.fitness( _penalization ); // penalization

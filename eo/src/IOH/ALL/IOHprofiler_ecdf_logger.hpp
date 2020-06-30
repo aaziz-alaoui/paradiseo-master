@@ -233,6 +233,11 @@ void IOHprofiler_ecdf_logger<T>::init_ecdf( const Problem& cur )
     if(_ecdf_suite[cur.pb][cur.dim].count(cur.ins) == 0) {
         _ecdf_suite[cur.pb][cur.dim][cur.ins] = _empty;
     }
+    assert(_ecdf_suite.size() > 0);
+    assert(_ecdf_suite.at(cur.pb).size() > 0);
+    assert(_ecdf_suite.at(cur.pb).at(cur.dim).size() > 0);
+    assert(_ecdf_suite.at(cur.pb).at(cur.dim).at(cur.ins).size() > 0);
+    // std::cout << _ecdf_suite.at(cur.pb).size() << std::endl; 
     assert(_ecdf_suite.at(cur.pb).at(cur.dim).at(cur.ins).at(0).at(0) == 0);
 }
 

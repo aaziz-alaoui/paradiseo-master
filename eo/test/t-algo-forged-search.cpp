@@ -5,10 +5,12 @@
 #include <ga.h>
 #include "../../problems/eval/oneMaxEval.h"
 
+
 #include <eo>
 #include <utils/checkpointing>
 
-using Particle = eoRealParticle<eoMaximizingFitness>;
+// using Particle = eoRealParticle<eoMaximizingFitness>;
+using Int = eoInt<double, size_t>;
 using Bits = eoBit<double, int>;
 
 
@@ -65,111 +67,34 @@ eoAlgoFoundryEA<Bits>& make_foundry(eoFunctorStore& store, eoPopEvalFunc<Bits>& 
     return foundry;
 }
 
-// A basic PSO algorithm.
-std::pair< eoAlgo<Particle>*, eoPop<Particle>* >
-    make_pso(eoFunctorStore& store, eoEvalFoundryEA<Particle,Bits>& eval_foundry, size_t dim)
-{
-    auto& gen_pos = store.pack< eoUniformGenerator<double> >(0.1,0.9);
-    auto& random_pos = store.pack< eoInitFixedLength<Particle> >(dim, gen_pos);
-
-    auto pop = new eoPop<Particle>();
-    pop->append(10, random_pos); // pop size
-
-    auto& gen_minus = store.pack< eoUniformGenerator<double> >(-0.05, 0.05);
-    auto& random_velo = store.pack< eoVelocityInitFixedLength<Particle> >(dim, gen_minus);
-
-    auto& local_init = store.pack< eoFirstIsBestInit<Particle> >();
-
-    auto topology = new eoLinearTopology<Particle>(5); // neighborhood size
-
-    auto& init = store.pack< eoInitializer<Particle> >(eval_foundry, random_velo, local_init, *topology, *pop);
-    init();
-
-    auto bounds = new eoRealVectorBounds(dim, 0, 0.999999);
-
-    auto& velocity = store.pack< eoStandardVelocity<Particle> >(*topology, 1, 1.6, 2, *bounds);
-
-    auto& flight = store.pack< eoStandardFlight<Particle> >();
-
-    auto& cont_gen = store.pack< eoGenContinue<Particle> >(10);
-    auto& cont = store.pack< eoCombinedContinue<Particle> >(cont_gen);
-
-    auto& checkpoint = store.pack< eoCheckPoint<Particle> >(cont);
-    auto& best = store.pack< eoBestFitnessStat<Particle> >();
-    checkpoint.add(best);
-    auto& monitor = store.pack< eoOStreamMonitor >(std::clog);
-    monitor.add(best);
-    checkpoint.add(monitor);
-
-    auto& pso = store.pack< eoEasyPSO<Particle> >(init, checkpoint, eval_foundry, velocity, flight);
-
-    return std::make_pair(&pso,pop);
-}    
-
-
-int main(int /*argc*/, char** /*argv*/)
+int main(int argc, char* argv[])
 {   
     
+    // std::cout << "Checkpoint 1" << std::endl;
+
     eo::log << eo::setlevel(eo::warnings);
     eoFunctorStore store;
 
-
-
-    // IOHprofiler_csv_logger<int> logger("./","run_w_model","EA","EA");
-    // logger.set_complete_flag(true);
-    // logger.set_interval(0);
-
-    // logger.activate_logger();
-    
-    // /// Configure w_model
-    // int dimension = 100;
-    // double w_model_suite_dummy_para = 0.75;
-    // int w_model_suite_epitasis_para = 4;
-    // int w_model_suite_neutrality_para = 3;
-    // int w_model_suite_ruggedness_para = 100;
-
-    // W_Model_OneMax w_model_om;
-    // std::string problem_name = "OneMax";
-    // problem_name = problem_name 
-    //                 + "_D" + std::to_string((int)(w_model_suite_dummy_para * dimension))
-    //                 + "_E" + std::to_string(w_model_suite_epitasis_para)
-    //                 + "_N" + std::to_string(w_model_suite_neutrality_para)
-    //                 + "_R" + std::to_string(w_model_suite_ruggedness_para);
-
-    // /// This must be called to configure the w-model to be tested.
-    // w_model_om.set_w_setting(w_model_suite_dummy_para,w_model_suite_epitasis_para,
-    //                                 w_model_suite_neutrality_para,w_model_suite_ruggedness_para);
-
-    // /// Set problem_name based on the configuration.
-    // w_model_om.IOHprofiler_set_problem_name(problem_name);
-
-    // /// Set problem_id as 1
-    // w_model_om.IOHprofiler_set_problem_id(1);
-
-    // /// Set dimension.
-    // w_model_om.IOHprofiler_set_number_of_variables(dimension);
-
-    // logger.track_problem(w_model_om.IOHprofiler_get_problem_id(), 
-    //                     w_model_om.IOHprofiler_get_number_of_variables(), 
-    //                     w_model_om.IOHprofiler_get_instance_id(),
-    //                     w_model_om.IOHprofiler_get_problem_name(),
-    //                     w_model_om.IOHprofiler_get_optimization_type());
+    // std::cout << "Checkpoint 2" << std::endl;
 
 
 
-
-    IOHprofiler_ecdf_logger<int> logger(0,4e7,0, 0,100,20);
+    IOHprofiler_ecdf_logger<int> logger(0, 100, 10, 0, 100, 10);
     logger.set_complete_flag(true);
     logger.set_interval(0);
 
     logger.activate_logger();
     
+    // std::cout << "Checkpoint 3" << std::endl;
+
     /// Configure w_model
     int dimension = 100;
     double w_model_suite_dummy_para = 0;
     int w_model_suite_epitasis_para = 0;
     int w_model_suite_neutrality_para = 0;
     int w_model_suite_ruggedness_para = 0;
+
+    // std::cout << "Checkpoint 4" << std::endl;
 
     W_Model_OneMax w_model_om;
     std::string problem_name = "OneMax";
@@ -179,22 +104,38 @@ int main(int /*argc*/, char** /*argv*/)
                     + "_N" + std::to_string(w_model_suite_neutrality_para)
                     + "_R" + std::to_string(w_model_suite_ruggedness_para);
 
+    // std::cout << "Checkpoint 5" << std::endl;
+
     /// This must be called to configure the w-model to be tested.
     w_model_om.set_w_setting(w_model_suite_dummy_para,w_model_suite_epitasis_para,
                                     w_model_suite_neutrality_para,w_model_suite_ruggedness_para);
 
+    // std::cout << "Checkpoint 6" << std::endl;
+
     /// Set problem_name based on the configuration.
     w_model_om.IOHprofiler_set_problem_name(problem_name);
+
+    // std::cout << "Checkpoint 7" << std::endl;
 
     /// Set problem_id as 1
     w_model_om.IOHprofiler_set_problem_id(1);
 
+    // std::cout << "Checkpoint 8" << std::endl;
+
     /// Set dimension.
     w_model_om.IOHprofiler_set_number_of_variables(dimension);
 
+    // std::cout << "Checkpoint 9" << std::endl;
+    // std::cout << "Checkpoint 10" << std::endl;
+
     logger.track_problem(w_model_om);
 
+    // std::cout << "Checkpoint 11" << std::endl;
+
     IOHprofiler_ecdf_sum sum;
+
+    // std::cout << "Checkpoint 12" << std::endl;
+
 
     eoEvalIOHproblem<Bits> evalfunc(w_model_om, logger);
      
@@ -207,55 +148,30 @@ int main(int /*argc*/, char** /*argv*/)
 
     // Evaluation of a forged algo on the sub-problem
     eoUniformGenerator<int> gen(0, 1);
-    eoInitFixedLength<Bits> onemax_init(/*bitstring size=*/50, gen);
-    eoEvalFoundryEA<Particle,Bits> eval_foundry(foundry,
+    eoInitFixedLength<Bits> onemax_init(/*bitstring size=*/100, gen);
+    eoEvalFoundryEA<Int, Bits> eval_foundry(foundry,
             onemax_init, /*pop_size=*/ 10,
             onemax_eval, /*penalization=*/ 0,
             sum, logger)   ;
 
 
-    /***** return statistic on the algorithm *****/
+    /***** return statistic on the chosen algorithm *****/
 
+    assert(argc == 6);
+    // Int algo = {atoi(argv[1]), atoi(argv[2]), atoi(argv[3]), atoi(argv[4]), atoi(argv[5])};
+    Int algo(5);
+    algo[0] = atoi(argv[1]);
+    algo[1] = atoi(argv[2]);
+    algo[2] = atoi(argv[3]);
+    algo[3] = atoi(argv[4]);
+    algo[4] = atoi(argv[5]);
+
+    eval_foundry(algo);
     
 
 
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /***** Algorithm selection stuff (PSO on foundry) *****/
-    eoAlgo<Particle>* pso;
-    eoPop<Particle>* pop_foundry;
-    std::tie(pso, pop_foundry) = make_pso(store, eval_foundry, foundry.size());
- 
-    // Perform the best algorithm configuration search.
-    (*pso)(*pop_foundry);
-
-
-
-
-
-
-
-
-
-
-
-    // // Print a glimpse of the best algorithm found.
-    foundry.select(eval_foundry.decode(pop_foundry->best_element()));
-    std::cout << "Best algorithm: " << foundry.name() << std::endl;
+    // // Print a glimpse of the algorithm metric found.
+    // //std::clog
+    std::cout << "Algorithm's performance : " << /* vérifier affichage*/ algo.fitness() << std::endl;
 
 }
