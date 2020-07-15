@@ -4,7 +4,7 @@
 #include <eo>
 #include <ga.h>
 #include "../../problems/eval/oneMaxEval.h"
-
+#include <cstdlib>
 
 #include <eo>
 #include <utils/checkpointing>
@@ -19,11 +19,13 @@ using Bits = eoBit<double, int>;
 // by enumerating candidate operators and their parameters.
 eoAlgoFoundryEA<Bits>& make_foundry(eoFunctorStore& store, eoPopEvalFunc<Bits>& eval_onemax)
 {
-    auto& foundry = store.pack< eoAlgoFoundryEA<Bits> >(eval_onemax, 100);
+    // doit être égal au eoInit plus bas sinon erreur
+    auto& foundry = store.pack< eoAlgoFoundryEA<Bits> >(eval_onemax, 1000);
 
     /***** Continuators ****/
     for(size_t i=10; i < 30; i+=2 ) {
-        foundry.continuators.add< eoSteadyFitContinue<Bits> >(10,i);
+        foundry.continuators.add< eoSteadyFitContinue<Bits> >(10,i
+        );
     }
 
     /***** Crossovers ****/
@@ -31,6 +33,7 @@ eoAlgoFoundryEA<Bits>& make_foundry(eoFunctorStore& store, eoPopEvalFunc<Bits>& 
     for(double i=0.1; i<0.9; i+=0.1) {
         foundry.crossovers.add< eoUBitXover<Bits> >(i); // preference over 1
     }
+    
     for(size_t i=1; i < 11; i+=1) {
         foundry.crossovers.add< eoNPtsBitXover<Bits> >(i); // nb of points
     }
@@ -77,9 +80,9 @@ int main(int argc, char* argv[])
 
     // std::cout << "Checkpoint 2" << std::endl;
 
+    //rng.seed() //eo:rng
 
-
-    IOHprofiler_ecdf_logger<int> logger(0, 100, 10, 0, 100, 10);
+    IOHprofiler_ecdf_logger<int> logger(0, 1000, 100, 0, 10000, 100);
     logger.set_complete_flag(true);
     logger.set_interval(0);
 
@@ -88,12 +91,11 @@ int main(int argc, char* argv[])
     // std::cout << "Checkpoint 3" << std::endl;
 
     /// Configure w_model
-    int dimension = 100;
+    int dimension = 1000;
     double w_model_suite_dummy_para = 0;
     int w_model_suite_epitasis_para = 0;
     int w_model_suite_neutrality_para = 0;
     int w_model_suite_ruggedness_para = 0;
-
     // std::cout << "Checkpoint 4" << std::endl;
 
     W_Model_OneMax w_model_om;
@@ -119,6 +121,10 @@ int main(int argc, char* argv[])
 
     /// Set problem_id as 1
     w_model_om.IOHprofiler_set_problem_id(1);
+
+    w_model_om.IOHprofiler_set_instance_id(atoi(argv[1]));
+
+    
 
     // std::cout << "Checkpoint 8" << std::endl;
 
@@ -148,23 +154,26 @@ int main(int argc, char* argv[])
 
     // Evaluation of a forged algo on the sub-problem
     eoUniformGenerator<int> gen(0, 1);
-    eoInitFixedLength<Bits> onemax_init(/*bitstring size=*/100, gen);
+    eoInitFixedLength<Bits> onemax_init(/*bitstring size=*/1000, gen);
     eoEvalFoundryEA<Int, Bits> eval_foundry(foundry,
             onemax_init, /*pop_size=*/ 10,
             onemax_eval, /*penalization=*/ 0,
             sum, logger)   ;
 
 
+    char *end;
+    eo::rng.reseed(strtoul(argv[2], &end, 10));
+
     /***** return statistic on the chosen algorithm *****/
 
-    assert(argc == 6);
+    assert(argc == 8);
     // Int algo = {atoi(argv[1]), atoi(argv[2]), atoi(argv[3]), atoi(argv[4]), atoi(argv[5])};
     Int algo(5);
-    algo[0] = atoi(argv[1]);
-    algo[1] = atoi(argv[2]);
-    algo[2] = atoi(argv[3]);
-    algo[3] = atoi(argv[4]);
-    algo[4] = atoi(argv[5]);
+    algo[0] = atoi(argv[3]);
+    algo[1] = atoi(argv[4]);
+    algo[2] = atoi(argv[5]);
+    algo[3] = atoi(argv[6]);
+    algo[4] = atoi(argv[7]);
 
     eval_foundry(algo);
     
@@ -172,6 +181,6 @@ int main(int argc, char* argv[])
 
     // // Print a glimpse of the algorithm metric found.
     // //std::clog
-    std::cout << "Algorithm's performance : " << /* vérifier affichage*/ algo.fitness() << std::endl;
-
+    std::cout << "Algorithm's performance : " << std::endl;
+    std::cout <<  /* vérifier affichage*/ algo.fitness() << std::endl;
 }

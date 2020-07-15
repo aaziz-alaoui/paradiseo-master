@@ -124,12 +124,13 @@ public:
         pop.append(_pop_size, _subpb_init);
         _subpb_eval(pop,pop);
 
-        auto config = decode(sol);
+        // auto config = decode(sol);
+        auto config = sol;
         double cont = config[i_cont];
         double cros = config[i_cros];
         double muta = config[i_muta];
         double sele = config[i_sele];
-        double repl = config[i_repl];
+        double repl = config[i_repl];       
 
         if(
                0 <= cont and cont < _foundry.continuators.size()
@@ -144,6 +145,7 @@ public:
             _foundry(pop);
 
             // sol.fitness( pop.best_element().fitness() );
+            
             // the logger is linked with the foundry
             sol.fitness(_sum(_logger.data()));
         } else {
