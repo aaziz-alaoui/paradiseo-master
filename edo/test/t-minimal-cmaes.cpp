@@ -7,8 +7,6 @@
 #include <do/make_continue.h>
 #include <do/make_checkpoint.h>
 
-/////////////* t-minimal-cmaes - VERSION IOH SPHERE DU TEST ///////////////*/
-
 
 using R = eoReal<eoMinimizingFitness>;
 using CMA = edoNormalAdaptive<R>;

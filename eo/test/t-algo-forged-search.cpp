@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
-#include <IOH.h>
+//#include <IOH.h>
+#include <IOH_developing.h>
 #include <eo>
 #include <ga.h>
 #include "../../problems/eval/oneMaxEval.h"
@@ -82,7 +83,7 @@ int main(int argc, char* argv[])
 
     //rng.seed() //eo:rng
 
-    IOHprofiler_ecdf_logger<int> logger(0, 1000, 100, 0, 10000, 100);
+    IOHprofiler_ecdf_logger<int> logger(0, 1000, 100, 0, 8130, 100);
     logger.set_complete_flag(true);
     logger.set_interval(0);
 
@@ -182,5 +183,5 @@ int main(int argc, char* argv[])
     // // Print a glimpse of the algorithm metric found.
     // //std::clog
     std::cout << "Algorithm's performance : " << std::endl;
-    std::cout <<  /* vérifier affichage*/ algo.fitness() << std::endl;
+    std::cout << algo.fitness() * -1 << std::endl;
 }
