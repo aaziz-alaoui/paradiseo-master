@@ -1,0 +1,736 @@
+\hypertarget{class_i_o_hprofiler__problem}{}\doxysection{I\+O\+Hprofiler\+\_\+problem$<$ Input\+Type $>$ Class Template Reference}
+\label{class_i_o_hprofiler__problem}\index{IOHprofiler\_problem$<$ InputType $>$@{IOHprofiler\_problem$<$ InputType $>$}}
+
+
+A base class for defining problems.  
+
+
+
+
+{\ttfamily \#include $<$I\+O\+Hprofiler\+\_\+problem.\+h$>$}
+
+
+
+Inheritance diagram for I\+O\+Hprofiler\+\_\+problem$<$ Input\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{class_i_o_hprofiler__problem__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a72b83facb0213b2d69d6f6a4edb65bcc}\label{class_i_o_hprofiler__problem_a72b83facb0213b2d69d6f6a4edb65bcc}} 
+{\bfseries I\+O\+Hprofiler\+\_\+problem} (int instance\+\_\+id=D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+N\+S\+T\+A\+N\+CE, int dimension=D\+E\+F\+A\+U\+L\+T\+\_\+\+D\+I\+M\+E\+N\+S\+I\+ON)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a30cc90962f4a561f30f8a6c6088dd33f}\label{class_i_o_hprofiler__problem_a30cc90962f4a561f30f8a6c6088dd33f}} 
+{\bfseries I\+O\+Hprofiler\+\_\+problem} (const \mbox{\hyperlink{class_i_o_hprofiler__problem}{I\+O\+Hprofiler\+\_\+problem}} \&)=delete
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a7892e1b4bb9de1505ee6af856babd889}\label{class_i_o_hprofiler__problem_a7892e1b4bb9de1505ee6af856babd889}} 
+\mbox{\hyperlink{class_i_o_hprofiler__problem}{I\+O\+Hprofiler\+\_\+problem}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_i_o_hprofiler__problem}{I\+O\+Hprofiler\+\_\+problem}} \&)=delete
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_aaaecc8e70db079e24cfa68f89f09ebc8}\label{class_i_o_hprofiler__problem_aaaecc8e70db079e24cfa68f89f09ebc8}} 
+virtual double {\bfseries internal\+\_\+evaluate} (const std\+::vector$<$ Input\+Type $>$ \&x)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a6f7e032790bfc7bede3146aa29aace6c}\label{class_i_o_hprofiler__problem_a6f7e032790bfc7bede3146aa29aace6c}} 
+virtual void {\bfseries prepare\+\_\+problem} ()
+\item 
+double \mbox{\hyperlink{class_i_o_hprofiler__problem_a936af495556300e02cc7d30bf6cf2ae0}{evaluate}} (std\+::vector$<$ Input\+Type $>$ x)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a3f3d793f5814dc51108a5f2294603214}\label{class_i_o_hprofiler__problem_a3f3d793f5814dc51108a5f2294603214}} 
+virtual void {\bfseries customize\+\_\+optimal} ()
+\item 
+void \mbox{\hyperlink{class_i_o_hprofiler__problem_a0bfe5cac70f9030e70c6f64d33ae8f8a}{calc\+\_\+optimal}} ()
+\item 
+void \mbox{\hyperlink{class_i_o_hprofiler__problem_a8e341f89def43a2ef8408509626ebbf8}{reset\+\_\+problem}} ()
+\begin{DoxyCompactList}\small\item\em Reset problem as the default condition before doing evaluating. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_aa95b8a9c60ce486344f3d8a5b913a8a1}\label{class_i_o_hprofiler__problem_aa95b8a9c60ce486344f3d8a5b913a8a1}} 
+std\+::vector$<$ double $>$ {\bfseries logger\+C\+O\+C\+O\+Info} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a0f6be5b43ee9cc2d253ce961d2997cb1}\label{class_i_o_hprofiler__problem_a0f6be5b43ee9cc2d253ce961d2997cb1}} 
+std\+::vector$<$ double $>$ {\bfseries logger\+Info} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a626cd82f5361e62f4e4f9f64041754b6}\label{class_i_o_hprofiler__problem_a626cd82f5361e62f4e4f9f64041754b6}} 
+bool \mbox{\hyperlink{class_i_o_hprofiler__problem_a626cd82f5361e62f4e4f9f64041754b6}{I\+O\+Hprofiler\+\_\+hit\+\_\+optimal}} () const
+\begin{DoxyCompactList}\small\item\em Detect if the optimal have been found. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a4fc391ff4070c563453b2ae3c3e0daeb}\label{class_i_o_hprofiler__problem_a4fc391ff4070c563453b2ae3c3e0daeb}} 
+int {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+problem\+\_\+id} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a0be01c533435c51fb9784c0fed8a1094}\label{class_i_o_hprofiler__problem_a0be01c533435c51fb9784c0fed8a1094}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+problem\+\_\+id} (int problem\+\_\+id)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_ad8e14a47ac8627a7d4086c47fc760e7b}\label{class_i_o_hprofiler__problem_ad8e14a47ac8627a7d4086c47fc760e7b}} 
+int {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+instance\+\_\+id} () const
+\item 
+void \mbox{\hyperlink{class_i_o_hprofiler__problem_a274b6d21250c336d04c7bc0ba6becce0}{I\+O\+Hprofiler\+\_\+set\+\_\+instance\+\_\+id}} (int instance\+\_\+id)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a9eff376794cd42cf78a9a7ff3a1f1a99}\label{class_i_o_hprofiler__problem_a9eff376794cd42cf78a9a7ff3a1f1a99}} 
+std\+::string {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+problem\+\_\+name} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_aeac9387a6a6c0b4b9542624924b6bfb4}\label{class_i_o_hprofiler__problem_aeac9387a6a6c0b4b9542624924b6bfb4}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+problem\+\_\+name} (std\+::string problem\+\_\+name)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a4ea9cc00bc199a12da0c99bddd6f3c26}\label{class_i_o_hprofiler__problem_a4ea9cc00bc199a12da0c99bddd6f3c26}} 
+std\+::string {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+problem\+\_\+type} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a37f3995156586e72b487256d1066ef35}\label{class_i_o_hprofiler__problem_a37f3995156586e72b487256d1066ef35}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+problem\+\_\+type} (std\+::string problem\+\_\+type)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a7d937cfbaeeabb84d04b0d4bbacf92ad}\label{class_i_o_hprofiler__problem_a7d937cfbaeeabb84d04b0d4bbacf92ad}} 
+std\+::vector$<$ Input\+Type $>$ {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+lowerbound} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a806bbb2ef473500a4bdd3da05cb213ea}\label{class_i_o_hprofiler__problem_a806bbb2ef473500a4bdd3da05cb213ea}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+lowerbound} (int lowerbound)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_af50417ff550dbd388fcb784dc6255d38}\label{class_i_o_hprofiler__problem_af50417ff550dbd388fcb784dc6255d38}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+lowerbound} (const std\+::vector$<$ Input\+Type $>$ \&lowerbound)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_abe7ffc3e49de5cc0905d25817b02aec8}\label{class_i_o_hprofiler__problem_abe7ffc3e49de5cc0905d25817b02aec8}} 
+std\+::vector$<$ Input\+Type $>$ {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+upperbound} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_ac679a83c6fb51cee5b70f0f144c16135}\label{class_i_o_hprofiler__problem_ac679a83c6fb51cee5b70f0f144c16135}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+upperbound} (int upperbound)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a7a392f05fa3aa46aebceca86ebc5a960}\label{class_i_o_hprofiler__problem_a7a392f05fa3aa46aebceca86ebc5a960}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+upperbound} (const std\+::vector$<$ Input\+Type $>$ \&upperbound)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a6ddc84da984ef66befcc3d7dadcf228d}\label{class_i_o_hprofiler__problem_a6ddc84da984ef66befcc3d7dadcf228d}} 
+int {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+number\+\_\+of\+\_\+variables} () const
+\item 
+void \mbox{\hyperlink{class_i_o_hprofiler__problem_aae2f77478533d0602371c447e1393d21}{I\+O\+Hprofiler\+\_\+set\+\_\+number\+\_\+of\+\_\+variables}} (const int number\+\_\+of\+\_\+variables)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_ae97272e94f83a4192b4dd89d9839b377}\label{class_i_o_hprofiler__problem_ae97272e94f83a4192b4dd89d9839b377}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+number\+\_\+of\+\_\+variables} (const int number\+\_\+of\+\_\+variables, const std\+::vector$<$ Input\+Type $>$ \&best\+\_\+variables)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_aa6b237e0efd489939979f7300861388f}\label{class_i_o_hprofiler__problem_aa6b237e0efd489939979f7300861388f}} 
+int {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+number\+\_\+of\+\_\+objectives} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a3134d53b05189eac9ef25bb2a0858819}\label{class_i_o_hprofiler__problem_a3134d53b05189eac9ef25bb2a0858819}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+number\+\_\+of\+\_\+objectives} (const int number\+\_\+of\+\_\+objectives)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a18d1bdecea90d16b1fc470fc918c1e33}\label{class_i_o_hprofiler__problem_a18d1bdecea90d16b1fc470fc918c1e33}} 
+std\+::vector$<$ double $>$ {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+raw\+\_\+objectives} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_ae582e33608507a3b742940b885dcde59}\label{class_i_o_hprofiler__problem_ae582e33608507a3b742940b885dcde59}} 
+std\+::vector$<$ double $>$ {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+transformed\+\_\+objectives} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a528d786226abe264dc82ee2caf7c4004}\label{class_i_o_hprofiler__problem_a528d786226abe264dc82ee2caf7c4004}} 
+int {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+transformed\+\_\+number\+\_\+of\+\_\+variables} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a0a277e52cd95046b3ba5512c26e34b5f}\label{class_i_o_hprofiler__problem_a0a277e52cd95046b3ba5512c26e34b5f}} 
+std\+::vector$<$ Input\+Type $>$ {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+transformed\+\_\+variables} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a1ba6bee3ec0389e68aac26936d1fe247}\label{class_i_o_hprofiler__problem_a1ba6bee3ec0389e68aac26936d1fe247}} 
+std\+::vector$<$ Input\+Type $>$ {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+best\+\_\+variables} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a151334242947c843905a7a76f9c8221f}\label{class_i_o_hprofiler__problem_a151334242947c843905a7a76f9c8221f}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+best\+\_\+variables} (const Input\+Type best\+\_\+variables)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a78207f00ec933f3d0c1bf295c0f486e4}\label{class_i_o_hprofiler__problem_a78207f00ec933f3d0c1bf295c0f486e4}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+best\+\_\+variables} (const std\+::vector$<$ Input\+Type $>$ \&best\+\_\+variables)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a662b777713043b8cff9f37c391475161}\label{class_i_o_hprofiler__problem_a662b777713043b8cff9f37c391475161}} 
+std\+::vector$<$ double $>$ {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+optimal} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a11455616e056ffec4841281f12dc8c42}\label{class_i_o_hprofiler__problem_a11455616e056ffec4841281f12dc8c42}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+optimal} (const double optimal)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_acf3d1be5ecb1af1c8b638b8be9f2730f}\label{class_i_o_hprofiler__problem_acf3d1be5ecb1af1c8b638b8be9f2730f}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+optimal} (const std\+::vector$<$ double $>$ \&optimal)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_ac9384f407e4c3689fbc0c3f7502ef4b5}\label{class_i_o_hprofiler__problem_ac9384f407e4c3689fbc0c3f7502ef4b5}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+evaluate\+\_\+optimal} (std\+::vector$<$ Input\+Type $>$ best\+\_\+variables)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a6e2c1bfb9676f60fb52ca43883974549}\label{class_i_o_hprofiler__problem_a6e2c1bfb9676f60fb52ca43883974549}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+evaluate\+\_\+optimal} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_af2a6eb758e845cdee89c19e073d0df82}\label{class_i_o_hprofiler__problem_af2a6eb758e845cdee89c19e073d0df82}} 
+int {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+evaluations} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a992d5079d185076ee97ef3fdc6366556}\label{class_i_o_hprofiler__problem_a992d5079d185076ee97ef3fdc6366556}} 
+std\+::vector$<$ double $>$ {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+best\+\_\+so\+\_\+far\+\_\+raw\+\_\+objectives} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_ad1c5e94917551318a0820d5d32e97afa}\label{class_i_o_hprofiler__problem_ad1c5e94917551318a0820d5d32e97afa}} 
+int {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+best\+\_\+so\+\_\+far\+\_\+raw\+\_\+evaluations} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a1746a2e0fb874f83b49083e286806339}\label{class_i_o_hprofiler__problem_a1746a2e0fb874f83b49083e286806339}} 
+std\+::vector$<$ double $>$ {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+best\+\_\+so\+\_\+far\+\_\+transformed\+\_\+objectives} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_ae502dcd11bc3d1ffeb52baba0857638d}\label{class_i_o_hprofiler__problem_ae502dcd11bc3d1ffeb52baba0857638d}} 
+int {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+best\+\_\+so\+\_\+far\+\_\+transformed\+\_\+evaluations} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a521155399e52727c111df7ce2fc9e967}\label{class_i_o_hprofiler__problem_a521155399e52727c111df7ce2fc9e967}} 
+I\+O\+H\+\_\+optimization\+\_\+type {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+optimization\+\_\+type} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_af4eba6ed4c37ce464ac42d30ad7880f0}\label{class_i_o_hprofiler__problem_af4eba6ed4c37ce464ac42d30ad7880f0}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+as\+\_\+maximization} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_ab2125e44c03bea70162396a6de96ef3d}\label{class_i_o_hprofiler__problem_ab2125e44c03bea70162396a6de96ef3d}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+as\+\_\+minimization} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a72b83facb0213b2d69d6f6a4edb65bcc}\label{class_i_o_hprofiler__problem_a72b83facb0213b2d69d6f6a4edb65bcc}} 
+{\bfseries I\+O\+Hprofiler\+\_\+problem} (int instance\+\_\+id=D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+N\+S\+T\+A\+N\+CE, int dimension=D\+E\+F\+A\+U\+L\+T\+\_\+\+D\+I\+M\+E\+N\+S\+I\+ON)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a30cc90962f4a561f30f8a6c6088dd33f}\label{class_i_o_hprofiler__problem_a30cc90962f4a561f30f8a6c6088dd33f}} 
+{\bfseries I\+O\+Hprofiler\+\_\+problem} (const \mbox{\hyperlink{class_i_o_hprofiler__problem}{I\+O\+Hprofiler\+\_\+problem}} \&)=delete
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a7892e1b4bb9de1505ee6af856babd889}\label{class_i_o_hprofiler__problem_a7892e1b4bb9de1505ee6af856babd889}} 
+\mbox{\hyperlink{class_i_o_hprofiler__problem}{I\+O\+Hprofiler\+\_\+problem}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_i_o_hprofiler__problem}{I\+O\+Hprofiler\+\_\+problem}} \&)=delete
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_aaaecc8e70db079e24cfa68f89f09ebc8}\label{class_i_o_hprofiler__problem_aaaecc8e70db079e24cfa68f89f09ebc8}} 
+virtual double {\bfseries internal\+\_\+evaluate} (const std\+::vector$<$ Input\+Type $>$ \&x)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a6f7e032790bfc7bede3146aa29aace6c}\label{class_i_o_hprofiler__problem_a6f7e032790bfc7bede3146aa29aace6c}} 
+virtual void {\bfseries prepare\+\_\+problem} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a936af495556300e02cc7d30bf6cf2ae0}\label{class_i_o_hprofiler__problem_a936af495556300e02cc7d30bf6cf2ae0}} 
+double {\bfseries evaluate} (std\+::vector$<$ Input\+Type $>$ x)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a3f3d793f5814dc51108a5f2294603214}\label{class_i_o_hprofiler__problem_a3f3d793f5814dc51108a5f2294603214}} 
+virtual void {\bfseries customize\+\_\+optimal} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a0bfe5cac70f9030e70c6f64d33ae8f8a}\label{class_i_o_hprofiler__problem_a0bfe5cac70f9030e70c6f64d33ae8f8a}} 
+void {\bfseries calc\+\_\+optimal} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a8e341f89def43a2ef8408509626ebbf8}\label{class_i_o_hprofiler__problem_a8e341f89def43a2ef8408509626ebbf8}} 
+void {\bfseries reset\+\_\+problem} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_acb60f4cddb856a64f9d3f4110d833514}\label{class_i_o_hprofiler__problem_acb60f4cddb856a64f9d3f4110d833514}} 
+std\+::vector$<$ double $>$ {\bfseries logger\+C\+O\+C\+O\+Info} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_af1c72f73afca9ef4ce5af72ef3907815}\label{class_i_o_hprofiler__problem_af1c72f73afca9ef4ce5af72ef3907815}} 
+std\+::vector$<$ double $>$ {\bfseries logger\+Info} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a626cd82f5361e62f4e4f9f64041754b6}\label{class_i_o_hprofiler__problem_a626cd82f5361e62f4e4f9f64041754b6}} 
+bool {\bfseries I\+O\+Hprofiler\+\_\+hit\+\_\+optimal} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a4fc391ff4070c563453b2ae3c3e0daeb}\label{class_i_o_hprofiler__problem_a4fc391ff4070c563453b2ae3c3e0daeb}} 
+int {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+problem\+\_\+id} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a0be01c533435c51fb9784c0fed8a1094}\label{class_i_o_hprofiler__problem_a0be01c533435c51fb9784c0fed8a1094}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+problem\+\_\+id} (int problem\+\_\+id)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_ad8e14a47ac8627a7d4086c47fc760e7b}\label{class_i_o_hprofiler__problem_ad8e14a47ac8627a7d4086c47fc760e7b}} 
+int {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+instance\+\_\+id} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a274b6d21250c336d04c7bc0ba6becce0}\label{class_i_o_hprofiler__problem_a274b6d21250c336d04c7bc0ba6becce0}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+instance\+\_\+id} (int instance\+\_\+id)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a9eff376794cd42cf78a9a7ff3a1f1a99}\label{class_i_o_hprofiler__problem_a9eff376794cd42cf78a9a7ff3a1f1a99}} 
+std\+::string {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+problem\+\_\+name} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_aeac9387a6a6c0b4b9542624924b6bfb4}\label{class_i_o_hprofiler__problem_aeac9387a6a6c0b4b9542624924b6bfb4}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+problem\+\_\+name} (std\+::string problem\+\_\+name)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a4ea9cc00bc199a12da0c99bddd6f3c26}\label{class_i_o_hprofiler__problem_a4ea9cc00bc199a12da0c99bddd6f3c26}} 
+std\+::string {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+problem\+\_\+type} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a37f3995156586e72b487256d1066ef35}\label{class_i_o_hprofiler__problem_a37f3995156586e72b487256d1066ef35}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+problem\+\_\+type} (std\+::string problem\+\_\+type)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a89b278b09e69c92c0706fe92565289f6}\label{class_i_o_hprofiler__problem_a89b278b09e69c92c0706fe92565289f6}} 
+std\+::vector$<$ Input\+Type $>$ {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+lowerbound} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a806bbb2ef473500a4bdd3da05cb213ea}\label{class_i_o_hprofiler__problem_a806bbb2ef473500a4bdd3da05cb213ea}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+lowerbound} (int lowerbound)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_af50417ff550dbd388fcb784dc6255d38}\label{class_i_o_hprofiler__problem_af50417ff550dbd388fcb784dc6255d38}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+lowerbound} (const std\+::vector$<$ Input\+Type $>$ \&lowerbound)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a099857f32f0597d9d7da803373a3e428}\label{class_i_o_hprofiler__problem_a099857f32f0597d9d7da803373a3e428}} 
+std\+::vector$<$ Input\+Type $>$ {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+upperbound} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_ac679a83c6fb51cee5b70f0f144c16135}\label{class_i_o_hprofiler__problem_ac679a83c6fb51cee5b70f0f144c16135}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+upperbound} (int upperbound)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a7a392f05fa3aa46aebceca86ebc5a960}\label{class_i_o_hprofiler__problem_a7a392f05fa3aa46aebceca86ebc5a960}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+upperbound} (const std\+::vector$<$ Input\+Type $>$ \&upperbound)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a6ddc84da984ef66befcc3d7dadcf228d}\label{class_i_o_hprofiler__problem_a6ddc84da984ef66befcc3d7dadcf228d}} 
+int {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+number\+\_\+of\+\_\+variables} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_aae2f77478533d0602371c447e1393d21}\label{class_i_o_hprofiler__problem_aae2f77478533d0602371c447e1393d21}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+number\+\_\+of\+\_\+variables} (const int number\+\_\+of\+\_\+variables)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_ae97272e94f83a4192b4dd89d9839b377}\label{class_i_o_hprofiler__problem_ae97272e94f83a4192b4dd89d9839b377}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+number\+\_\+of\+\_\+variables} (const int number\+\_\+of\+\_\+variables, const std\+::vector$<$ Input\+Type $>$ \&best\+\_\+variables)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_aa6b237e0efd489939979f7300861388f}\label{class_i_o_hprofiler__problem_aa6b237e0efd489939979f7300861388f}} 
+int {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+number\+\_\+of\+\_\+objectives} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a3134d53b05189eac9ef25bb2a0858819}\label{class_i_o_hprofiler__problem_a3134d53b05189eac9ef25bb2a0858819}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+number\+\_\+of\+\_\+objectives} (const int number\+\_\+of\+\_\+objectives)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a16c6d8deba2a05c88488c6fc0423076a}\label{class_i_o_hprofiler__problem_a16c6d8deba2a05c88488c6fc0423076a}} 
+std\+::vector$<$ double $>$ {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+raw\+\_\+objectives} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a96ec224421455e332172d31fa28ed92a}\label{class_i_o_hprofiler__problem_a96ec224421455e332172d31fa28ed92a}} 
+std\+::vector$<$ double $>$ {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+transformed\+\_\+objectives} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a528d786226abe264dc82ee2caf7c4004}\label{class_i_o_hprofiler__problem_a528d786226abe264dc82ee2caf7c4004}} 
+int {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+transformed\+\_\+number\+\_\+of\+\_\+variables} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a3f669d20a7ae52c4c4cdb7ad0ed185dd}\label{class_i_o_hprofiler__problem_a3f669d20a7ae52c4c4cdb7ad0ed185dd}} 
+std\+::vector$<$ Input\+Type $>$ {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+transformed\+\_\+variables} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a9e6ce52c7f994a34091e4907c00882ed}\label{class_i_o_hprofiler__problem_a9e6ce52c7f994a34091e4907c00882ed}} 
+std\+::vector$<$ Input\+Type $>$ {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+best\+\_\+variables} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a151334242947c843905a7a76f9c8221f}\label{class_i_o_hprofiler__problem_a151334242947c843905a7a76f9c8221f}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+best\+\_\+variables} (const Input\+Type best\+\_\+variables)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a78207f00ec933f3d0c1bf295c0f486e4}\label{class_i_o_hprofiler__problem_a78207f00ec933f3d0c1bf295c0f486e4}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+best\+\_\+variables} (const std\+::vector$<$ Input\+Type $>$ \&best\+\_\+variables)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_afd3d75aa477d16a219e35fdd323e00bf}\label{class_i_o_hprofiler__problem_afd3d75aa477d16a219e35fdd323e00bf}} 
+std\+::vector$<$ double $>$ {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+optimal} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a11455616e056ffec4841281f12dc8c42}\label{class_i_o_hprofiler__problem_a11455616e056ffec4841281f12dc8c42}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+optimal} (const double optimal)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_acf3d1be5ecb1af1c8b638b8be9f2730f}\label{class_i_o_hprofiler__problem_acf3d1be5ecb1af1c8b638b8be9f2730f}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+optimal} (const std\+::vector$<$ double $>$ \&optimal)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_ac9384f407e4c3689fbc0c3f7502ef4b5}\label{class_i_o_hprofiler__problem_ac9384f407e4c3689fbc0c3f7502ef4b5}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+evaluate\+\_\+optimal} (std\+::vector$<$ Input\+Type $>$ best\+\_\+variables)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a6e2c1bfb9676f60fb52ca43883974549}\label{class_i_o_hprofiler__problem_a6e2c1bfb9676f60fb52ca43883974549}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+evaluate\+\_\+optimal} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_af2a6eb758e845cdee89c19e073d0df82}\label{class_i_o_hprofiler__problem_af2a6eb758e845cdee89c19e073d0df82}} 
+int {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+evaluations} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a691471cede3155f4276db0b9616a7319}\label{class_i_o_hprofiler__problem_a691471cede3155f4276db0b9616a7319}} 
+std\+::vector$<$ double $>$ {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+best\+\_\+so\+\_\+far\+\_\+raw\+\_\+objectives} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_ad1c5e94917551318a0820d5d32e97afa}\label{class_i_o_hprofiler__problem_ad1c5e94917551318a0820d5d32e97afa}} 
+int {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+best\+\_\+so\+\_\+far\+\_\+raw\+\_\+evaluations} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_acf7eb1b4208e6c29d2adc890503c0be0}\label{class_i_o_hprofiler__problem_acf7eb1b4208e6c29d2adc890503c0be0}} 
+std\+::vector$<$ double $>$ {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+best\+\_\+so\+\_\+far\+\_\+transformed\+\_\+objectives} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_ae502dcd11bc3d1ffeb52baba0857638d}\label{class_i_o_hprofiler__problem_ae502dcd11bc3d1ffeb52baba0857638d}} 
+int {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+best\+\_\+so\+\_\+far\+\_\+transformed\+\_\+evaluations} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a521155399e52727c111df7ce2fc9e967}\label{class_i_o_hprofiler__problem_a521155399e52727c111df7ce2fc9e967}} 
+I\+O\+H\+\_\+optimization\+\_\+type {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+optimization\+\_\+type} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_af4eba6ed4c37ce464ac42d30ad7880f0}\label{class_i_o_hprofiler__problem_af4eba6ed4c37ce464ac42d30ad7880f0}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+as\+\_\+maximization} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_ab2125e44c03bea70162396a6de96ef3d}\label{class_i_o_hprofiler__problem_ab2125e44c03bea70162396a6de96ef3d}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+as\+\_\+minimization} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a72b83facb0213b2d69d6f6a4edb65bcc}\label{class_i_o_hprofiler__problem_a72b83facb0213b2d69d6f6a4edb65bcc}} 
+{\bfseries I\+O\+Hprofiler\+\_\+problem} (int instance\+\_\+id=D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+N\+S\+T\+A\+N\+CE, int dimension=D\+E\+F\+A\+U\+L\+T\+\_\+\+D\+I\+M\+E\+N\+S\+I\+ON)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a30cc90962f4a561f30f8a6c6088dd33f}\label{class_i_o_hprofiler__problem_a30cc90962f4a561f30f8a6c6088dd33f}} 
+{\bfseries I\+O\+Hprofiler\+\_\+problem} (const \mbox{\hyperlink{class_i_o_hprofiler__problem}{I\+O\+Hprofiler\+\_\+problem}} \&)=delete
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a7892e1b4bb9de1505ee6af856babd889}\label{class_i_o_hprofiler__problem_a7892e1b4bb9de1505ee6af856babd889}} 
+\mbox{\hyperlink{class_i_o_hprofiler__problem}{I\+O\+Hprofiler\+\_\+problem}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_i_o_hprofiler__problem}{I\+O\+Hprofiler\+\_\+problem}} \&)=delete
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_aaaecc8e70db079e24cfa68f89f09ebc8}\label{class_i_o_hprofiler__problem_aaaecc8e70db079e24cfa68f89f09ebc8}} 
+virtual double {\bfseries internal\+\_\+evaluate} (const std\+::vector$<$ Input\+Type $>$ \&x)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a6f7e032790bfc7bede3146aa29aace6c}\label{class_i_o_hprofiler__problem_a6f7e032790bfc7bede3146aa29aace6c}} 
+virtual void {\bfseries prepare\+\_\+problem} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a936af495556300e02cc7d30bf6cf2ae0}\label{class_i_o_hprofiler__problem_a936af495556300e02cc7d30bf6cf2ae0}} 
+double {\bfseries evaluate} (std\+::vector$<$ Input\+Type $>$ x)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a3f3d793f5814dc51108a5f2294603214}\label{class_i_o_hprofiler__problem_a3f3d793f5814dc51108a5f2294603214}} 
+virtual void {\bfseries customize\+\_\+optimal} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a0bfe5cac70f9030e70c6f64d33ae8f8a}\label{class_i_o_hprofiler__problem_a0bfe5cac70f9030e70c6f64d33ae8f8a}} 
+void {\bfseries calc\+\_\+optimal} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a8e341f89def43a2ef8408509626ebbf8}\label{class_i_o_hprofiler__problem_a8e341f89def43a2ef8408509626ebbf8}} 
+void {\bfseries reset\+\_\+problem} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_acb60f4cddb856a64f9d3f4110d833514}\label{class_i_o_hprofiler__problem_acb60f4cddb856a64f9d3f4110d833514}} 
+std\+::vector$<$ double $>$ {\bfseries logger\+C\+O\+C\+O\+Info} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_af1c72f73afca9ef4ce5af72ef3907815}\label{class_i_o_hprofiler__problem_af1c72f73afca9ef4ce5af72ef3907815}} 
+std\+::vector$<$ double $>$ {\bfseries logger\+Info} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a626cd82f5361e62f4e4f9f64041754b6}\label{class_i_o_hprofiler__problem_a626cd82f5361e62f4e4f9f64041754b6}} 
+bool {\bfseries I\+O\+Hprofiler\+\_\+hit\+\_\+optimal} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a4fc391ff4070c563453b2ae3c3e0daeb}\label{class_i_o_hprofiler__problem_a4fc391ff4070c563453b2ae3c3e0daeb}} 
+int {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+problem\+\_\+id} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a0be01c533435c51fb9784c0fed8a1094}\label{class_i_o_hprofiler__problem_a0be01c533435c51fb9784c0fed8a1094}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+problem\+\_\+id} (int problem\+\_\+id)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_ad8e14a47ac8627a7d4086c47fc760e7b}\label{class_i_o_hprofiler__problem_ad8e14a47ac8627a7d4086c47fc760e7b}} 
+int {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+instance\+\_\+id} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a274b6d21250c336d04c7bc0ba6becce0}\label{class_i_o_hprofiler__problem_a274b6d21250c336d04c7bc0ba6becce0}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+instance\+\_\+id} (int instance\+\_\+id)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a9eff376794cd42cf78a9a7ff3a1f1a99}\label{class_i_o_hprofiler__problem_a9eff376794cd42cf78a9a7ff3a1f1a99}} 
+std\+::string {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+problem\+\_\+name} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_aeac9387a6a6c0b4b9542624924b6bfb4}\label{class_i_o_hprofiler__problem_aeac9387a6a6c0b4b9542624924b6bfb4}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+problem\+\_\+name} (std\+::string problem\+\_\+name)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a4ea9cc00bc199a12da0c99bddd6f3c26}\label{class_i_o_hprofiler__problem_a4ea9cc00bc199a12da0c99bddd6f3c26}} 
+std\+::string {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+problem\+\_\+type} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a37f3995156586e72b487256d1066ef35}\label{class_i_o_hprofiler__problem_a37f3995156586e72b487256d1066ef35}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+problem\+\_\+type} (std\+::string problem\+\_\+type)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a89b278b09e69c92c0706fe92565289f6}\label{class_i_o_hprofiler__problem_a89b278b09e69c92c0706fe92565289f6}} 
+std\+::vector$<$ Input\+Type $>$ {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+lowerbound} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a806bbb2ef473500a4bdd3da05cb213ea}\label{class_i_o_hprofiler__problem_a806bbb2ef473500a4bdd3da05cb213ea}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+lowerbound} (int lowerbound)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_af50417ff550dbd388fcb784dc6255d38}\label{class_i_o_hprofiler__problem_af50417ff550dbd388fcb784dc6255d38}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+lowerbound} (const std\+::vector$<$ Input\+Type $>$ \&lowerbound)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a099857f32f0597d9d7da803373a3e428}\label{class_i_o_hprofiler__problem_a099857f32f0597d9d7da803373a3e428}} 
+std\+::vector$<$ Input\+Type $>$ {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+upperbound} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_ac679a83c6fb51cee5b70f0f144c16135}\label{class_i_o_hprofiler__problem_ac679a83c6fb51cee5b70f0f144c16135}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+upperbound} (int upperbound)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a7a392f05fa3aa46aebceca86ebc5a960}\label{class_i_o_hprofiler__problem_a7a392f05fa3aa46aebceca86ebc5a960}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+upperbound} (const std\+::vector$<$ Input\+Type $>$ \&upperbound)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a6ddc84da984ef66befcc3d7dadcf228d}\label{class_i_o_hprofiler__problem_a6ddc84da984ef66befcc3d7dadcf228d}} 
+int {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+number\+\_\+of\+\_\+variables} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_aae2f77478533d0602371c447e1393d21}\label{class_i_o_hprofiler__problem_aae2f77478533d0602371c447e1393d21}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+number\+\_\+of\+\_\+variables} (const int number\+\_\+of\+\_\+variables)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_ae97272e94f83a4192b4dd89d9839b377}\label{class_i_o_hprofiler__problem_ae97272e94f83a4192b4dd89d9839b377}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+number\+\_\+of\+\_\+variables} (const int number\+\_\+of\+\_\+variables, const std\+::vector$<$ Input\+Type $>$ \&best\+\_\+variables)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_aa6b237e0efd489939979f7300861388f}\label{class_i_o_hprofiler__problem_aa6b237e0efd489939979f7300861388f}} 
+int {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+number\+\_\+of\+\_\+objectives} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a3134d53b05189eac9ef25bb2a0858819}\label{class_i_o_hprofiler__problem_a3134d53b05189eac9ef25bb2a0858819}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+number\+\_\+of\+\_\+objectives} (const int number\+\_\+of\+\_\+objectives)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a16c6d8deba2a05c88488c6fc0423076a}\label{class_i_o_hprofiler__problem_a16c6d8deba2a05c88488c6fc0423076a}} 
+std\+::vector$<$ double $>$ {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+raw\+\_\+objectives} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a96ec224421455e332172d31fa28ed92a}\label{class_i_o_hprofiler__problem_a96ec224421455e332172d31fa28ed92a}} 
+std\+::vector$<$ double $>$ {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+transformed\+\_\+objectives} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a528d786226abe264dc82ee2caf7c4004}\label{class_i_o_hprofiler__problem_a528d786226abe264dc82ee2caf7c4004}} 
+int {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+transformed\+\_\+number\+\_\+of\+\_\+variables} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a3f669d20a7ae52c4c4cdb7ad0ed185dd}\label{class_i_o_hprofiler__problem_a3f669d20a7ae52c4c4cdb7ad0ed185dd}} 
+std\+::vector$<$ Input\+Type $>$ {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+transformed\+\_\+variables} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a9e6ce52c7f994a34091e4907c00882ed}\label{class_i_o_hprofiler__problem_a9e6ce52c7f994a34091e4907c00882ed}} 
+std\+::vector$<$ Input\+Type $>$ {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+best\+\_\+variables} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a151334242947c843905a7a76f9c8221f}\label{class_i_o_hprofiler__problem_a151334242947c843905a7a76f9c8221f}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+best\+\_\+variables} (const Input\+Type best\+\_\+variables)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a78207f00ec933f3d0c1bf295c0f486e4}\label{class_i_o_hprofiler__problem_a78207f00ec933f3d0c1bf295c0f486e4}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+best\+\_\+variables} (const std\+::vector$<$ Input\+Type $>$ \&best\+\_\+variables)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a1e0bb28a9a4003e617dfa6e20d19ed51}\label{class_i_o_hprofiler__problem_a1e0bb28a9a4003e617dfa6e20d19ed51}} 
+bool {\bfseries I\+O\+Hprofiler\+\_\+has\+\_\+optimal} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_afd3d75aa477d16a219e35fdd323e00bf}\label{class_i_o_hprofiler__problem_afd3d75aa477d16a219e35fdd323e00bf}} 
+std\+::vector$<$ double $>$ {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+optimal} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a11455616e056ffec4841281f12dc8c42}\label{class_i_o_hprofiler__problem_a11455616e056ffec4841281f12dc8c42}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+optimal} (const double optimal)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_acf3d1be5ecb1af1c8b638b8be9f2730f}\label{class_i_o_hprofiler__problem_acf3d1be5ecb1af1c8b638b8be9f2730f}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+optimal} (const std\+::vector$<$ double $>$ \&optimal)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_ac9384f407e4c3689fbc0c3f7502ef4b5}\label{class_i_o_hprofiler__problem_ac9384f407e4c3689fbc0c3f7502ef4b5}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+evaluate\+\_\+optimal} (std\+::vector$<$ Input\+Type $>$ best\+\_\+variables)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a6e2c1bfb9676f60fb52ca43883974549}\label{class_i_o_hprofiler__problem_a6e2c1bfb9676f60fb52ca43883974549}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+evaluate\+\_\+optimal} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_af2a6eb758e845cdee89c19e073d0df82}\label{class_i_o_hprofiler__problem_af2a6eb758e845cdee89c19e073d0df82}} 
+int {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+evaluations} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a691471cede3155f4276db0b9616a7319}\label{class_i_o_hprofiler__problem_a691471cede3155f4276db0b9616a7319}} 
+std\+::vector$<$ double $>$ {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+best\+\_\+so\+\_\+far\+\_\+raw\+\_\+objectives} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_ad1c5e94917551318a0820d5d32e97afa}\label{class_i_o_hprofiler__problem_ad1c5e94917551318a0820d5d32e97afa}} 
+int {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+best\+\_\+so\+\_\+far\+\_\+raw\+\_\+evaluations} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_acf7eb1b4208e6c29d2adc890503c0be0}\label{class_i_o_hprofiler__problem_acf7eb1b4208e6c29d2adc890503c0be0}} 
+std\+::vector$<$ double $>$ {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+best\+\_\+so\+\_\+far\+\_\+transformed\+\_\+objectives} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_ae502dcd11bc3d1ffeb52baba0857638d}\label{class_i_o_hprofiler__problem_ae502dcd11bc3d1ffeb52baba0857638d}} 
+int {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+best\+\_\+so\+\_\+far\+\_\+transformed\+\_\+evaluations} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a521155399e52727c111df7ce2fc9e967}\label{class_i_o_hprofiler__problem_a521155399e52727c111df7ce2fc9e967}} 
+I\+O\+H\+\_\+optimization\+\_\+type {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+optimization\+\_\+type} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_af4eba6ed4c37ce464ac42d30ad7880f0}\label{class_i_o_hprofiler__problem_af4eba6ed4c37ce464ac42d30ad7880f0}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+as\+\_\+maximization} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_ab2125e44c03bea70162396a6de96ef3d}\label{class_i_o_hprofiler__problem_ab2125e44c03bea70162396a6de96ef3d}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+as\+\_\+minimization} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a72b83facb0213b2d69d6f6a4edb65bcc}\label{class_i_o_hprofiler__problem_a72b83facb0213b2d69d6f6a4edb65bcc}} 
+{\bfseries I\+O\+Hprofiler\+\_\+problem} (int instance\+\_\+id=D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+N\+S\+T\+A\+N\+CE, int dimension=D\+E\+F\+A\+U\+L\+T\+\_\+\+D\+I\+M\+E\+N\+S\+I\+ON)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a30cc90962f4a561f30f8a6c6088dd33f}\label{class_i_o_hprofiler__problem_a30cc90962f4a561f30f8a6c6088dd33f}} 
+{\bfseries I\+O\+Hprofiler\+\_\+problem} (const \mbox{\hyperlink{class_i_o_hprofiler__problem}{I\+O\+Hprofiler\+\_\+problem}} \&)=delete
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a7892e1b4bb9de1505ee6af856babd889}\label{class_i_o_hprofiler__problem_a7892e1b4bb9de1505ee6af856babd889}} 
+\mbox{\hyperlink{class_i_o_hprofiler__problem}{I\+O\+Hprofiler\+\_\+problem}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_i_o_hprofiler__problem}{I\+O\+Hprofiler\+\_\+problem}} \&)=delete
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_aaaecc8e70db079e24cfa68f89f09ebc8}\label{class_i_o_hprofiler__problem_aaaecc8e70db079e24cfa68f89f09ebc8}} 
+virtual double {\bfseries internal\+\_\+evaluate} (const std\+::vector$<$ Input\+Type $>$ \&x)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a6f7e032790bfc7bede3146aa29aace6c}\label{class_i_o_hprofiler__problem_a6f7e032790bfc7bede3146aa29aace6c}} 
+virtual void {\bfseries prepare\+\_\+problem} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a936af495556300e02cc7d30bf6cf2ae0}\label{class_i_o_hprofiler__problem_a936af495556300e02cc7d30bf6cf2ae0}} 
+double {\bfseries evaluate} (std\+::vector$<$ Input\+Type $>$ x)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a3f3d793f5814dc51108a5f2294603214}\label{class_i_o_hprofiler__problem_a3f3d793f5814dc51108a5f2294603214}} 
+virtual void {\bfseries customize\+\_\+optimal} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a0bfe5cac70f9030e70c6f64d33ae8f8a}\label{class_i_o_hprofiler__problem_a0bfe5cac70f9030e70c6f64d33ae8f8a}} 
+void {\bfseries calc\+\_\+optimal} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a8e341f89def43a2ef8408509626ebbf8}\label{class_i_o_hprofiler__problem_a8e341f89def43a2ef8408509626ebbf8}} 
+void {\bfseries reset\+\_\+problem} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_acb60f4cddb856a64f9d3f4110d833514}\label{class_i_o_hprofiler__problem_acb60f4cddb856a64f9d3f4110d833514}} 
+std\+::vector$<$ double $>$ {\bfseries logger\+C\+O\+C\+O\+Info} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_af1c72f73afca9ef4ce5af72ef3907815}\label{class_i_o_hprofiler__problem_af1c72f73afca9ef4ce5af72ef3907815}} 
+std\+::vector$<$ double $>$ {\bfseries logger\+Info} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a626cd82f5361e62f4e4f9f64041754b6}\label{class_i_o_hprofiler__problem_a626cd82f5361e62f4e4f9f64041754b6}} 
+bool {\bfseries I\+O\+Hprofiler\+\_\+hit\+\_\+optimal} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a4fc391ff4070c563453b2ae3c3e0daeb}\label{class_i_o_hprofiler__problem_a4fc391ff4070c563453b2ae3c3e0daeb}} 
+int {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+problem\+\_\+id} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a0be01c533435c51fb9784c0fed8a1094}\label{class_i_o_hprofiler__problem_a0be01c533435c51fb9784c0fed8a1094}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+problem\+\_\+id} (int problem\+\_\+id)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_ad8e14a47ac8627a7d4086c47fc760e7b}\label{class_i_o_hprofiler__problem_ad8e14a47ac8627a7d4086c47fc760e7b}} 
+int {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+instance\+\_\+id} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a274b6d21250c336d04c7bc0ba6becce0}\label{class_i_o_hprofiler__problem_a274b6d21250c336d04c7bc0ba6becce0}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+instance\+\_\+id} (int instance\+\_\+id)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a9eff376794cd42cf78a9a7ff3a1f1a99}\label{class_i_o_hprofiler__problem_a9eff376794cd42cf78a9a7ff3a1f1a99}} 
+std\+::string {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+problem\+\_\+name} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_aeac9387a6a6c0b4b9542624924b6bfb4}\label{class_i_o_hprofiler__problem_aeac9387a6a6c0b4b9542624924b6bfb4}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+problem\+\_\+name} (std\+::string problem\+\_\+name)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a4ea9cc00bc199a12da0c99bddd6f3c26}\label{class_i_o_hprofiler__problem_a4ea9cc00bc199a12da0c99bddd6f3c26}} 
+std\+::string {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+problem\+\_\+type} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a37f3995156586e72b487256d1066ef35}\label{class_i_o_hprofiler__problem_a37f3995156586e72b487256d1066ef35}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+problem\+\_\+type} (std\+::string problem\+\_\+type)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a89b278b09e69c92c0706fe92565289f6}\label{class_i_o_hprofiler__problem_a89b278b09e69c92c0706fe92565289f6}} 
+std\+::vector$<$ Input\+Type $>$ {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+lowerbound} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a806bbb2ef473500a4bdd3da05cb213ea}\label{class_i_o_hprofiler__problem_a806bbb2ef473500a4bdd3da05cb213ea}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+lowerbound} (int lowerbound)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_af50417ff550dbd388fcb784dc6255d38}\label{class_i_o_hprofiler__problem_af50417ff550dbd388fcb784dc6255d38}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+lowerbound} (const std\+::vector$<$ Input\+Type $>$ \&lowerbound)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a099857f32f0597d9d7da803373a3e428}\label{class_i_o_hprofiler__problem_a099857f32f0597d9d7da803373a3e428}} 
+std\+::vector$<$ Input\+Type $>$ {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+upperbound} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_ac679a83c6fb51cee5b70f0f144c16135}\label{class_i_o_hprofiler__problem_ac679a83c6fb51cee5b70f0f144c16135}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+upperbound} (int upperbound)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a7a392f05fa3aa46aebceca86ebc5a960}\label{class_i_o_hprofiler__problem_a7a392f05fa3aa46aebceca86ebc5a960}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+upperbound} (const std\+::vector$<$ Input\+Type $>$ \&upperbound)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a6ddc84da984ef66befcc3d7dadcf228d}\label{class_i_o_hprofiler__problem_a6ddc84da984ef66befcc3d7dadcf228d}} 
+int {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+number\+\_\+of\+\_\+variables} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_aae2f77478533d0602371c447e1393d21}\label{class_i_o_hprofiler__problem_aae2f77478533d0602371c447e1393d21}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+number\+\_\+of\+\_\+variables} (const int number\+\_\+of\+\_\+variables)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_ae97272e94f83a4192b4dd89d9839b377}\label{class_i_o_hprofiler__problem_ae97272e94f83a4192b4dd89d9839b377}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+number\+\_\+of\+\_\+variables} (const int number\+\_\+of\+\_\+variables, const std\+::vector$<$ Input\+Type $>$ \&best\+\_\+variables)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_aa6b237e0efd489939979f7300861388f}\label{class_i_o_hprofiler__problem_aa6b237e0efd489939979f7300861388f}} 
+int {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+number\+\_\+of\+\_\+objectives} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a3134d53b05189eac9ef25bb2a0858819}\label{class_i_o_hprofiler__problem_a3134d53b05189eac9ef25bb2a0858819}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+number\+\_\+of\+\_\+objectives} (const int number\+\_\+of\+\_\+objectives)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a16c6d8deba2a05c88488c6fc0423076a}\label{class_i_o_hprofiler__problem_a16c6d8deba2a05c88488c6fc0423076a}} 
+std\+::vector$<$ double $>$ {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+raw\+\_\+objectives} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a96ec224421455e332172d31fa28ed92a}\label{class_i_o_hprofiler__problem_a96ec224421455e332172d31fa28ed92a}} 
+std\+::vector$<$ double $>$ {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+transformed\+\_\+objectives} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a528d786226abe264dc82ee2caf7c4004}\label{class_i_o_hprofiler__problem_a528d786226abe264dc82ee2caf7c4004}} 
+int {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+transformed\+\_\+number\+\_\+of\+\_\+variables} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a3f669d20a7ae52c4c4cdb7ad0ed185dd}\label{class_i_o_hprofiler__problem_a3f669d20a7ae52c4c4cdb7ad0ed185dd}} 
+std\+::vector$<$ Input\+Type $>$ {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+transformed\+\_\+variables} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a9e6ce52c7f994a34091e4907c00882ed}\label{class_i_o_hprofiler__problem_a9e6ce52c7f994a34091e4907c00882ed}} 
+std\+::vector$<$ Input\+Type $>$ {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+best\+\_\+variables} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a151334242947c843905a7a76f9c8221f}\label{class_i_o_hprofiler__problem_a151334242947c843905a7a76f9c8221f}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+best\+\_\+variables} (const Input\+Type best\+\_\+variables)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a78207f00ec933f3d0c1bf295c0f486e4}\label{class_i_o_hprofiler__problem_a78207f00ec933f3d0c1bf295c0f486e4}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+best\+\_\+variables} (const std\+::vector$<$ Input\+Type $>$ \&best\+\_\+variables)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_afd3d75aa477d16a219e35fdd323e00bf}\label{class_i_o_hprofiler__problem_afd3d75aa477d16a219e35fdd323e00bf}} 
+std\+::vector$<$ double $>$ {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+optimal} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a11455616e056ffec4841281f12dc8c42}\label{class_i_o_hprofiler__problem_a11455616e056ffec4841281f12dc8c42}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+optimal} (const double optimal)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_acf3d1be5ecb1af1c8b638b8be9f2730f}\label{class_i_o_hprofiler__problem_acf3d1be5ecb1af1c8b638b8be9f2730f}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+optimal} (const std\+::vector$<$ double $>$ \&optimal)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_ac9384f407e4c3689fbc0c3f7502ef4b5}\label{class_i_o_hprofiler__problem_ac9384f407e4c3689fbc0c3f7502ef4b5}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+evaluate\+\_\+optimal} (std\+::vector$<$ Input\+Type $>$ best\+\_\+variables)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a6e2c1bfb9676f60fb52ca43883974549}\label{class_i_o_hprofiler__problem_a6e2c1bfb9676f60fb52ca43883974549}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+evaluate\+\_\+optimal} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_af2a6eb758e845cdee89c19e073d0df82}\label{class_i_o_hprofiler__problem_af2a6eb758e845cdee89c19e073d0df82}} 
+int {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+evaluations} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a691471cede3155f4276db0b9616a7319}\label{class_i_o_hprofiler__problem_a691471cede3155f4276db0b9616a7319}} 
+std\+::vector$<$ double $>$ {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+best\+\_\+so\+\_\+far\+\_\+raw\+\_\+objectives} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_ad1c5e94917551318a0820d5d32e97afa}\label{class_i_o_hprofiler__problem_ad1c5e94917551318a0820d5d32e97afa}} 
+int {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+best\+\_\+so\+\_\+far\+\_\+raw\+\_\+evaluations} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_acf7eb1b4208e6c29d2adc890503c0be0}\label{class_i_o_hprofiler__problem_acf7eb1b4208e6c29d2adc890503c0be0}} 
+std\+::vector$<$ double $>$ {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+best\+\_\+so\+\_\+far\+\_\+transformed\+\_\+objectives} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_ae502dcd11bc3d1ffeb52baba0857638d}\label{class_i_o_hprofiler__problem_ae502dcd11bc3d1ffeb52baba0857638d}} 
+int {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+best\+\_\+so\+\_\+far\+\_\+transformed\+\_\+evaluations} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a521155399e52727c111df7ce2fc9e967}\label{class_i_o_hprofiler__problem_a521155399e52727c111df7ce2fc9e967}} 
+I\+O\+H\+\_\+optimization\+\_\+type {\bfseries I\+O\+Hprofiler\+\_\+get\+\_\+optimization\+\_\+type} () const
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_af4eba6ed4c37ce464ac42d30ad7880f0}\label{class_i_o_hprofiler__problem_af4eba6ed4c37ce464ac42d30ad7880f0}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+as\+\_\+maximization} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_ab2125e44c03bea70162396a6de96ef3d}\label{class_i_o_hprofiler__problem_ab2125e44c03bea70162396a6de96ef3d}} 
+void {\bfseries I\+O\+Hprofiler\+\_\+set\+\_\+as\+\_\+minimization} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class Input\+Type$>$\newline
+class I\+O\+Hprofiler\+\_\+problem$<$ Input\+Type $>$}
+
+A base class for defining problems. 
+
+Basic structure for I\+O\+H\+Experimentor, which is used for generating benchmark problems. To define a new problem, the \textquotesingle{}internal\+\_\+evaluate\textquotesingle{} method must be defined. The problem sets as maximization by default. If the \textquotesingle{}best\+\_\+variables\textquotesingle{} are given, the optimal of the problem will be calculated with the \textquotesingle{}best\+\_\+variables\textquotesingle{}; or you can set the optimal by defining the \textquotesingle{}customized\+\_\+optimal\textquotesingle{} function; otherwise, the optimal is set as min()(max()) for \mbox{\hyperlink{structmaximization}{maximization(minimization)}}. If additional calculation is needed by \textquotesingle{}internal\+\_\+evaluate\textquotesingle{}, you can configure it in \textquotesingle{}prepare\+\_\+problem()\textquotesingle{}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a0bfe5cac70f9030e70c6f64d33ae8f8a}\label{class_i_o_hprofiler__problem_a0bfe5cac70f9030e70c6f64d33ae8f8a}} 
+\index{IOHprofiler\_problem$<$ InputType $>$@{IOHprofiler\_problem$<$ InputType $>$}!calc\_optimal@{calc\_optimal}}
+\index{calc\_optimal@{calc\_optimal}!IOHprofiler\_problem$<$ InputType $>$@{IOHprofiler\_problem$<$ InputType $>$}}
+\doxysubsubsection{\texorpdfstring{calc\_optimal()}{calc\_optimal()}}
+{\footnotesize\ttfamily template$<$class Input\+Type $>$ \\
+void \mbox{\hyperlink{class_i_o_hprofiler__problem}{I\+O\+Hprofiler\+\_\+problem}}$<$ Input\+Type $>$\+::calc\+\_\+optimal}
+
+A function to calculate optimal of the problem. It will be revoked after setting dimension (number\+\_\+of\+\_\+variables) or instance\+\_\+id. todo. Make Exception. Do not apply transformation on best\+\_\+variables as calculating optimal
+
+This only works for F4, F16-\/18, and F23 of B\+B\+OB suite.\mbox{\Hypertarget{class_i_o_hprofiler__problem_a936af495556300e02cc7d30bf6cf2ae0}\label{class_i_o_hprofiler__problem_a936af495556300e02cc7d30bf6cf2ae0}} 
+\index{IOHprofiler\_problem$<$ InputType $>$@{IOHprofiler\_problem$<$ InputType $>$}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!IOHprofiler\_problem$<$ InputType $>$@{IOHprofiler\_problem$<$ InputType $>$}}
+\doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily template$<$class Input\+Type $>$ \\
+double \mbox{\hyperlink{class_i_o_hprofiler__problem}{I\+O\+Hprofiler\+\_\+problem}}$<$ Input\+Type $>$\+::evaluate (\begin{DoxyParamCaption}\item[{std\+::vector$<$ Input\+Type $>$}]{x }\end{DoxyParamCaption})}
+
+\textbackslash{}brife A common function for evaluating fitness of problems.
+
+Raw evaluate process, tranformation operations, and logging process are excuted in this function. 
+\begin{DoxyParams}{Parameters}
+{\em x} & A Input\+Type vector of variables. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A double vector of objectives. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a274b6d21250c336d04c7bc0ba6becce0}\label{class_i_o_hprofiler__problem_a274b6d21250c336d04c7bc0ba6becce0}} 
+\index{IOHprofiler\_problem$<$ InputType $>$@{IOHprofiler\_problem$<$ InputType $>$}!IOHprofiler\_set\_instance\_id@{IOHprofiler\_set\_instance\_id}}
+\index{IOHprofiler\_set\_instance\_id@{IOHprofiler\_set\_instance\_id}!IOHprofiler\_problem$<$ InputType $>$@{IOHprofiler\_problem$<$ InputType $>$}}
+\doxysubsubsection{\texorpdfstring{IOHprofiler\_set\_instance\_id()}{IOHprofiler\_set\_instance\_id()}}
+{\footnotesize\ttfamily template$<$class Input\+Type $>$ \\
+void \mbox{\hyperlink{class_i_o_hprofiler__problem}{I\+O\+Hprofiler\+\_\+problem}}$<$ Input\+Type $>$\+::I\+O\+Hprofiler\+\_\+set\+\_\+instance\+\_\+id (\begin{DoxyParamCaption}\item[{int}]{instance\+\_\+id }\end{DoxyParamCaption})}
+
+To set instance\+\_\+id of the problem. Since the optimal will be updated as instanced\+\_\+id updated, \mbox{\hyperlink{class_i_o_hprofiler__problem_a0bfe5cac70f9030e70c6f64d33ae8f8a}{calc\+\_\+optimal()}} is revoked here. 
+\begin{DoxyParams}{Parameters}
+{\em instance\+\_\+id} & ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_aae2f77478533d0602371c447e1393d21}\label{class_i_o_hprofiler__problem_aae2f77478533d0602371c447e1393d21}} 
+\index{IOHprofiler\_problem$<$ InputType $>$@{IOHprofiler\_problem$<$ InputType $>$}!IOHprofiler\_set\_number\_of\_variables@{IOHprofiler\_set\_number\_of\_variables}}
+\index{IOHprofiler\_set\_number\_of\_variables@{IOHprofiler\_set\_number\_of\_variables}!IOHprofiler\_problem$<$ InputType $>$@{IOHprofiler\_problem$<$ InputType $>$}}
+\doxysubsubsection{\texorpdfstring{IOHprofiler\_set\_number\_of\_variables()}{IOHprofiler\_set\_number\_of\_variables()}}
+{\footnotesize\ttfamily template$<$class Input\+Type $>$ \\
+void \mbox{\hyperlink{class_i_o_hprofiler__problem}{I\+O\+Hprofiler\+\_\+problem}}$<$ Input\+Type $>$\+::I\+O\+Hprofiler\+\_\+set\+\_\+number\+\_\+of\+\_\+variables (\begin{DoxyParamCaption}\item[{const int}]{number\+\_\+of\+\_\+variables }\end{DoxyParamCaption})}
+
+To set number\+\_\+of\+\_\+variables of the problem. When the number\+\_\+of\+\_\+variables is updated, best\+\_\+variables, lowerbound, upperbound, and optimal need to be updated as well.
+
+
+\begin{DoxyParams}{Parameters}
+{\em number\+\_\+of\+\_\+variables} & \\
+\hline
+\end{DoxyParams}
+To set number\+\_\+of\+\_\+variables of the problem. When the number\+\_\+of\+\_\+variables is updated, best\+\_\+variables, lowerbound, upperbound, and optimal need to be updated as well. In case the best value for each bit is not staic, another input \textquotesingle{}best\+\_\+variables\textquotesingle{} is supplied.
+
+
+\begin{DoxyParams}{Parameters}
+{\em number\+\_\+of\+\_\+variables,best\+\_\+variables} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_i_o_hprofiler__problem_a8e341f89def43a2ef8408509626ebbf8}\label{class_i_o_hprofiler__problem_a8e341f89def43a2ef8408509626ebbf8}} 
+\index{IOHprofiler\_problem$<$ InputType $>$@{IOHprofiler\_problem$<$ InputType $>$}!reset\_problem@{reset\_problem}}
+\index{reset\_problem@{reset\_problem}!IOHprofiler\_problem$<$ InputType $>$@{IOHprofiler\_problem$<$ InputType $>$}}
+\doxysubsubsection{\texorpdfstring{reset\_problem()}{reset\_problem()}}
+{\footnotesize\ttfamily template$<$class Input\+Type $>$ \\
+void \mbox{\hyperlink{class_i_o_hprofiler__problem}{I\+O\+Hprofiler\+\_\+problem}}$<$ Input\+Type $>$\+::reset\+\_\+problem}
+
+
+
+Reset problem as the default condition before doing evaluating. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000036}{Todo}}]To support constrained optimization. \end{DoxyRefDesc}
+
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000042}{Todo}}]To support constrained optimization. \end{DoxyRefDesc}
+
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000050}{Todo}}]To support constrained optimization. \end{DoxyRefDesc}
+
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000056}{Todo}}]To support constrained optimization. \end{DoxyRefDesc}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/aaziz-\/alaoui/\+Documents/\+P\+F\+E X/\+Paradis\+E\+O Resources/paradiseo-\/master/eo/src/\+I\+O\+H/\+A\+L\+L/\mbox{\hyperlink{_a_l_l_2_i_o_hprofiler__problem_8h}{I\+O\+Hprofiler\+\_\+problem.\+h}}\item 
+/home/aaziz-\/alaoui/\+Documents/\+P\+F\+E X/\+Paradis\+E\+O Resources/paradiseo-\/master/eo/src/\+I\+O\+H/\+A\+L\+L/I\+O\+Hprofiler\+\_\+problem.\+hpp\end{DoxyCompactItemize}

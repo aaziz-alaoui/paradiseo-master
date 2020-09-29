@@ -1,0 +1,398 @@
+\hypertarget{class_i_o_hprofiler__csv__logger}{}\doxysection{I\+O\+Hprofiler\+\_\+csv\+\_\+logger$<$ T $>$ Class Template Reference}
+\label{class_i_o_hprofiler__csv__logger}\index{IOHprofiler\_csv\_logger$<$ T $>$@{IOHprofiler\_csv\_logger$<$ T $>$}}
+
+
+A class of logging csv files.  
+
+
+
+
+{\ttfamily \#include $<$I\+O\+Hprofiler\+\_\+csv\+\_\+logger.\+h$>$}
+
+
+
+Inheritance diagram for I\+O\+Hprofiler\+\_\+csv\+\_\+logger$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{class_i_o_hprofiler__csv__logger__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for I\+O\+Hprofiler\+\_\+csv\+\_\+logger$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{class_i_o_hprofiler__csv__logger__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a65f4b3a5089c926b3fbbb49b4347137c}\label{class_i_o_hprofiler__csv__logger_a65f4b3a5089c926b3fbbb49b4347137c}} 
+{\bfseries I\+O\+Hprofiler\+\_\+csv\+\_\+logger} (std\+::string directory, std\+::string folder\+\_\+name, std\+::string alg\+\_\+name, std\+::string alg\+\_\+info)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a484b92bb3d54b5f08910fdd0627e459f}\label{class_i_o_hprofiler__csv__logger_a484b92bb3d54b5f08910fdd0627e459f}} 
+bool {\bfseries folder\+\_\+exist} (std\+::string folder\+\_\+name)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a5ff956789b20d604700d1546d02ccab5}\label{class_i_o_hprofiler__csv__logger_a5ff956789b20d604700d1546d02ccab5}} 
+void {\bfseries activate\+\_\+logger} ()
+\item 
+void \mbox{\hyperlink{class_i_o_hprofiler__csv__logger_a2c34effb5661482c49bf66d60f7bd3e7}{clear\+\_\+logger}} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a6a7a484c1ac3c25d2db2bedf405b440f}\label{class_i_o_hprofiler__csv__logger_a6a7a484c1ac3c25d2db2bedf405b440f}} 
+void {\bfseries add\+\_\+dynamic\+\_\+attribute} (const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ double $>$ $>$ \&attributes)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a0d1b52f8924912160fe4529a2c6c1c70}\label{class_i_o_hprofiler__csv__logger_a0d1b52f8924912160fe4529a2c6c1c70}} 
+void {\bfseries add\+\_\+dynamic\+\_\+attribute} (const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ double $>$ $>$ \&attributes, const std\+::vector$<$ std\+::string $>$ \&attributes\+\_\+name)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_ab354cfe127c3819b7665406cb5434bea}\label{class_i_o_hprofiler__csv__logger_ab354cfe127c3819b7665406cb5434bea}} 
+void {\bfseries add\+\_\+attribute} (std\+::string, int)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_ab920234684361e7c0e117cdcb9f6e3c7}\label{class_i_o_hprofiler__csv__logger_ab920234684361e7c0e117cdcb9f6e3c7}} 
+void {\bfseries add\+\_\+attribute} (std\+::string, double)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a3aefb790a1051ddf910113d312ebb547}\label{class_i_o_hprofiler__csv__logger_a3aefb790a1051ddf910113d312ebb547}} 
+void {\bfseries add\+\_\+attribute} (std\+::string, float)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_ac2f01a712f3427f61907d0497005af57}\label{class_i_o_hprofiler__csv__logger_ac2f01a712f3427f61907d0497005af57}} 
+void {\bfseries add\+\_\+attribute} (std\+::string, std\+::string)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a0bd9f077a32647bbe0d0b31b92cd1629}\label{class_i_o_hprofiler__csv__logger_a0bd9f077a32647bbe0d0b31b92cd1629}} 
+void {\bfseries delete\+\_\+attribute} (std\+::string)
+\item 
+void \mbox{\hyperlink{class_i_o_hprofiler__csv__logger_acf2e7492154665058015eb9742355ac3}{track\+\_\+problem}} (const int problem\+\_\+id, const int dimension, const int instance, const std\+::string problem\+\_\+name, const I\+O\+H\+\_\+optimization\+\_\+type maximization\+\_\+minimization\+\_\+flag)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a5819a9577fcbda19f16d992675133934}\label{class_i_o_hprofiler__csv__logger_a5819a9577fcbda19f16d992675133934}} 
+void {\bfseries track\+\_\+problem} (const \mbox{\hyperlink{class_i_o_hprofiler__problem}{I\+O\+Hprofiler\+\_\+problem}}$<$ T $>$ \&problem)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_aadbb43b6195aa3d8c429fc6be8637571}\label{class_i_o_hprofiler__csv__logger_aadbb43b6195aa3d8c429fc6be8637571}} 
+void {\bfseries track\+\_\+suite} (std\+::string suite\+\_\+name)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_ac69b422d1070de9dfc7116aa5d165397}\label{class_i_o_hprofiler__csv__logger_ac69b422d1070de9dfc7116aa5d165397}} 
+void {\bfseries track\+\_\+suite} (const \mbox{\hyperlink{class_i_o_hprofiler__suite}{I\+O\+Hprofiler\+\_\+suite}}$<$ T $>$ \&suite)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a3d68c9c5236cfae0f2d93a1dc0a43b71}\label{class_i_o_hprofiler__csv__logger_a3d68c9c5236cfae0f2d93a1dc0a43b71}} 
+void {\bfseries open\+Info} (int problem\+\_\+id, int dimension, std\+::string problem\+\_\+name)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a01d5052987ce5069d2d1065a20835d17}\label{class_i_o_hprofiler__csv__logger_a01d5052987ce5069d2d1065a20835d17}} 
+void {\bfseries write\+\_\+info} (int instance, double best\+\_\+y, double best\+\_\+transformed\+\_\+y, int evaluations, double last\+\_\+y, double last\+\_\+transformed\+\_\+y, int last\+\_\+evaluations)
+\item 
+void \mbox{\hyperlink{class_i_o_hprofiler__csv__logger_ae1f87543ebe3b26dc0d7b6b80a0dead6}{write\+\_\+line}} (const size\+\_\+t evaluations, const double y, const double best\+\_\+so\+\_\+far\+\_\+y, const double transformed\+\_\+y, const double best\+\_\+so\+\_\+far\+\_\+transformed\+\_\+y)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a4d2f13c06793df131d0ecefb064205db}\label{class_i_o_hprofiler__csv__logger_a4d2f13c06793df131d0ecefb064205db}} 
+void {\bfseries do\+\_\+log} (const std\+::vector$<$ double $>$ \&log\+\_\+info)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_aa26bdf20129df3162f4fe01046a4997e}\label{class_i_o_hprofiler__csv__logger_aa26bdf20129df3162f4fe01046a4997e}} 
+void {\bfseries write\+\_\+line} (const std\+::vector$<$ double $>$ \&log\+\_\+info)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a7d4f0c3240db72f4a06d3f04ca90bfa7}\label{class_i_o_hprofiler__csv__logger_a7d4f0c3240db72f4a06d3f04ca90bfa7}} 
+void {\bfseries update\+\_\+logger\+\_\+info} (size\+\_\+t optimal\+\_\+evaluations, double y, double transformed\+\_\+y)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_afb9332227365f788cfff0b780f12fdf3}\label{class_i_o_hprofiler__csv__logger_afb9332227365f788cfff0b780f12fdf3}} 
+void {\bfseries set\+\_\+parameters} (const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ double $>$ $>$ \&\mbox{\hyperlink{structparameters}{parameters}})
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a03f594adcc0d4dd9321d121dce75d296}\label{class_i_o_hprofiler__csv__logger_a03f594adcc0d4dd9321d121dce75d296}} 
+void {\bfseries set\+\_\+parameters} (const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ double $>$ $>$ \&\mbox{\hyperlink{structparameters}{parameters}}, const std\+::vector$<$ std\+::string $>$ \&parameters\+\_\+name)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a65f4b3a5089c926b3fbbb49b4347137c}\label{class_i_o_hprofiler__csv__logger_a65f4b3a5089c926b3fbbb49b4347137c}} 
+{\bfseries I\+O\+Hprofiler\+\_\+csv\+\_\+logger} (std\+::string directory, std\+::string folder\+\_\+name, std\+::string alg\+\_\+name, std\+::string alg\+\_\+info)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a484b92bb3d54b5f08910fdd0627e459f}\label{class_i_o_hprofiler__csv__logger_a484b92bb3d54b5f08910fdd0627e459f}} 
+bool {\bfseries folder\+\_\+exist} (std\+::string folder\+\_\+name)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a5ff956789b20d604700d1546d02ccab5}\label{class_i_o_hprofiler__csv__logger_a5ff956789b20d604700d1546d02ccab5}} 
+void {\bfseries activate\+\_\+logger} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a2c34effb5661482c49bf66d60f7bd3e7}\label{class_i_o_hprofiler__csv__logger_a2c34effb5661482c49bf66d60f7bd3e7}} 
+void {\bfseries clear\+\_\+logger} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a6a7a484c1ac3c25d2db2bedf405b440f}\label{class_i_o_hprofiler__csv__logger_a6a7a484c1ac3c25d2db2bedf405b440f}} 
+void {\bfseries add\+\_\+dynamic\+\_\+attribute} (const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ double $>$ $>$ \&attributes)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a0d1b52f8924912160fe4529a2c6c1c70}\label{class_i_o_hprofiler__csv__logger_a0d1b52f8924912160fe4529a2c6c1c70}} 
+void {\bfseries add\+\_\+dynamic\+\_\+attribute} (const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ double $>$ $>$ \&attributes, const std\+::vector$<$ std\+::string $>$ \&attributes\+\_\+name)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_ab354cfe127c3819b7665406cb5434bea}\label{class_i_o_hprofiler__csv__logger_ab354cfe127c3819b7665406cb5434bea}} 
+void {\bfseries add\+\_\+attribute} (std\+::string, int)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_ab920234684361e7c0e117cdcb9f6e3c7}\label{class_i_o_hprofiler__csv__logger_ab920234684361e7c0e117cdcb9f6e3c7}} 
+void {\bfseries add\+\_\+attribute} (std\+::string, double)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a3aefb790a1051ddf910113d312ebb547}\label{class_i_o_hprofiler__csv__logger_a3aefb790a1051ddf910113d312ebb547}} 
+void {\bfseries add\+\_\+attribute} (std\+::string, float)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_ac2f01a712f3427f61907d0497005af57}\label{class_i_o_hprofiler__csv__logger_ac2f01a712f3427f61907d0497005af57}} 
+void {\bfseries add\+\_\+attribute} (std\+::string, std\+::string)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a0bd9f077a32647bbe0d0b31b92cd1629}\label{class_i_o_hprofiler__csv__logger_a0bd9f077a32647bbe0d0b31b92cd1629}} 
+void {\bfseries delete\+\_\+attribute} (std\+::string)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_acf2e7492154665058015eb9742355ac3}\label{class_i_o_hprofiler__csv__logger_acf2e7492154665058015eb9742355ac3}} 
+void {\bfseries track\+\_\+problem} (const int problem\+\_\+id, const int dimension, const int instance, const std\+::string problem\+\_\+name, const I\+O\+H\+\_\+optimization\+\_\+type maximization\+\_\+minimization\+\_\+flag)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a5819a9577fcbda19f16d992675133934}\label{class_i_o_hprofiler__csv__logger_a5819a9577fcbda19f16d992675133934}} 
+void {\bfseries track\+\_\+problem} (const \mbox{\hyperlink{class_i_o_hprofiler__problem}{I\+O\+Hprofiler\+\_\+problem}}$<$ T $>$ \&problem)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_aadbb43b6195aa3d8c429fc6be8637571}\label{class_i_o_hprofiler__csv__logger_aadbb43b6195aa3d8c429fc6be8637571}} 
+void {\bfseries track\+\_\+suite} (std\+::string suite\+\_\+name)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_ac69b422d1070de9dfc7116aa5d165397}\label{class_i_o_hprofiler__csv__logger_ac69b422d1070de9dfc7116aa5d165397}} 
+void {\bfseries track\+\_\+suite} (const \mbox{\hyperlink{class_i_o_hprofiler__suite}{I\+O\+Hprofiler\+\_\+suite}}$<$ T $>$ \&suite)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a3d68c9c5236cfae0f2d93a1dc0a43b71}\label{class_i_o_hprofiler__csv__logger_a3d68c9c5236cfae0f2d93a1dc0a43b71}} 
+void {\bfseries open\+Info} (int problem\+\_\+id, int dimension, std\+::string problem\+\_\+name)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a01d5052987ce5069d2d1065a20835d17}\label{class_i_o_hprofiler__csv__logger_a01d5052987ce5069d2d1065a20835d17}} 
+void {\bfseries write\+\_\+info} (int instance, double best\+\_\+y, double best\+\_\+transformed\+\_\+y, int evaluations, double last\+\_\+y, double last\+\_\+transformed\+\_\+y, int last\+\_\+evaluations)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_ae1f87543ebe3b26dc0d7b6b80a0dead6}\label{class_i_o_hprofiler__csv__logger_ae1f87543ebe3b26dc0d7b6b80a0dead6}} 
+void {\bfseries write\+\_\+line} (const size\+\_\+t evaluations, const double y, const double best\+\_\+so\+\_\+far\+\_\+y, const double transformed\+\_\+y, const double best\+\_\+so\+\_\+far\+\_\+transformed\+\_\+y)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a4d2f13c06793df131d0ecefb064205db}\label{class_i_o_hprofiler__csv__logger_a4d2f13c06793df131d0ecefb064205db}} 
+void {\bfseries do\+\_\+log} (const std\+::vector$<$ double $>$ \&log\+\_\+info)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_aa26bdf20129df3162f4fe01046a4997e}\label{class_i_o_hprofiler__csv__logger_aa26bdf20129df3162f4fe01046a4997e}} 
+void {\bfseries write\+\_\+line} (const std\+::vector$<$ double $>$ \&log\+\_\+info)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a7d4f0c3240db72f4a06d3f04ca90bfa7}\label{class_i_o_hprofiler__csv__logger_a7d4f0c3240db72f4a06d3f04ca90bfa7}} 
+void {\bfseries update\+\_\+logger\+\_\+info} (size\+\_\+t optimal\+\_\+evaluations, double y, double transformed\+\_\+y)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_afb9332227365f788cfff0b780f12fdf3}\label{class_i_o_hprofiler__csv__logger_afb9332227365f788cfff0b780f12fdf3}} 
+void {\bfseries set\+\_\+parameters} (const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ double $>$ $>$ \&\mbox{\hyperlink{structparameters}{parameters}})
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a03f594adcc0d4dd9321d121dce75d296}\label{class_i_o_hprofiler__csv__logger_a03f594adcc0d4dd9321d121dce75d296}} 
+void {\bfseries set\+\_\+parameters} (const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ double $>$ $>$ \&\mbox{\hyperlink{structparameters}{parameters}}, const std\+::vector$<$ std\+::string $>$ \&parameters\+\_\+name)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a65f4b3a5089c926b3fbbb49b4347137c}\label{class_i_o_hprofiler__csv__logger_a65f4b3a5089c926b3fbbb49b4347137c}} 
+{\bfseries I\+O\+Hprofiler\+\_\+csv\+\_\+logger} (std\+::string directory, std\+::string folder\+\_\+name, std\+::string alg\+\_\+name, std\+::string alg\+\_\+info)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a484b92bb3d54b5f08910fdd0627e459f}\label{class_i_o_hprofiler__csv__logger_a484b92bb3d54b5f08910fdd0627e459f}} 
+bool {\bfseries folder\+\_\+exist} (std\+::string folder\+\_\+name)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a5ff956789b20d604700d1546d02ccab5}\label{class_i_o_hprofiler__csv__logger_a5ff956789b20d604700d1546d02ccab5}} 
+void {\bfseries activate\+\_\+logger} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a2c34effb5661482c49bf66d60f7bd3e7}\label{class_i_o_hprofiler__csv__logger_a2c34effb5661482c49bf66d60f7bd3e7}} 
+void {\bfseries clear\+\_\+logger} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a6a7a484c1ac3c25d2db2bedf405b440f}\label{class_i_o_hprofiler__csv__logger_a6a7a484c1ac3c25d2db2bedf405b440f}} 
+void {\bfseries add\+\_\+dynamic\+\_\+attribute} (const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ double $>$ $>$ \&attributes)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a0d1b52f8924912160fe4529a2c6c1c70}\label{class_i_o_hprofiler__csv__logger_a0d1b52f8924912160fe4529a2c6c1c70}} 
+void {\bfseries add\+\_\+dynamic\+\_\+attribute} (const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ double $>$ $>$ \&attributes, const std\+::vector$<$ std\+::string $>$ \&attributes\+\_\+name)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_ac48a97da08e290dd9817bdea8c600699}\label{class_i_o_hprofiler__csv__logger_ac48a97da08e290dd9817bdea8c600699}} 
+void \mbox{\hyperlink{class_i_o_hprofiler__csv__logger_ac48a97da08e290dd9817bdea8c600699}{set\+\_\+dynamic\+\_\+attributes\+\_\+name}} (const std\+::vector$<$ std\+::string $>$ \&attributes\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Only for python wrapper. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a143211f5dc3b31d9f3af7dfdc5ed5730}\label{class_i_o_hprofiler__csv__logger_a143211f5dc3b31d9f3af7dfdc5ed5730}} 
+void \mbox{\hyperlink{class_i_o_hprofiler__csv__logger_a143211f5dc3b31d9f3af7dfdc5ed5730}{set\+\_\+dynamic\+\_\+attributes\+\_\+name}} (const std\+::vector$<$ std\+::string $>$ \&attributes\+\_\+name, const std\+::vector$<$ double $>$ \&initial\+\_\+attributes)
+\begin{DoxyCompactList}\small\item\em Only for python wrapper. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a1361a930fe251deb1e09a7fcabf0be4a}\label{class_i_o_hprofiler__csv__logger_a1361a930fe251deb1e09a7fcabf0be4a}} 
+void \mbox{\hyperlink{class_i_o_hprofiler__csv__logger_a1361a930fe251deb1e09a7fcabf0be4a}{set\+\_\+dynamic\+\_\+attributes}} (const std\+::vector$<$ std\+::string $>$ \&attributes\+\_\+name, const std\+::vector$<$ double $>$ \&attributes)
+\begin{DoxyCompactList}\small\item\em Only for python wrapper. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_ab354cfe127c3819b7665406cb5434bea}\label{class_i_o_hprofiler__csv__logger_ab354cfe127c3819b7665406cb5434bea}} 
+void {\bfseries add\+\_\+attribute} (std\+::string, int)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_ab920234684361e7c0e117cdcb9f6e3c7}\label{class_i_o_hprofiler__csv__logger_ab920234684361e7c0e117cdcb9f6e3c7}} 
+void {\bfseries add\+\_\+attribute} (std\+::string, double)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a3aefb790a1051ddf910113d312ebb547}\label{class_i_o_hprofiler__csv__logger_a3aefb790a1051ddf910113d312ebb547}} 
+void {\bfseries add\+\_\+attribute} (std\+::string, float)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_ac2f01a712f3427f61907d0497005af57}\label{class_i_o_hprofiler__csv__logger_ac2f01a712f3427f61907d0497005af57}} 
+void {\bfseries add\+\_\+attribute} (std\+::string, std\+::string)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a0bd9f077a32647bbe0d0b31b92cd1629}\label{class_i_o_hprofiler__csv__logger_a0bd9f077a32647bbe0d0b31b92cd1629}} 
+void {\bfseries delete\+\_\+attribute} (std\+::string)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_acf2e7492154665058015eb9742355ac3}\label{class_i_o_hprofiler__csv__logger_acf2e7492154665058015eb9742355ac3}} 
+void {\bfseries track\+\_\+problem} (const int problem\+\_\+id, const int dimension, const int instance, const std\+::string problem\+\_\+name, const I\+O\+H\+\_\+optimization\+\_\+type maximization\+\_\+minimization\+\_\+flag)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a5819a9577fcbda19f16d992675133934}\label{class_i_o_hprofiler__csv__logger_a5819a9577fcbda19f16d992675133934}} 
+void {\bfseries track\+\_\+problem} (const \mbox{\hyperlink{class_i_o_hprofiler__problem}{I\+O\+Hprofiler\+\_\+problem}}$<$ T $>$ \&problem)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_aadbb43b6195aa3d8c429fc6be8637571}\label{class_i_o_hprofiler__csv__logger_aadbb43b6195aa3d8c429fc6be8637571}} 
+void {\bfseries track\+\_\+suite} (std\+::string suite\+\_\+name)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_ac69b422d1070de9dfc7116aa5d165397}\label{class_i_o_hprofiler__csv__logger_ac69b422d1070de9dfc7116aa5d165397}} 
+void {\bfseries track\+\_\+suite} (const \mbox{\hyperlink{class_i_o_hprofiler__suite}{I\+O\+Hprofiler\+\_\+suite}}$<$ T $>$ \&suite)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a3d68c9c5236cfae0f2d93a1dc0a43b71}\label{class_i_o_hprofiler__csv__logger_a3d68c9c5236cfae0f2d93a1dc0a43b71}} 
+void {\bfseries open\+Info} (int problem\+\_\+id, int dimension, std\+::string problem\+\_\+name)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a01d5052987ce5069d2d1065a20835d17}\label{class_i_o_hprofiler__csv__logger_a01d5052987ce5069d2d1065a20835d17}} 
+void {\bfseries write\+\_\+info} (int instance, double best\+\_\+y, double best\+\_\+transformed\+\_\+y, int evaluations, double last\+\_\+y, double last\+\_\+transformed\+\_\+y, int last\+\_\+evaluations)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_ae1f87543ebe3b26dc0d7b6b80a0dead6}\label{class_i_o_hprofiler__csv__logger_ae1f87543ebe3b26dc0d7b6b80a0dead6}} 
+void {\bfseries write\+\_\+line} (const size\+\_\+t evaluations, const double y, const double best\+\_\+so\+\_\+far\+\_\+y, const double transformed\+\_\+y, const double best\+\_\+so\+\_\+far\+\_\+transformed\+\_\+y)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a4d2f13c06793df131d0ecefb064205db}\label{class_i_o_hprofiler__csv__logger_a4d2f13c06793df131d0ecefb064205db}} 
+void {\bfseries do\+\_\+log} (const std\+::vector$<$ double $>$ \&log\+\_\+info)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_aa26bdf20129df3162f4fe01046a4997e}\label{class_i_o_hprofiler__csv__logger_aa26bdf20129df3162f4fe01046a4997e}} 
+void {\bfseries write\+\_\+line} (const std\+::vector$<$ double $>$ \&log\+\_\+info)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a7d4f0c3240db72f4a06d3f04ca90bfa7}\label{class_i_o_hprofiler__csv__logger_a7d4f0c3240db72f4a06d3f04ca90bfa7}} 
+void {\bfseries update\+\_\+logger\+\_\+info} (size\+\_\+t optimal\+\_\+evaluations, double y, double transformed\+\_\+y)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_afb9332227365f788cfff0b780f12fdf3}\label{class_i_o_hprofiler__csv__logger_afb9332227365f788cfff0b780f12fdf3}} 
+void {\bfseries set\+\_\+parameters} (const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ double $>$ $>$ \&\mbox{\hyperlink{structparameters}{parameters}})
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a03f594adcc0d4dd9321d121dce75d296}\label{class_i_o_hprofiler__csv__logger_a03f594adcc0d4dd9321d121dce75d296}} 
+void {\bfseries set\+\_\+parameters} (const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ double $>$ $>$ \&\mbox{\hyperlink{structparameters}{parameters}}, const std\+::vector$<$ std\+::string $>$ \&parameters\+\_\+name)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a41eb70c8150a82c00b369e3acc867c75}\label{class_i_o_hprofiler__csv__logger_a41eb70c8150a82c00b369e3acc867c75}} 
+void \mbox{\hyperlink{class_i_o_hprofiler__csv__logger_a41eb70c8150a82c00b369e3acc867c75}{set\+\_\+parameters\+\_\+name}} (const std\+::vector$<$ std\+::string $>$ \&parameters\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Only for python wrapper. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_ada74aa5998af9e81b0d9c151bf87f0e3}\label{class_i_o_hprofiler__csv__logger_ada74aa5998af9e81b0d9c151bf87f0e3}} 
+void \mbox{\hyperlink{class_i_o_hprofiler__csv__logger_ada74aa5998af9e81b0d9c151bf87f0e3}{set\+\_\+parameters\+\_\+name}} (const std\+::vector$<$ std\+::string $>$ \&parameters\+\_\+name, const std\+::vector$<$ double $>$ \&initial\+\_\+parameters)
+\begin{DoxyCompactList}\small\item\em Only for python wrapper. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_ae98a4e8f39fccf3757638268b0609d11}\label{class_i_o_hprofiler__csv__logger_ae98a4e8f39fccf3757638268b0609d11}} 
+void \mbox{\hyperlink{class_i_o_hprofiler__csv__logger_ae98a4e8f39fccf3757638268b0609d11}{set\+\_\+parameters}} (const std\+::vector$<$ std\+::string $>$ \&parameters\+\_\+name, const std\+::vector$<$ double $>$ \&\mbox{\hyperlink{structparameters}{parameters}})
+\begin{DoxyCompactList}\small\item\em Only for python wrapper. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a65f4b3a5089c926b3fbbb49b4347137c}\label{class_i_o_hprofiler__csv__logger_a65f4b3a5089c926b3fbbb49b4347137c}} 
+{\bfseries I\+O\+Hprofiler\+\_\+csv\+\_\+logger} (std\+::string directory, std\+::string folder\+\_\+name, std\+::string alg\+\_\+name, std\+::string alg\+\_\+info)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a484b92bb3d54b5f08910fdd0627e459f}\label{class_i_o_hprofiler__csv__logger_a484b92bb3d54b5f08910fdd0627e459f}} 
+bool {\bfseries folder\+\_\+exist} (std\+::string folder\+\_\+name)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a5ff956789b20d604700d1546d02ccab5}\label{class_i_o_hprofiler__csv__logger_a5ff956789b20d604700d1546d02ccab5}} 
+void {\bfseries activate\+\_\+logger} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a2c34effb5661482c49bf66d60f7bd3e7}\label{class_i_o_hprofiler__csv__logger_a2c34effb5661482c49bf66d60f7bd3e7}} 
+void {\bfseries clear\+\_\+logger} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a6a7a484c1ac3c25d2db2bedf405b440f}\label{class_i_o_hprofiler__csv__logger_a6a7a484c1ac3c25d2db2bedf405b440f}} 
+void {\bfseries add\+\_\+dynamic\+\_\+attribute} (const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ double $>$ $>$ \&attributes)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a0d1b52f8924912160fe4529a2c6c1c70}\label{class_i_o_hprofiler__csv__logger_a0d1b52f8924912160fe4529a2c6c1c70}} 
+void {\bfseries add\+\_\+dynamic\+\_\+attribute} (const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ double $>$ $>$ \&attributes, const std\+::vector$<$ std\+::string $>$ \&attributes\+\_\+name)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_ac48a97da08e290dd9817bdea8c600699}\label{class_i_o_hprofiler__csv__logger_ac48a97da08e290dd9817bdea8c600699}} 
+void {\bfseries set\+\_\+dynamic\+\_\+attributes\+\_\+name} (const std\+::vector$<$ std\+::string $>$ \&attributes\+\_\+name)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a143211f5dc3b31d9f3af7dfdc5ed5730}\label{class_i_o_hprofiler__csv__logger_a143211f5dc3b31d9f3af7dfdc5ed5730}} 
+void {\bfseries set\+\_\+dynamic\+\_\+attributes\+\_\+name} (const std\+::vector$<$ std\+::string $>$ \&attributes\+\_\+name, const std\+::vector$<$ double $>$ \&initial\+\_\+attributes)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a1361a930fe251deb1e09a7fcabf0be4a}\label{class_i_o_hprofiler__csv__logger_a1361a930fe251deb1e09a7fcabf0be4a}} 
+void {\bfseries set\+\_\+dynamic\+\_\+attributes} (const std\+::vector$<$ std\+::string $>$ \&attributes\+\_\+name, const std\+::vector$<$ double $>$ \&attributes)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_ab354cfe127c3819b7665406cb5434bea}\label{class_i_o_hprofiler__csv__logger_ab354cfe127c3819b7665406cb5434bea}} 
+void {\bfseries add\+\_\+attribute} (std\+::string, int)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_ab920234684361e7c0e117cdcb9f6e3c7}\label{class_i_o_hprofiler__csv__logger_ab920234684361e7c0e117cdcb9f6e3c7}} 
+void {\bfseries add\+\_\+attribute} (std\+::string, double)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a3aefb790a1051ddf910113d312ebb547}\label{class_i_o_hprofiler__csv__logger_a3aefb790a1051ddf910113d312ebb547}} 
+void {\bfseries add\+\_\+attribute} (std\+::string, float)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_ac2f01a712f3427f61907d0497005af57}\label{class_i_o_hprofiler__csv__logger_ac2f01a712f3427f61907d0497005af57}} 
+void {\bfseries add\+\_\+attribute} (std\+::string, std\+::string)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a0bd9f077a32647bbe0d0b31b92cd1629}\label{class_i_o_hprofiler__csv__logger_a0bd9f077a32647bbe0d0b31b92cd1629}} 
+void {\bfseries delete\+\_\+attribute} (std\+::string)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_acf2e7492154665058015eb9742355ac3}\label{class_i_o_hprofiler__csv__logger_acf2e7492154665058015eb9742355ac3}} 
+void {\bfseries track\+\_\+problem} (const int problem\+\_\+id, const int dimension, const int instance, const std\+::string problem\+\_\+name, const I\+O\+H\+\_\+optimization\+\_\+type maximization\+\_\+minimization\+\_\+flag)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a5819a9577fcbda19f16d992675133934}\label{class_i_o_hprofiler__csv__logger_a5819a9577fcbda19f16d992675133934}} 
+void {\bfseries track\+\_\+problem} (const \mbox{\hyperlink{class_i_o_hprofiler__problem}{I\+O\+Hprofiler\+\_\+problem}}$<$ T $>$ \&problem)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_aadbb43b6195aa3d8c429fc6be8637571}\label{class_i_o_hprofiler__csv__logger_aadbb43b6195aa3d8c429fc6be8637571}} 
+void {\bfseries track\+\_\+suite} (std\+::string suite\+\_\+name)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_ac69b422d1070de9dfc7116aa5d165397}\label{class_i_o_hprofiler__csv__logger_ac69b422d1070de9dfc7116aa5d165397}} 
+void {\bfseries track\+\_\+suite} (const \mbox{\hyperlink{class_i_o_hprofiler__suite}{I\+O\+Hprofiler\+\_\+suite}}$<$ T $>$ \&suite)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a3d68c9c5236cfae0f2d93a1dc0a43b71}\label{class_i_o_hprofiler__csv__logger_a3d68c9c5236cfae0f2d93a1dc0a43b71}} 
+void {\bfseries open\+Info} (int problem\+\_\+id, int dimension, std\+::string problem\+\_\+name)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a01d5052987ce5069d2d1065a20835d17}\label{class_i_o_hprofiler__csv__logger_a01d5052987ce5069d2d1065a20835d17}} 
+void {\bfseries write\+\_\+info} (int instance, double best\+\_\+y, double best\+\_\+transformed\+\_\+y, int evaluations, double last\+\_\+y, double last\+\_\+transformed\+\_\+y, int last\+\_\+evaluations)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_ae1f87543ebe3b26dc0d7b6b80a0dead6}\label{class_i_o_hprofiler__csv__logger_ae1f87543ebe3b26dc0d7b6b80a0dead6}} 
+void {\bfseries write\+\_\+line} (const size\+\_\+t evaluations, const double y, const double best\+\_\+so\+\_\+far\+\_\+y, const double transformed\+\_\+y, const double best\+\_\+so\+\_\+far\+\_\+transformed\+\_\+y)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a4d2f13c06793df131d0ecefb064205db}\label{class_i_o_hprofiler__csv__logger_a4d2f13c06793df131d0ecefb064205db}} 
+void {\bfseries do\+\_\+log} (const std\+::vector$<$ double $>$ \&log\+\_\+info)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_aa26bdf20129df3162f4fe01046a4997e}\label{class_i_o_hprofiler__csv__logger_aa26bdf20129df3162f4fe01046a4997e}} 
+void {\bfseries write\+\_\+line} (const std\+::vector$<$ double $>$ \&log\+\_\+info)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a7d4f0c3240db72f4a06d3f04ca90bfa7}\label{class_i_o_hprofiler__csv__logger_a7d4f0c3240db72f4a06d3f04ca90bfa7}} 
+void {\bfseries update\+\_\+logger\+\_\+info} (size\+\_\+t optimal\+\_\+evaluations, double y, double transformed\+\_\+y)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_afb9332227365f788cfff0b780f12fdf3}\label{class_i_o_hprofiler__csv__logger_afb9332227365f788cfff0b780f12fdf3}} 
+void {\bfseries set\+\_\+parameters} (const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ double $>$ $>$ \&\mbox{\hyperlink{structparameters}{parameters}})
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a03f594adcc0d4dd9321d121dce75d296}\label{class_i_o_hprofiler__csv__logger_a03f594adcc0d4dd9321d121dce75d296}} 
+void {\bfseries set\+\_\+parameters} (const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ double $>$ $>$ \&\mbox{\hyperlink{structparameters}{parameters}}, const std\+::vector$<$ std\+::string $>$ \&parameters\+\_\+name)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a41eb70c8150a82c00b369e3acc867c75}\label{class_i_o_hprofiler__csv__logger_a41eb70c8150a82c00b369e3acc867c75}} 
+void {\bfseries set\+\_\+parameters\+\_\+name} (const std\+::vector$<$ std\+::string $>$ \&parameters\+\_\+name)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_ada74aa5998af9e81b0d9c151bf87f0e3}\label{class_i_o_hprofiler__csv__logger_ada74aa5998af9e81b0d9c151bf87f0e3}} 
+void {\bfseries set\+\_\+parameters\+\_\+name} (const std\+::vector$<$ std\+::string $>$ \&parameters\+\_\+name, const std\+::vector$<$ double $>$ \&initial\+\_\+parameters)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_ae98a4e8f39fccf3757638268b0609d11}\label{class_i_o_hprofiler__csv__logger_ae98a4e8f39fccf3757638268b0609d11}} 
+void {\bfseries set\+\_\+parameters} (const std\+::vector$<$ std\+::string $>$ \&parameters\+\_\+name, const std\+::vector$<$ double $>$ \&\mbox{\hyperlink{structparameters}{parameters}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class I\+O\+Hprofiler\+\_\+csv\+\_\+logger$<$ T $>$}
+
+A class of logging csv files. 
+
+To activate logger functions as evaluating problems, a \textquotesingle{}logger\textquotesingle{} must be added to \mbox{\hyperlink{class_i_o_hprofiler__problem}{I\+O\+Hprofiler\+\_\+problem}} by the statement \textquotesingle{}problem.\+add\+\_\+logger(logger)\textquotesingle{}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_a2c34effb5661482c49bf66d60f7bd3e7}\label{class_i_o_hprofiler__csv__logger_a2c34effb5661482c49bf66d60f7bd3e7}} 
+\index{IOHprofiler\_csv\_logger$<$ T $>$@{IOHprofiler\_csv\_logger$<$ T $>$}!clear\_logger@{clear\_logger}}
+\index{clear\_logger@{clear\_logger}!IOHprofiler\_csv\_logger$<$ T $>$@{IOHprofiler\_csv\_logger$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{clear\_logger()}{clear\_logger()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_i_o_hprofiler__csv__logger}{I\+O\+Hprofiler\+\_\+csv\+\_\+logger}}$<$ T $>$\+::clear\+\_\+logger}
+
+Close .dat files after .info file to record evaluations of the last iteration.\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_acf2e7492154665058015eb9742355ac3}\label{class_i_o_hprofiler__csv__logger_acf2e7492154665058015eb9742355ac3}} 
+\index{IOHprofiler\_csv\_logger$<$ T $>$@{IOHprofiler\_csv\_logger$<$ T $>$}!track\_problem@{track\_problem}}
+\index{track\_problem@{track\_problem}!IOHprofiler\_csv\_logger$<$ T $>$@{IOHprofiler\_csv\_logger$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{track\_problem()}{track\_problem()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_i_o_hprofiler__csv__logger}{I\+O\+Hprofiler\+\_\+csv\+\_\+logger}}$<$ T $>$\+::track\+\_\+problem (\begin{DoxyParamCaption}\item[{const int}]{problem\+\_\+id,  }\item[{const int}]{dimension,  }\item[{const int}]{instance,  }\item[{const std\+::string}]{problem\+\_\+name,  }\item[{const I\+O\+H\+\_\+optimization\+\_\+type}]{maximization\+\_\+minimization\+\_\+flag }\end{DoxyParamCaption})}
+
+Handle info of the previous problem.
+
+TO DO\+: Update the method of initializing this value.\mbox{\Hypertarget{class_i_o_hprofiler__csv__logger_ae1f87543ebe3b26dc0d7b6b80a0dead6}\label{class_i_o_hprofiler__csv__logger_ae1f87543ebe3b26dc0d7b6b80a0dead6}} 
+\index{IOHprofiler\_csv\_logger$<$ T $>$@{IOHprofiler\_csv\_logger$<$ T $>$}!write\_line@{write\_line}}
+\index{write\_line@{write\_line}!IOHprofiler\_csv\_logger$<$ T $>$@{IOHprofiler\_csv\_logger$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{write\_line()}{write\_line()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_i_o_hprofiler__csv__logger}{I\+O\+Hprofiler\+\_\+csv\+\_\+logger}}$<$ T $>$\+::write\+\_\+line (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{evaluations,  }\item[{const double}]{y,  }\item[{const double}]{best\+\_\+so\+\_\+far\+\_\+y,  }\item[{const double}]{transformed\+\_\+y,  }\item[{const double}]{best\+\_\+so\+\_\+far\+\_\+transformed\+\_\+y }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000031}{Todo}}]The precision of double values. \end{DoxyRefDesc}
+
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000043}{Todo}}]The precision of double values. \end{DoxyRefDesc}
+
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000045}{Todo}}]The precision of double values. \end{DoxyRefDesc}
+
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000057}{Todo}}]The precision of double values. \end{DoxyRefDesc}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/aaziz-\/alaoui/\+Documents/\+P\+F\+E X/\+Paradis\+E\+O Resources/paradiseo-\/master/eo/src/\+I\+O\+H/\+A\+L\+L/\mbox{\hyperlink{_a_l_l_2_i_o_hprofiler__csv__logger_8h}{I\+O\+Hprofiler\+\_\+csv\+\_\+logger.\+h}}\item 
+/home/aaziz-\/alaoui/\+Documents/\+P\+F\+E X/\+Paradis\+E\+O Resources/paradiseo-\/master/eo/src/\+I\+O\+H/\+A\+L\+L/I\+O\+Hprofiler\+\_\+csv\+\_\+logger.\+hpp\end{DoxyCompactItemize}

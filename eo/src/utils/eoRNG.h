@@ -216,6 +216,31 @@ public :
             return uniform() < bias;
         }
 
+    /** Sample in a binomial distribution of size n and probability p.
+
+        FIXME most naive algorithm, one should really use a rejection algorithm.
+    */
+    unsigned binomial(unsigned n, double p)
+        {
+            unsigned x = 0;
+            for(unsigned i=0; i<n; ++i) {
+                x += flip(p);
+            }
+            return x;
+        }
+
+    /** Sample in a power law distribution
+     */
+    double powerlaw(double min, double max, double gamma)
+       {
+            double x = uniform(min,max);
+            return std::pow(
+                     x * (std::pow(max,-gamma+1) - std::pow(min,-gamma+1))
+                       + std::pow(min,-gamma+1.0),
+                     1.0/(-gamma + 1.0)
+                   );
+       }
+
     /** Gaussian deviate
 
     Zero mean Gaussian deviate with standard deviation 1.

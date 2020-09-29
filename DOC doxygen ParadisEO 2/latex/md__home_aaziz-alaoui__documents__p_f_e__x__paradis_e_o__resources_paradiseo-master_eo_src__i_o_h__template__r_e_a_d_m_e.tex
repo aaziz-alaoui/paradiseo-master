@@ -1,0 +1,25 @@
+\mbox{[}This folder\mbox{]} includes common used codes of {\bfseries{I\+O\+Hexperimenter}}. For details of {\ttfamily \mbox{\hyperlink{class_i_o_hprofiler__problem}{I\+O\+Hprofiler\+\_\+problem}}} and {\ttfamily \mbox{\hyperlink{class_i_o_hprofiler__suite}{I\+O\+Hprofiler\+\_\+suite}}}, please visit \href{/src/Problems/}{\texttt{ problem page}} and \href{/src/Suites}{\texttt{ suite page}}.\hypertarget{md__home_aaziz-alaoui__documents__p_f_e__x__paradis_e_o__resources_paradiseo-master_eo_src__i_o_h__template__r_e_a_d_m_e_autotoc_md72}{}\doxysubsection{I\+O\+Hprofiler\+\_\+transformation}\label{md__home_aaziz-alaoui__documents__p_f_e__x__paradis_e_o__resources_paradiseo-master_eo_src__i_o_h__template__r_e_a_d_m_e_autotoc_md72}
+\mbox{\hyperlink{class_i_o_hprofiler__transformation}{I\+O\+Hprofiler\+\_\+transformation}}{\ttfamily defines methods of transformation applied on}I\+O\+Hprofiler\+\_\+problem\`{}. For the definition of methods, please visit \href{https://iohprofiler.github.io/Benchmark/Transformation/}{\texttt{ wikipage}}\hypertarget{md__home_aaziz-alaoui__documents__p_f_e__x__paradis_e_o__resources_paradiseo-master_eo_src__i_o_h__template__r_e_a_d_m_e_autotoc_md73}{}\doxysubsection{I\+O\+Hprofiler\+\_\+random}\label{md__home_aaziz-alaoui__documents__p_f_e__x__paradis_e_o__resources_paradiseo-master_eo_src__i_o_h__template__r_e_a_d_m_e_autotoc_md73}
+{\bfseries{I\+O\+Hexperimenter}} supplies methods of generating random numbers, which can be used to reproduce same experiments with the same random seed.
+
+{\ttfamily \mbox{\hyperlink{class_i_o_hprofiler__random}{I\+O\+Hprofiler\+\_\+random}}} is a {\ttfamily class} of random methods, you can construct it with a specified random seed as\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_i_o_hprofiler__random}{IOHprofiler\_random}}(\textcolor{keywordtype}{long} seed);}
+\end{DoxyCode}
+
+
+And two random number generator methods are as follow.
+\begin{DoxyItemize}
+\item {\itshape double I\+O\+Hprofiler\+\_\+uniform\+\_\+rand()}, returns a random number from standard uniform distribution.
+\item {\itshape double I\+O\+Hprofiler\+\_\+normal\+\_\+rand()}, returns a random number from standard normal distribution.
+\end{DoxyItemize}\hypertarget{md__home_aaziz-alaoui__documents__p_f_e__x__paradis_e_o__resources_paradiseo-master_eo_src__i_o_h__template__r_e_a_d_m_e_autotoc_md74}{}\doxysubsection{I\+O\+Hprofiler\+\_\+observer}\label{md__home_aaziz-alaoui__documents__p_f_e__x__paradis_e_o__resources_paradiseo-master_eo_src__i_o_h__template__r_e_a_d_m_e_autotoc_md74}
+{\ttfamily \mbox{\hyperlink{class_i_o_hprofiler__observer}{I\+O\+Hprofiler\+\_\+observer}}} defines triggers of recording evaluations, and {\bfseries{logger}} classes inherit it to set up the time of recording.
+
+Four strategies of recording evaluations are available,
+\begin{DoxyItemize}
+\item {\bfseries{complete tracking}}, provides the highest granularity, by storing information for each function evaluation. Use {\itshape set\+\_\+complete\+\_\+flag(true)} to enable this strategy,
+\item {\bfseries{interval tracking}}, stores information for each \$\textbackslash{}tau\$-\/th function evaluation. Use {\itshape set\+\_\+interval()} to set \$\textbackslash{}tau $>$ 0\$ to enable this stragety.
+\item {\bfseries{target-\/based tracking}}, stores information for each iteration in which the best-\/so-\/far fitness improved. Use {\itshape set\+\_\+update\+\_\+flag(true)} to enbale this stragety.
+\item {\bfseries{time-\/based tracking}}, stores information when the user-\/specified running time budgets are reached. These budget are evenly spaced in log-\/10 scale.
+\end{DoxyItemize}\hypertarget{md__home_aaziz-alaoui__documents__p_f_e__x__paradis_e_o__resources_paradiseo-master_eo_src__i_o_h__template__r_e_a_d_m_e_autotoc_md75}{}\doxysubsection{I\+O\+Hprofier\+\_\+class\+\_\+generator}\label{md__home_aaziz-alaoui__documents__p_f_e__x__paradis_e_o__resources_paradiseo-master_eo_src__i_o_h__template__r_e_a_d_m_e_autotoc_md75}
+{\ttfamily I\+O\+Hprofiler\+\_\+class\+\_\+generator} supplied methods of registering and creating {\ttfamily \mbox{\hyperlink{class_i_o_hprofiler__problem}{I\+O\+Hprofiler\+\_\+problem}}} and {\ttfamily \mbox{\hyperlink{class_i_o_hprofiler__suite}{I\+O\+Hprofiler\+\_\+suite}}}. 

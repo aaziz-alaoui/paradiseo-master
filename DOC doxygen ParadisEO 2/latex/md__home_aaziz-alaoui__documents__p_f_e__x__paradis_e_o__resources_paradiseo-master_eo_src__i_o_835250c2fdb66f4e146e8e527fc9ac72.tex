@@ -1,0 +1,139 @@
+\href{/src/Template/IOHprofiler_suite.hpp}{\texttt{ I\+O\+Hprofiler\+\_\+suite}} is the base {\ttfamily class} of suites of {\bfseries{I\+O\+Hexperimenter}}. The property variables of problems include\+:
+\begin{DoxyItemize}
+\item {\ttfamily problem\+\_\+id}, a vector containing the ids of the problems to be tested.
+\item {\ttfamily instance\+\_\+id}, a vector containing the ids of the instances of the problems. Intance ids specify which transformations will be applied to the problem. The original problem has instance\+\_\+id 1; {\itshape scale} and {\itshape shift} are applied on objectives for instance\+\_\+id in \mbox{[}2,100\mbox{]}; {\itshape X\+OR} will be applied on variables for instance\+\_\+id in \mbox{[}2,50\mbox{]}, and {\itshape sigma} function is applied on variables for instance\+\_\+id in \mbox{[}51,100\mbox{]}.
+\item {\ttfamily dimension}, a vector containing the dimensions of the problems.
+\item {\ttfamily number\+\_\+of\+\_\+problems}
+\item {\ttfamily number\+\_\+of\+\_\+instances}
+\item {\ttfamily number\+\_\+of\+\_\+dimensions}
+\end{DoxyItemize}\hypertarget{md__home_aaziz-alaoui__documents__p_f_e__x__paradis_e_o__resources_paradiseo-master_eo_src__i_o_835250c2fdb66f4e146e8e527fc9ac72_autotoc_md79}{}\doxysubsection{Creating a suite}\label{md__home_aaziz-alaoui__documents__p_f_e__x__paradis_e_o__resources_paradiseo-master_eo_src__i_o_835250c2fdb66f4e146e8e527fc9ac72_autotoc_md79}
+{\bfseries{I\+O\+Hexperimenter}} provides {\bfseries{\mbox{\hyperlink{class_p_b_o__suite}{P\+B\+O\+\_\+suite}}}} for pseudo Boolean problems \href{https://coco.gforge.inria.fr/downloads/download16.00/bbobdocfunctions.pdf}{\texttt{ {\bfseries{B\+B\+OB suite}}}} for continuous problems of C\+O\+CO, but it is also easy to add your own suite. Creating a suite is done by registering problems in the suite and assigning ids to them.
+
+Taking the implementation of {\bfseries{\mbox{\hyperlink{class_p_b_o__suite}{P\+B\+O\+\_\+suite}}}} as an example, {\itshape constructor functions} are as below. In the constructor functions, the range of allowed {\ttfamily problem\+\_\+id}, {\ttfamily instance\+\_\+id} and {\ttfamily dimension} should be identified. In addition, {\itshape register\+Problem()} must be included in the constructor functions.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_p_b_o__suite}{PBO\_suite}}() \{}
+\DoxyCodeLine{  std::vector<int> problem\_id;}
+\DoxyCodeLine{  std::vector<int> instance\_id;}
+\DoxyCodeLine{  std::vector<int> dimension;}
+\DoxyCodeLine{  \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 23; ++i) \{}
+\DoxyCodeLine{    problem\_id.push\_back(i+1);}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{  \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 1; ++i) \{}
+\DoxyCodeLine{    instance\_id.push\_back(i+1);}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{  dimension.push\_back(100);}
+\DoxyCodeLine{  }
+\DoxyCodeLine{  IOHprofiler\_set\_suite\_problem\_id(problem\_id);}
+\DoxyCodeLine{  IOHprofiler\_set\_suite\_instance\_id(instance\_id);}
+\DoxyCodeLine{  IOHprofiler\_set\_suite\_dimension(dimension);}
+\DoxyCodeLine{  IOHprofiler\_set\_suite\_name(\textcolor{stringliteral}{"PBO"});}
+\DoxyCodeLine{  registerProblem();}
+\DoxyCodeLine{  loadProblem();}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{class_p_b_o__suite}{PBO\_suite}}(std::vector<int> problem\_id, std::vector<int> instance\_id, std::vector<int> dimension) \{}
+\DoxyCodeLine{  \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < problem\_id.size(); ++i) \{}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (problem\_id[i] < 0 || problem\_id[i] > 23) \{}
+\DoxyCodeLine{      IOH\_error(\textcolor{stringliteral}{"problem\_id "} + std::to\_string(problem\_id[i]) + \textcolor{stringliteral}{" is not in PBO\_suite"});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{  }
+\DoxyCodeLine{  \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < instance\_id.size(); ++i) \{}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (instance\_id[i] < 0 || instance\_id[i] > 100) \{}
+\DoxyCodeLine{      IOH\_error(\textcolor{stringliteral}{"instance\_id "} + std::to\_string(instance\_id[i]) + \textcolor{stringliteral}{" is not in PBO\_suite"});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{  \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < dimension.size(); ++i) \{}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (dimension[i] < 0 || dimension[i] > 20000) \{}
+\DoxyCodeLine{      IOH\_error(\textcolor{stringliteral}{"dimension "} + std::to\_string(dimension[i]) + \textcolor{stringliteral}{" is not in PBO\_suite"});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{  IOHprofiler\_set\_suite\_problem\_id(problem\_id);}
+\DoxyCodeLine{  IOHprofiler\_set\_suite\_instance\_id(instance\_id);}
+\DoxyCodeLine{  IOHprofiler\_set\_suite\_dimension(dimension);}
+\DoxyCodeLine{  IOHprofiler\_set\_suite\_name(\textcolor{stringliteral}{"PBO"});}
+\DoxyCodeLine{  registerProblem();}
+\DoxyCodeLine{  loadProblem();}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+{\itshape register\+Problem()} is a virtual function of the base {\ttfamily \mbox{\hyperlink{class_i_o_hprofiler__suite}{I\+O\+Hprofiler\+\_\+suite}}} class. When you create a suite, it {\bfseries{must}} be implemented. Problems to be included in the suite can be registered by name. Afterwards, problem id and name should be mapped through {\itshape map\+I\+D\+T\+O\+Name$>$} function, which enables the suite to recognize problems by problem id. Following is the {\itshape register\+Problem()} function of {\bfseries{\mbox{\hyperlink{class_p_b_o__suite}{P\+B\+O\+\_\+suite}}}}. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classregister_in_factory}{registerInFactory<IOHprofiler\_problem<int>}},\mbox{\hyperlink{class_one_max}{OneMax}}> regOneMax(\textcolor{stringliteral}{"OneMax"});}
+\DoxyCodeLine{\mbox{\hyperlink{classregister_in_factory}{registerInFactory<IOHprofiler\_problem<int>}},\mbox{\hyperlink{class_one_max___dummy1}{OneMax\_Dummy1}}> regOneMax\_Dummy1(\textcolor{stringliteral}{"OneMax\_Dummy1"});}
+\DoxyCodeLine{\mbox{\hyperlink{classregister_in_factory}{registerInFactory<IOHprofiler\_problem<int>}},\mbox{\hyperlink{class_one_max___dummy2}{OneMax\_Dummy2}}> regOneMax\_Dummy2(\textcolor{stringliteral}{"OneMax\_Dummy2"});}
+\DoxyCodeLine{\mbox{\hyperlink{classregister_in_factory}{registerInFactory<IOHprofiler\_problem<int>}},\mbox{\hyperlink{class_one_max___epistasis}{OneMax\_Epistasis}}> regOneMax\_Epistasis(\textcolor{stringliteral}{"OneMax\_Epistasis"});}
+\DoxyCodeLine{\mbox{\hyperlink{classregister_in_factory}{registerInFactory<IOHprofiler\_problem<int>}},\mbox{\hyperlink{class_one_max___neutrality}{OneMax\_Neutrality}}> regOneMax\_Neutrality(\textcolor{stringliteral}{"OneMax\_Neutrality"});}
+\DoxyCodeLine{\mbox{\hyperlink{classregister_in_factory}{registerInFactory<IOHprofiler\_problem<int>}},\mbox{\hyperlink{class_one_max___ruggedness1}{OneMax\_Ruggedness1}}> regOneMax\_Ruggedness1(\textcolor{stringliteral}{"OneMax\_Ruggedness1"});}
+\DoxyCodeLine{\mbox{\hyperlink{classregister_in_factory}{registerInFactory<IOHprofiler\_problem<int>}},\mbox{\hyperlink{class_one_max___ruggedness2}{OneMax\_Ruggedness2}}> regOneMax\_Ruggedness2(\textcolor{stringliteral}{"OneMax\_Ruggedness2"});}
+\DoxyCodeLine{\mbox{\hyperlink{classregister_in_factory}{registerInFactory<IOHprofiler\_problem<int>}},\mbox{\hyperlink{class_one_max___ruggedness3}{OneMax\_Ruggedness3}}> regOneMax\_Ruggedness3(\textcolor{stringliteral}{"OneMax\_Ruggedness3"});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{classregister_in_factory}{registerInFactory<IOHprofiler\_problem<int>}},\mbox{\hyperlink{class_leading_ones}{LeadingOnes}}> regLeadingOnes(\textcolor{stringliteral}{"LeadingOnes"});}
+\DoxyCodeLine{\mbox{\hyperlink{classregister_in_factory}{registerInFactory<IOHprofiler\_problem<int>}},\mbox{\hyperlink{class_leading_ones___dummy1}{LeadingOnes\_Dummy1}}> regLeadingOnes\_Dummy1(\textcolor{stringliteral}{"LeadingOnes\_Dummy1"});}
+\DoxyCodeLine{\mbox{\hyperlink{classregister_in_factory}{registerInFactory<IOHprofiler\_problem<int>}},\mbox{\hyperlink{class_leading_ones___dummy2}{LeadingOnes\_Dummy2}}> regLeadingOnes\_Dummy2(\textcolor{stringliteral}{"LeadingOnes\_Dummy2"});}
+\DoxyCodeLine{\mbox{\hyperlink{classregister_in_factory}{registerInFactory<IOHprofiler\_problem<int>}},\mbox{\hyperlink{class_leading_ones___epistasis}{LeadingOnes\_Epistasis}}> regLeadingOnes\_Epistasis(\textcolor{stringliteral}{"LeadingOnes\_Epistasis"});}
+\DoxyCodeLine{\mbox{\hyperlink{classregister_in_factory}{registerInFactory<IOHprofiler\_problem<int>}},\mbox{\hyperlink{class_leading_ones___neutrality}{LeadingOnes\_Neutrality}}> regLeadingOnes\_Neutrality(\textcolor{stringliteral}{"LeadingOnes\_Neutrality"});}
+\DoxyCodeLine{\mbox{\hyperlink{classregister_in_factory}{registerInFactory<IOHprofiler\_problem<int>}},\mbox{\hyperlink{class_leading_ones___ruggedness1}{LeadingOnes\_Ruggedness1}}> regLeadingOnes\_Ruggedness1(\textcolor{stringliteral}{"LeadingOnes\_Ruggedness1"});}
+\DoxyCodeLine{\mbox{\hyperlink{classregister_in_factory}{registerInFactory<IOHprofiler\_problem<int>}},\mbox{\hyperlink{class_leading_ones___ruggedness2}{LeadingOnes\_Ruggedness2}}> regLeadingOnes\_Ruggedness2(\textcolor{stringliteral}{"LeadingOnes\_Ruggedness2"});}
+\DoxyCodeLine{\mbox{\hyperlink{classregister_in_factory}{registerInFactory<IOHprofiler\_problem<int>}},\mbox{\hyperlink{class_leading_ones___ruggedness3}{LeadingOnes\_Ruggedness3}}> regLeadingOnes\_Ruggedness3(\textcolor{stringliteral}{"LeadingOnes\_Ruggedness3"});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{classregister_in_factory}{registerInFactory<IOHprofiler\_problem<int>}},\mbox{\hyperlink{class_linear}{Linear}}> regLinear(\textcolor{stringliteral}{"Linear"});}
+\DoxyCodeLine{\mbox{\hyperlink{classregister_in_factory}{registerInFactory<IOHprofiler\_problem<int>}},\mbox{\hyperlink{class_m_i_s}{MIS}}> regMIS(\textcolor{stringliteral}{"MIS"});}
+\DoxyCodeLine{\mbox{\hyperlink{classregister_in_factory}{registerInFactory<IOHprofiler\_problem<int>}},\mbox{\hyperlink{class_l_a_b_s}{LABS}}> regLABS(\textcolor{stringliteral}{"LABS"});}
+\DoxyCodeLine{\mbox{\hyperlink{classregister_in_factory}{registerInFactory<IOHprofiler\_problem<int>}},\mbox{\hyperlink{class_n_queens}{NQueens}}> regNQueens(\textcolor{stringliteral}{"NQueens"});}
+\DoxyCodeLine{\mbox{\hyperlink{classregister_in_factory}{registerInFactory<IOHprofiler\_problem<int>}},Ising\_1D> regIsing\_1D(\textcolor{stringliteral}{"Ising\_1D"});}
+\DoxyCodeLine{\mbox{\hyperlink{classregister_in_factory}{registerInFactory<IOHprofiler\_problem<int>}},Ising\_2D> regIsing\_2D(\textcolor{stringliteral}{"Ising\_2D"});}
+\DoxyCodeLine{\mbox{\hyperlink{classregister_in_factory}{registerInFactory<IOHprofiler\_problem<int>}},Ising\_Triangle> regIsing\_Triangle(\textcolor{stringliteral}{"Ising\_Triangle"});}
+\DoxyCodeLine{}
+\DoxyCodeLine{mapIDTOName(1,\textcolor{stringliteral}{"OneMax"});}
+\DoxyCodeLine{mapIDTOName(2,\textcolor{stringliteral}{"LeadingOnes"});}
+\DoxyCodeLine{mapIDTOName(3,\textcolor{stringliteral}{"Linear"});}
+\DoxyCodeLine{mapIDTOName(4,\textcolor{stringliteral}{"OneMax\_Dummy1"});}
+\DoxyCodeLine{mapIDTOName(5,\textcolor{stringliteral}{"OneMax\_Dummy2"});}
+\DoxyCodeLine{mapIDTOName(6,\textcolor{stringliteral}{"OneMax\_Neutrality"});}
+\DoxyCodeLine{mapIDTOName(7,\textcolor{stringliteral}{"OneMax\_Epistasis"});}
+\DoxyCodeLine{mapIDTOName(8,\textcolor{stringliteral}{"OneMax\_Ruggedness1"});}
+\DoxyCodeLine{mapIDTOName(9,\textcolor{stringliteral}{"OneMax\_Ruggedness2"});}
+\DoxyCodeLine{mapIDTOName(10,\textcolor{stringliteral}{"OneMax\_Ruggedness3"});}
+\DoxyCodeLine{mapIDTOName(11,\textcolor{stringliteral}{"LeadingOnes\_Dummy1"});}
+\DoxyCodeLine{mapIDTOName(12,\textcolor{stringliteral}{"LeadingOnes\_Dummy2"});}
+\DoxyCodeLine{mapIDTOName(13,\textcolor{stringliteral}{"LeadingOnes\_Neutrality"});}
+\DoxyCodeLine{mapIDTOName(14,\textcolor{stringliteral}{"LeadingOnes\_Epistasis"});}
+\DoxyCodeLine{mapIDTOName(15,\textcolor{stringliteral}{"LeadingOnes\_Ruggedness1"});}
+\DoxyCodeLine{mapIDTOName(16,\textcolor{stringliteral}{"LeadingOnes\_Ruggedness2"});}
+\DoxyCodeLine{mapIDTOName(17,\textcolor{stringliteral}{"LeadingOnes\_Ruggedness3"});}
+\DoxyCodeLine{mapIDTOName(18,\textcolor{stringliteral}{"LABS"});}
+\DoxyCodeLine{mapIDTOName(22,\textcolor{stringliteral}{"MIS"});}
+\DoxyCodeLine{mapIDTOName(19,\textcolor{stringliteral}{"Ising\_1D"});}
+\DoxyCodeLine{mapIDTOName(20,\textcolor{stringliteral}{"Ising\_2D"});}
+\DoxyCodeLine{mapIDTOName(21,\textcolor{stringliteral}{"Ising\_Triangle"});}
+\DoxyCodeLine{mapIDTOName(23,\textcolor{stringliteral}{"NQueens"});}
+\end{DoxyCode}
+
+
+If you want to register your suite called {\ttfamily suite\+\_\+name}, please add following codes and modify names. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{static} \mbox{\hyperlink{class_p_b_o__suite}{PBO\_suite}} * createInstance() \{}
+\DoxyCodeLine{  \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{class_p_b_o__suite}{PBO\_suite}}();}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{static} \mbox{\hyperlink{class_p_b_o__suite}{PBO\_suite}} * createInstance(std::vector<int> problem\_id, std::vector<int> instance\_id, std::vector<int> dimension) \{}
+\DoxyCodeLine{  \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{class_p_b_o__suite}{PBO\_suite}}(problem\_id, instance\_id, dimension);}
+\DoxyCodeLine{\};}
+\end{DoxyCode}
+
+
+To register the suite, you can use the {\itshape \mbox{\hyperlink{classgeneric_generator}{generic\+Generator}}} in \href{/src/Template/}{\texttt{ I\+O\+Hprofiler\+\_\+class\+\_\+generator}}. For example, you can use the following statement to register and create {\bfseries{\mbox{\hyperlink{class_p_b_o__suite}{P\+B\+O\+\_\+suite}}}} , 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// Register}}
+\DoxyCodeLine{\textcolor{keyword}{static} \mbox{\hyperlink{classregister_in_factory}{registerInFactory<IOHprofiler\_suite<int>}},\mbox{\hyperlink{class_p_b_o__suite}{PBO\_suite}}> regPBO(\textcolor{stringliteral}{"PBO"});}
+\DoxyCodeLine{\textcolor{comment}{// Create}}
+\DoxyCodeLine{std::shared\_ptr<IOHprofiler\_suite<InputType>> suite = \mbox{\hyperlink{classgeneric_generator}{genericGenerator<IOHprofiler\_suite<int>}}>::instance().create(\textcolor{stringliteral}{"PBO"});}
+\DoxyCodeLine{);}
+\end{DoxyCode}
+ 

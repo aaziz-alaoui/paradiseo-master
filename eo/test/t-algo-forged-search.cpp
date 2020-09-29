@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <string>
 //#include <IOH.h>
@@ -18,16 +19,20 @@ using Bits = eoBit<double, int>;
 
 // Generate a search space of 5,232,000 algorithms,
 // by enumerating candidate operators and their parameters.
-eoAlgoFoundryEA<Bits>& make_foundry(eoFunctorStore& store, eoPopEvalFunc<Bits>& eval_onemax)
+eoAlgoFoundryEA<Bits>& make_foundry(eoFunctorStore& store, eoPopEvalFunc<Bits>& eval_onemax, int dimension, int pop_size)
 {
     // doit être égal au eoInit plus bas sinon erreur
-    auto& foundry = store.pack< eoAlgoFoundryEA<Bits> >(eval_onemax, 1000);
+    auto& foundry = store.pack< eoAlgoFoundryEA<Bits> >(eval_onemax, dimension);
+
+    // /***** Continuators ****/
+    // for(size_t i=10; i < 30; i+=2 ) {
+    //     foundry.continuators.add< eoSteadyFitContinue<Bits> >(10,i
+    //     );
+    // }
 
     /***** Continuators ****/
-    for(size_t i=10; i < 30; i+=2 ) {
-        foundry.continuators.add< eoSteadyFitContinue<Bits> >(10,i
-        );
-    }
+    foundry.continuators.add< eoGenContinue<Bits> >(2*dimension / pop_size);
+
 
     /***** Crossovers ****/
     foundry.crossovers.add< eo1PtBitXover<Bits> >();
@@ -82,8 +87,9 @@ int main(int argc, char* argv[])
     // std::cout << "Checkpoint 2" << std::endl;
 
     //rng.seed() //eo:rng
-
-    IOHprofiler_ecdf_logger<int> logger(0, 1000, 100, 0, 8130, 100);
+    int dimension = 1000;
+    // TO DO : linear on the y-axis ()
+    IOHprofiler_ecdf_logger<int> logger(0, dimension, 100, 0, 2*dimension, 100);
     logger.set_complete_flag(true);
     logger.set_interval(0);
 
@@ -92,7 +98,7 @@ int main(int argc, char* argv[])
     // std::cout << "Checkpoint 3" << std::endl;
 
     /// Configure w_model
-    int dimension = 1000;
+
     double w_model_suite_dummy_para = 0;
     int w_model_suite_epitasis_para = 0;
     int w_model_suite_neutrality_para = 0;
@@ -148,16 +154,28 @@ int main(int argc, char* argv[])
      
     eoPopLoopEval<Bits> onemax_eval(evalfunc);
 
-    auto& foundry = make_foundry(store, onemax_eval);
+
+    assert(argc == 8);
+    // Int algo = {atoi(argv[1]), atoi(argv[2]), atoi(argv[3]), atoi(argv[4]), atoi(argv[5])};
+    Int algo(5);
+    int pop_size = atoi(argv[3]);
+    algo[0] = 0;
+    algo[1] = atoi(argv[4]);
+    algo[2] = atoi(argv[5]);
+    algo[3] = atoi(argv[6]);
+    algo[4] = atoi(argv[7]);
+
+    auto& foundry = make_foundry(store, onemax_eval, dimension, pop_size);
+
 
     size_t n = foundry.continuators.size() * foundry.crossovers.size() * foundry.mutations.size() * foundry.selectors.size() * foundry.replacements.size();
     std::clog << n << " possible algorithms instances." << std::endl;
 
     // Evaluation of a forged algo on the sub-problem
     eoUniformGenerator<int> gen(0, 1);
-    eoInitFixedLength<Bits> onemax_init(/*bitstring size=*/1000, gen);
+    eoInitFixedLength<Bits> onemax_init(/*bitstring size=*/dimension, gen);
     eoEvalFoundryEA<Int, Bits> eval_foundry(foundry,
-            onemax_init, /*pop_size=*/ 10,
+            onemax_init, /*pop_size=*/ pop_size,
             onemax_eval, /*penalization=*/ 0,
             sum, logger)   ;
 
@@ -167,14 +185,6 @@ int main(int argc, char* argv[])
 
     /***** return statistic on the chosen algorithm *****/
 
-    assert(argc == 8);
-    // Int algo = {atoi(argv[1]), atoi(argv[2]), atoi(argv[3]), atoi(argv[4]), atoi(argv[5])};
-    Int algo(5);
-    algo[0] = atoi(argv[3]);
-    algo[1] = atoi(argv[4]);
-    algo[2] = atoi(argv[5]);
-    algo[3] = atoi(argv[6]);
-    algo[4] = atoi(argv[7]);
 
     eval_foundry(algo);
     
@@ -185,3 +195,6 @@ int main(int argc, char* argv[])
     std::cout << "Algorithm's performance : " << std::endl;
     std::cout << algo.fitness() * -1 << std::endl;
 }
+
+
+

@@ -1,0 +1,275 @@
+\hypertarget{class_i_o_hprofiler__configuration}{}\doxysection{I\+O\+Hprofiler\+\_\+configuration Class Reference}
+\label{class_i_o_hprofiler__configuration}\index{IOHprofiler\_configuration@{IOHprofiler\_configuration}}
+
+
+A class of configuration files, to be used in \mbox{\hyperlink{class_i_o_hprofiler__experimenter}{I\+O\+Hprofiler\+\_\+experimenter}}.  
+
+
+
+
+{\ttfamily \#include $<$I\+O\+Hprofiler\+\_\+configuration.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a30113919a1cac2e5dd02a6cb2dbdff0b}\label{class_i_o_hprofiler__configuration_a30113919a1cac2e5dd02a6cb2dbdff0b}} 
+int {\bfseries set\+\_\+\+Dict} (\mbox{\hyperlink{class___dict}{\+\_\+\+Dict}} \&dict, const std\+::string section, const std\+::string key, const std\+::string value)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_aa544c015581ce4f09afa0c0b94acebf2}\label{class_i_o_hprofiler__configuration_aa544c015581ce4f09afa0c0b94acebf2}} 
+std\+::string {\bfseries get\+\_\+\+Dict\+\_\+\+String} (const \mbox{\hyperlink{class___dict}{\+\_\+\+Dict}} dict, const std\+::string section, const std\+::string key)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_ad041ff0e6950932c9c05211f82ea76a0}\label{class_i_o_hprofiler__configuration_ad041ff0e6950932c9c05211f82ea76a0}} 
+std\+::vector$<$ int $>$ {\bfseries get\+\_\+\+Dict\+\_\+int\+\_\+vector} (const \mbox{\hyperlink{class___dict}{\+\_\+\+Dict}} dict, const std\+::string section, const std\+::string key, const int \+\_\+min, const int \+\_\+max)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_af0edfbfcebb5f14fa415ef915ea0d699}\label{class_i_o_hprofiler__configuration_af0edfbfcebb5f14fa415ef915ea0d699}} 
+int {\bfseries get\+\_\+\+Dict\+\_\+\+Int} (const \mbox{\hyperlink{class___dict}{\+\_\+\+Dict}} dict, const std\+::string section, const std\+::string key)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a35d03221cfcbad1525f6b7110a799275}\label{class_i_o_hprofiler__configuration_a35d03221cfcbad1525f6b7110a799275}} 
+bool {\bfseries get\+\_\+\+Dict\+\_\+bool} (const \mbox{\hyperlink{class___dict}{\+\_\+\+Dict}} dict, const std\+::string section, const std\+::string key)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a7439ea0f184f92518e525ec20c33ea32}\label{class_i_o_hprofiler__configuration_a7439ea0f184f92518e525ec20c33ea32}} 
+linecontent {\bfseries add\+\_\+\+Line} (const std\+::string input\+\_\+line, std\+::string \&section, std\+::string \&key, std\+::string \&value)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a12685e4716754623c89e9dec0ec990ea}\label{class_i_o_hprofiler__configuration_a12685e4716754623c89e9dec0ec990ea}} 
+\mbox{\hyperlink{class___dict}{\+\_\+\+Dict}} {\bfseries load} (const std\+::string filename)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_acf1ecbe58ffc5145c08a9f999c5980e2}\label{class_i_o_hprofiler__configuration_acf1ecbe58ffc5145c08a9f999c5980e2}} 
+void {\bfseries readcfg} (std\+::string filename)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_ae8c557a509ad767d4543819a6c2dc6d2}\label{class_i_o_hprofiler__configuration_ae8c557a509ad767d4543819a6c2dc6d2}} 
+std\+::string {\bfseries get\+\_\+suite\+\_\+name} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a0ffb9bf9d39ee4640828a40d4e1966b1}\label{class_i_o_hprofiler__configuration_a0ffb9bf9d39ee4640828a40d4e1966b1}} 
+std\+::vector$<$ int $>$ {\bfseries get\+\_\+problem\+\_\+id} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a677979b336fbe4016b681ab1d8363b57}\label{class_i_o_hprofiler__configuration_a677979b336fbe4016b681ab1d8363b57}} 
+std\+::vector$<$ int $>$ {\bfseries get\+\_\+instance\+\_\+id} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a12ad51ad26c27f979742f4fd7e7c1aca}\label{class_i_o_hprofiler__configuration_a12ad51ad26c27f979742f4fd7e7c1aca}} 
+std\+::vector$<$ int $>$ {\bfseries get\+\_\+dimension} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a402d2653b71cb48bfad3a6f6343ecd77}\label{class_i_o_hprofiler__configuration_a402d2653b71cb48bfad3a6f6343ecd77}} 
+std\+::string {\bfseries get\+\_\+output\+\_\+directory} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a22c507554135806e8ae09aa3dbf20150}\label{class_i_o_hprofiler__configuration_a22c507554135806e8ae09aa3dbf20150}} 
+std\+::string {\bfseries get\+\_\+result\+\_\+folder} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a2a2b1abb52132a24fc27ab4175aa14bc}\label{class_i_o_hprofiler__configuration_a2a2b1abb52132a24fc27ab4175aa14bc}} 
+std\+::string {\bfseries get\+\_\+algorithm\+\_\+info} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_aaec179ddcc85b8919142464dfdb9067f}\label{class_i_o_hprofiler__configuration_aaec179ddcc85b8919142464dfdb9067f}} 
+std\+::string {\bfseries get\+\_\+algorithm\+\_\+name} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a552ff57e2d8a46845e132aa8669fe146}\label{class_i_o_hprofiler__configuration_a552ff57e2d8a46845e132aa8669fe146}} 
+bool {\bfseries get\+\_\+complete\+\_\+triggers} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a59196c5614fdb054fab0603dfaca2dfa}\label{class_i_o_hprofiler__configuration_a59196c5614fdb054fab0603dfaca2dfa}} 
+bool {\bfseries get\+\_\+update\+\_\+triggers} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a397c7ecf26ef87644bbcdf3addd0d5b7}\label{class_i_o_hprofiler__configuration_a397c7ecf26ef87644bbcdf3addd0d5b7}} 
+std\+::vector$<$ int $>$ {\bfseries get\+\_\+base\+\_\+evaluation\+\_\+triggers} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_af0e5e6fc887c338e7a33416476c81b3e}\label{class_i_o_hprofiler__configuration_af0e5e6fc887c338e7a33416476c81b3e}} 
+int {\bfseries get\+\_\+number\+\_\+target\+\_\+triggers} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a35177e9dbe5a58c830d5d7f08e68fcd1}\label{class_i_o_hprofiler__configuration_a35177e9dbe5a58c830d5d7f08e68fcd1}} 
+int {\bfseries get\+\_\+number\+\_\+interval\+\_\+triggers} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a30113919a1cac2e5dd02a6cb2dbdff0b}\label{class_i_o_hprofiler__configuration_a30113919a1cac2e5dd02a6cb2dbdff0b}} 
+int {\bfseries set\+\_\+\+Dict} (\mbox{\hyperlink{class___dict}{\+\_\+\+Dict}} \&dict, const std\+::string section, const std\+::string key, const std\+::string value)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_aa544c015581ce4f09afa0c0b94acebf2}\label{class_i_o_hprofiler__configuration_aa544c015581ce4f09afa0c0b94acebf2}} 
+std\+::string {\bfseries get\+\_\+\+Dict\+\_\+\+String} (const \mbox{\hyperlink{class___dict}{\+\_\+\+Dict}} dict, const std\+::string section, const std\+::string key)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a2bb14b5dad7e3a88d747b84c74ae8e92}\label{class_i_o_hprofiler__configuration_a2bb14b5dad7e3a88d747b84c74ae8e92}} 
+std\+::vector$<$ int $>$ {\bfseries get\+\_\+\+Dict\+\_\+int\+\_\+vector} (const \mbox{\hyperlink{class___dict}{\+\_\+\+Dict}} dict, const std\+::string section, const std\+::string key, const int \+\_\+min, const int \+\_\+max)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_af0edfbfcebb5f14fa415ef915ea0d699}\label{class_i_o_hprofiler__configuration_af0edfbfcebb5f14fa415ef915ea0d699}} 
+int {\bfseries get\+\_\+\+Dict\+\_\+\+Int} (const \mbox{\hyperlink{class___dict}{\+\_\+\+Dict}} dict, const std\+::string section, const std\+::string key)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a35d03221cfcbad1525f6b7110a799275}\label{class_i_o_hprofiler__configuration_a35d03221cfcbad1525f6b7110a799275}} 
+bool {\bfseries get\+\_\+\+Dict\+\_\+bool} (const \mbox{\hyperlink{class___dict}{\+\_\+\+Dict}} dict, const std\+::string section, const std\+::string key)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a7439ea0f184f92518e525ec20c33ea32}\label{class_i_o_hprofiler__configuration_a7439ea0f184f92518e525ec20c33ea32}} 
+linecontent {\bfseries add\+\_\+\+Line} (const std\+::string input\+\_\+line, std\+::string \&section, std\+::string \&key, std\+::string \&value)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a12685e4716754623c89e9dec0ec990ea}\label{class_i_o_hprofiler__configuration_a12685e4716754623c89e9dec0ec990ea}} 
+\mbox{\hyperlink{class___dict}{\+\_\+\+Dict}} {\bfseries load} (const std\+::string filename)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_acf1ecbe58ffc5145c08a9f999c5980e2}\label{class_i_o_hprofiler__configuration_acf1ecbe58ffc5145c08a9f999c5980e2}} 
+void {\bfseries readcfg} (std\+::string filename)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_ae8c557a509ad767d4543819a6c2dc6d2}\label{class_i_o_hprofiler__configuration_ae8c557a509ad767d4543819a6c2dc6d2}} 
+std\+::string {\bfseries get\+\_\+suite\+\_\+name} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a87d521474a3fa4e556647782ca2c5ab5}\label{class_i_o_hprofiler__configuration_a87d521474a3fa4e556647782ca2c5ab5}} 
+std\+::vector$<$ int $>$ {\bfseries get\+\_\+problem\+\_\+id} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a42a5cc98ab6059a02ae75012223c695f}\label{class_i_o_hprofiler__configuration_a42a5cc98ab6059a02ae75012223c695f}} 
+std\+::vector$<$ int $>$ {\bfseries get\+\_\+instance\+\_\+id} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_affd3bda275782bc85282876902ac26ce}\label{class_i_o_hprofiler__configuration_affd3bda275782bc85282876902ac26ce}} 
+std\+::vector$<$ int $>$ {\bfseries get\+\_\+dimension} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a402d2653b71cb48bfad3a6f6343ecd77}\label{class_i_o_hprofiler__configuration_a402d2653b71cb48bfad3a6f6343ecd77}} 
+std\+::string {\bfseries get\+\_\+output\+\_\+directory} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a22c507554135806e8ae09aa3dbf20150}\label{class_i_o_hprofiler__configuration_a22c507554135806e8ae09aa3dbf20150}} 
+std\+::string {\bfseries get\+\_\+result\+\_\+folder} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a2a2b1abb52132a24fc27ab4175aa14bc}\label{class_i_o_hprofiler__configuration_a2a2b1abb52132a24fc27ab4175aa14bc}} 
+std\+::string {\bfseries get\+\_\+algorithm\+\_\+info} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_aaec179ddcc85b8919142464dfdb9067f}\label{class_i_o_hprofiler__configuration_aaec179ddcc85b8919142464dfdb9067f}} 
+std\+::string {\bfseries get\+\_\+algorithm\+\_\+name} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a552ff57e2d8a46845e132aa8669fe146}\label{class_i_o_hprofiler__configuration_a552ff57e2d8a46845e132aa8669fe146}} 
+bool {\bfseries get\+\_\+complete\+\_\+triggers} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a59196c5614fdb054fab0603dfaca2dfa}\label{class_i_o_hprofiler__configuration_a59196c5614fdb054fab0603dfaca2dfa}} 
+bool {\bfseries get\+\_\+update\+\_\+triggers} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a64481b363514dff01e281950f77f5bc0}\label{class_i_o_hprofiler__configuration_a64481b363514dff01e281950f77f5bc0}} 
+std\+::vector$<$ int $>$ {\bfseries get\+\_\+base\+\_\+evaluation\+\_\+triggers} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_af0e5e6fc887c338e7a33416476c81b3e}\label{class_i_o_hprofiler__configuration_af0e5e6fc887c338e7a33416476c81b3e}} 
+int {\bfseries get\+\_\+number\+\_\+target\+\_\+triggers} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a35177e9dbe5a58c830d5d7f08e68fcd1}\label{class_i_o_hprofiler__configuration_a35177e9dbe5a58c830d5d7f08e68fcd1}} 
+int {\bfseries get\+\_\+number\+\_\+interval\+\_\+triggers} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a30113919a1cac2e5dd02a6cb2dbdff0b}\label{class_i_o_hprofiler__configuration_a30113919a1cac2e5dd02a6cb2dbdff0b}} 
+int {\bfseries set\+\_\+\+Dict} (\mbox{\hyperlink{class___dict}{\+\_\+\+Dict}} \&dict, const std\+::string section, const std\+::string key, const std\+::string value)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_aa544c015581ce4f09afa0c0b94acebf2}\label{class_i_o_hprofiler__configuration_aa544c015581ce4f09afa0c0b94acebf2}} 
+std\+::string {\bfseries get\+\_\+\+Dict\+\_\+\+String} (const \mbox{\hyperlink{class___dict}{\+\_\+\+Dict}} dict, const std\+::string section, const std\+::string key)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a2bb14b5dad7e3a88d747b84c74ae8e92}\label{class_i_o_hprofiler__configuration_a2bb14b5dad7e3a88d747b84c74ae8e92}} 
+std\+::vector$<$ int $>$ {\bfseries get\+\_\+\+Dict\+\_\+int\+\_\+vector} (const \mbox{\hyperlink{class___dict}{\+\_\+\+Dict}} dict, const std\+::string section, const std\+::string key, const int \+\_\+min, const int \+\_\+max)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_af0edfbfcebb5f14fa415ef915ea0d699}\label{class_i_o_hprofiler__configuration_af0edfbfcebb5f14fa415ef915ea0d699}} 
+int {\bfseries get\+\_\+\+Dict\+\_\+\+Int} (const \mbox{\hyperlink{class___dict}{\+\_\+\+Dict}} dict, const std\+::string section, const std\+::string key)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a35d03221cfcbad1525f6b7110a799275}\label{class_i_o_hprofiler__configuration_a35d03221cfcbad1525f6b7110a799275}} 
+bool {\bfseries get\+\_\+\+Dict\+\_\+bool} (const \mbox{\hyperlink{class___dict}{\+\_\+\+Dict}} dict, const std\+::string section, const std\+::string key)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a7439ea0f184f92518e525ec20c33ea32}\label{class_i_o_hprofiler__configuration_a7439ea0f184f92518e525ec20c33ea32}} 
+linecontent {\bfseries add\+\_\+\+Line} (const std\+::string input\+\_\+line, std\+::string \&section, std\+::string \&key, std\+::string \&value)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a12685e4716754623c89e9dec0ec990ea}\label{class_i_o_hprofiler__configuration_a12685e4716754623c89e9dec0ec990ea}} 
+\mbox{\hyperlink{class___dict}{\+\_\+\+Dict}} {\bfseries load} (const std\+::string filename)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_acf1ecbe58ffc5145c08a9f999c5980e2}\label{class_i_o_hprofiler__configuration_acf1ecbe58ffc5145c08a9f999c5980e2}} 
+void {\bfseries readcfg} (std\+::string filename)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_ae8c557a509ad767d4543819a6c2dc6d2}\label{class_i_o_hprofiler__configuration_ae8c557a509ad767d4543819a6c2dc6d2}} 
+std\+::string {\bfseries get\+\_\+suite\+\_\+name} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a87d521474a3fa4e556647782ca2c5ab5}\label{class_i_o_hprofiler__configuration_a87d521474a3fa4e556647782ca2c5ab5}} 
+std\+::vector$<$ int $>$ {\bfseries get\+\_\+problem\+\_\+id} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a42a5cc98ab6059a02ae75012223c695f}\label{class_i_o_hprofiler__configuration_a42a5cc98ab6059a02ae75012223c695f}} 
+std\+::vector$<$ int $>$ {\bfseries get\+\_\+instance\+\_\+id} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_affd3bda275782bc85282876902ac26ce}\label{class_i_o_hprofiler__configuration_affd3bda275782bc85282876902ac26ce}} 
+std\+::vector$<$ int $>$ {\bfseries get\+\_\+dimension} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a402d2653b71cb48bfad3a6f6343ecd77}\label{class_i_o_hprofiler__configuration_a402d2653b71cb48bfad3a6f6343ecd77}} 
+std\+::string {\bfseries get\+\_\+output\+\_\+directory} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a22c507554135806e8ae09aa3dbf20150}\label{class_i_o_hprofiler__configuration_a22c507554135806e8ae09aa3dbf20150}} 
+std\+::string {\bfseries get\+\_\+result\+\_\+folder} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a2a2b1abb52132a24fc27ab4175aa14bc}\label{class_i_o_hprofiler__configuration_a2a2b1abb52132a24fc27ab4175aa14bc}} 
+std\+::string {\bfseries get\+\_\+algorithm\+\_\+info} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_aaec179ddcc85b8919142464dfdb9067f}\label{class_i_o_hprofiler__configuration_aaec179ddcc85b8919142464dfdb9067f}} 
+std\+::string {\bfseries get\+\_\+algorithm\+\_\+name} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a552ff57e2d8a46845e132aa8669fe146}\label{class_i_o_hprofiler__configuration_a552ff57e2d8a46845e132aa8669fe146}} 
+bool {\bfseries get\+\_\+complete\+\_\+triggers} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a59196c5614fdb054fab0603dfaca2dfa}\label{class_i_o_hprofiler__configuration_a59196c5614fdb054fab0603dfaca2dfa}} 
+bool {\bfseries get\+\_\+update\+\_\+triggers} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a64481b363514dff01e281950f77f5bc0}\label{class_i_o_hprofiler__configuration_a64481b363514dff01e281950f77f5bc0}} 
+std\+::vector$<$ int $>$ {\bfseries get\+\_\+base\+\_\+evaluation\+\_\+triggers} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_af0e5e6fc887c338e7a33416476c81b3e}\label{class_i_o_hprofiler__configuration_af0e5e6fc887c338e7a33416476c81b3e}} 
+int {\bfseries get\+\_\+number\+\_\+target\+\_\+triggers} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a35177e9dbe5a58c830d5d7f08e68fcd1}\label{class_i_o_hprofiler__configuration_a35177e9dbe5a58c830d5d7f08e68fcd1}} 
+int {\bfseries get\+\_\+number\+\_\+interval\+\_\+triggers} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a30113919a1cac2e5dd02a6cb2dbdff0b}\label{class_i_o_hprofiler__configuration_a30113919a1cac2e5dd02a6cb2dbdff0b}} 
+int {\bfseries set\+\_\+\+Dict} (\mbox{\hyperlink{class___dict}{\+\_\+\+Dict}} \&dict, const std\+::string section, const std\+::string key, const std\+::string value)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_aa544c015581ce4f09afa0c0b94acebf2}\label{class_i_o_hprofiler__configuration_aa544c015581ce4f09afa0c0b94acebf2}} 
+std\+::string {\bfseries get\+\_\+\+Dict\+\_\+\+String} (const \mbox{\hyperlink{class___dict}{\+\_\+\+Dict}} dict, const std\+::string section, const std\+::string key)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a2bb14b5dad7e3a88d747b84c74ae8e92}\label{class_i_o_hprofiler__configuration_a2bb14b5dad7e3a88d747b84c74ae8e92}} 
+std\+::vector$<$ int $>$ {\bfseries get\+\_\+\+Dict\+\_\+int\+\_\+vector} (const \mbox{\hyperlink{class___dict}{\+\_\+\+Dict}} dict, const std\+::string section, const std\+::string key, const int \+\_\+min, const int \+\_\+max)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_af0edfbfcebb5f14fa415ef915ea0d699}\label{class_i_o_hprofiler__configuration_af0edfbfcebb5f14fa415ef915ea0d699}} 
+int {\bfseries get\+\_\+\+Dict\+\_\+\+Int} (const \mbox{\hyperlink{class___dict}{\+\_\+\+Dict}} dict, const std\+::string section, const std\+::string key)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a35d03221cfcbad1525f6b7110a799275}\label{class_i_o_hprofiler__configuration_a35d03221cfcbad1525f6b7110a799275}} 
+bool {\bfseries get\+\_\+\+Dict\+\_\+bool} (const \mbox{\hyperlink{class___dict}{\+\_\+\+Dict}} dict, const std\+::string section, const std\+::string key)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a7439ea0f184f92518e525ec20c33ea32}\label{class_i_o_hprofiler__configuration_a7439ea0f184f92518e525ec20c33ea32}} 
+linecontent {\bfseries add\+\_\+\+Line} (const std\+::string input\+\_\+line, std\+::string \&section, std\+::string \&key, std\+::string \&value)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a12685e4716754623c89e9dec0ec990ea}\label{class_i_o_hprofiler__configuration_a12685e4716754623c89e9dec0ec990ea}} 
+\mbox{\hyperlink{class___dict}{\+\_\+\+Dict}} {\bfseries load} (const std\+::string filename)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_acf1ecbe58ffc5145c08a9f999c5980e2}\label{class_i_o_hprofiler__configuration_acf1ecbe58ffc5145c08a9f999c5980e2}} 
+void {\bfseries readcfg} (std\+::string filename)
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_ae8c557a509ad767d4543819a6c2dc6d2}\label{class_i_o_hprofiler__configuration_ae8c557a509ad767d4543819a6c2dc6d2}} 
+std\+::string {\bfseries get\+\_\+suite\+\_\+name} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a87d521474a3fa4e556647782ca2c5ab5}\label{class_i_o_hprofiler__configuration_a87d521474a3fa4e556647782ca2c5ab5}} 
+std\+::vector$<$ int $>$ {\bfseries get\+\_\+problem\+\_\+id} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a42a5cc98ab6059a02ae75012223c695f}\label{class_i_o_hprofiler__configuration_a42a5cc98ab6059a02ae75012223c695f}} 
+std\+::vector$<$ int $>$ {\bfseries get\+\_\+instance\+\_\+id} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_affd3bda275782bc85282876902ac26ce}\label{class_i_o_hprofiler__configuration_affd3bda275782bc85282876902ac26ce}} 
+std\+::vector$<$ int $>$ {\bfseries get\+\_\+dimension} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a402d2653b71cb48bfad3a6f6343ecd77}\label{class_i_o_hprofiler__configuration_a402d2653b71cb48bfad3a6f6343ecd77}} 
+std\+::string {\bfseries get\+\_\+output\+\_\+directory} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a22c507554135806e8ae09aa3dbf20150}\label{class_i_o_hprofiler__configuration_a22c507554135806e8ae09aa3dbf20150}} 
+std\+::string {\bfseries get\+\_\+result\+\_\+folder} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a2a2b1abb52132a24fc27ab4175aa14bc}\label{class_i_o_hprofiler__configuration_a2a2b1abb52132a24fc27ab4175aa14bc}} 
+std\+::string {\bfseries get\+\_\+algorithm\+\_\+info} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_aaec179ddcc85b8919142464dfdb9067f}\label{class_i_o_hprofiler__configuration_aaec179ddcc85b8919142464dfdb9067f}} 
+std\+::string {\bfseries get\+\_\+algorithm\+\_\+name} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a552ff57e2d8a46845e132aa8669fe146}\label{class_i_o_hprofiler__configuration_a552ff57e2d8a46845e132aa8669fe146}} 
+bool {\bfseries get\+\_\+complete\+\_\+triggers} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a59196c5614fdb054fab0603dfaca2dfa}\label{class_i_o_hprofiler__configuration_a59196c5614fdb054fab0603dfaca2dfa}} 
+bool {\bfseries get\+\_\+update\+\_\+triggers} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a64481b363514dff01e281950f77f5bc0}\label{class_i_o_hprofiler__configuration_a64481b363514dff01e281950f77f5bc0}} 
+std\+::vector$<$ int $>$ {\bfseries get\+\_\+base\+\_\+evaluation\+\_\+triggers} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_af0e5e6fc887c338e7a33416476c81b3e}\label{class_i_o_hprofiler__configuration_af0e5e6fc887c338e7a33416476c81b3e}} 
+int {\bfseries get\+\_\+number\+\_\+target\+\_\+triggers} ()
+\item 
+\mbox{\Hypertarget{class_i_o_hprofiler__configuration_a35177e9dbe5a58c830d5d7f08e68fcd1}\label{class_i_o_hprofiler__configuration_a35177e9dbe5a58c830d5d7f08e68fcd1}} 
+int {\bfseries get\+\_\+number\+\_\+interval\+\_\+triggers} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class of configuration files, to be used in \mbox{\hyperlink{class_i_o_hprofiler__experimenter}{I\+O\+Hprofiler\+\_\+experimenter}}. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/aaziz-\/alaoui/\+Documents/\+P\+F\+E X/\+Paradis\+E\+O Resources/paradiseo-\/master/eo/src/\+I\+O\+H/\+A\+L\+L/\mbox{\hyperlink{_a_l_l_2_i_o_hprofiler__configuration_8h}{I\+O\+Hprofiler\+\_\+configuration.\+h}}\item 
+/home/aaziz-\/alaoui/\+Documents/\+P\+F\+E X/\+Paradis\+E\+O Resources/paradiseo-\/master/eo/src/\+I\+O\+H/\+A\+L\+L/\mbox{\hyperlink{_a_l_l_2_i_o_hprofiler__configuration_8cpp}{I\+O\+Hprofiler\+\_\+configuration.\+cpp}}\end{DoxyCompactItemize}

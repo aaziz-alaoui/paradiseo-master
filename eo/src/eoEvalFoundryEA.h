@@ -148,7 +148,9 @@ public:
             
             // the logger is linked with the foundry
             sol.fitness(_sum(_logger.data()));
+    
         } else {
+            eo::log << eo::warnings << "Warning, index out of range" << std::endl;
             sol.fitness( _penalization ); // penalization
         }
     }

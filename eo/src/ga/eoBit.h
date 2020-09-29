@@ -78,6 +78,7 @@ public:
    * @param value Default value.
    */
   eoBit(unsigned size = 0, ScalarType value = false):
+  // eoBit(unsigned size, ScalarType value):
     eoVector<FitT, ScalarType>(size, value) {}
 
   /// My class name.

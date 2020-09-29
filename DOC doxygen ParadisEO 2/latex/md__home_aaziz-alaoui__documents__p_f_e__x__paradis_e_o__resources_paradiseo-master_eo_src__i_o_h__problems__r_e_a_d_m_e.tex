@@ -1,0 +1,95 @@
+\href{/src/Template/IOHprofiler_problem.hpp}{\texttt{ I\+O\+Hprofiler\+\_\+problem}} is the base {\ttfamily class} of problems of {\bfseries{I\+O\+Hexperimenter}}. The property variables of problems include\+:
+\begin{DoxyItemize}
+\item {\ttfamily problem\+\_\+id}, will be assigned if the problem is added to a suite, otherwise default by 0.
+\item {\ttfamily instance\+\_\+id}, sets transformation methods on problems. The original problem is with instance\+\_\+id 1, {\itshape scale} and {\itshape shift} are applied on objectives for instance\+\_\+id in \mbox{[}2,100\mbox{]}, {\itshape X\+OR} is applied on variables for instance\+\_\+id in \mbox{[}2,50\mbox{]}, and {\itshape sigma} function is applied on variables for instance\+\_\+id in \mbox{[}51,100\mbox{]}.
+\item {\ttfamily problem\+\_\+name}
+\item {\ttfamily problem\+\_\+type}
+\item {\ttfamily lowerbound}, is a vector of lowerbound for variables.
+\item {\ttfamily upperbound}, is a vector of upperbound for variables.
+\item {\ttfamily number\+\_\+of\+\_\+variables}, is the dimension of the problem.
+\item {\ttfamily number\+\_\+of\+\_\+objectives}, is only available as 1 now. The functionality of multi-\/objectives is under development.
+\item {\ttfamily best\+\_\+variables}, is a vector of optimal solution, which is used to calculate the optimum. If the best\+\_\+variables is not given, the optimum will be set as {\bfseries{D\+B\+L\+\_\+\+M\+AX}}.
+\item {\ttfamily optimal}, is a vector of optimal objectives, but currently only single objective is supported.
+\item {\ttfamily evaluate\+\_\+int\+\_\+info}, is a vector of {\bfseries{int}} values that are iteratively used in {\itshape evaluate}.
+\item {\ttfamily evaluate\+\_\+double\+\_\+info}, is a vector of {\bfseries{double}} values that are iteratively used in {\itshape evaluate}.
+\end{DoxyItemize}
+
+And some functions for personal experiments are supplied\+:
+\begin{DoxyItemize}
+\item {\itshape evaluate(x)}, returns a vector of fitness values. The argument {\bfseries{x}} is a vector of variables.
+\item {\itshape evaluate(x,y)}, updates {\bfseries{y}} with a vector of fitness values, and {\bfseries{x}} is a vector of variables.
+\item {\itshape add\+C\+S\+V\+Logger(logger)}, assigns a {\bfseries{\mbox{\hyperlink{class_i_o_hprofiler__csv__logger}{I\+O\+Hprofiler\+\_\+csv\+\_\+logger}}}} class to the problem.
+\item {\itshape clear\+Logger()}, delete logger methods of the problem.
+\item {\itshape reset\+\_\+problem()}, reset the history information of problem evaluations. You should call this function at first when you plan to do another test on the same problem class.
+\item {\itshape I\+O\+Hprofiler\+\_\+hit\+\_\+optimal()}, returns true if the optimum of the problem has been found.
+\item {\itshape I\+O\+Hprofiler\+\_\+set\+\_\+number\+\_\+of\+\_\+variables(number\+\_\+of\+\_\+variables)}, sets dimension of the problem.
+\item {\itshape I\+O\+Hprofiler\+\_\+set\+\_\+instance\+\_\+id(instance\+\_\+id)}
+\end{DoxyItemize}\hypertarget{md__home_aaziz-alaoui__documents__p_f_e__x__paradis_e_o__resources_paradiseo-master_eo_src__i_o_h__problems__r_e_a_d_m_e_autotoc_md67}{}\doxysubsection{Creating a problem}\label{md__home_aaziz-alaoui__documents__p_f_e__x__paradis_e_o__resources_paradiseo-master_eo_src__i_o_h__problems__r_e_a_d_m_e_autotoc_md67}
+{\bfseries{I\+O\+Hexperimenter}} provides a variety of problems for testing algorithms, but it is also easy to add your own problems. Overall, to create a problem of {\bfseries{I\+O\+Hexperimenter}}, two functions need to be implemented\+: {\itshape construct functions} and {\itshape internel\+\_\+evaluate}. Additionally, you can define {\itshape update\+\_\+evaluate\+\_\+double\+\_\+info} and {\itshape update\+\_\+evaluate\+\_\+int\+\_\+info} to make evluate process more efficiently.
+
+Taking the implementation of {\bfseries{\mbox{\hyperlink{class_one_max}{One\+Max}}}} as an instance, {\itshape construct functions} are as below. {\ttfamily problem\+\_\+name} and {\ttfamily number\+\_\+of\+\_\+objectives} {\bfseries{must}} be set. In general, two methods of construction of the problems are given. One is constructing without giving {\ttfamily instance\+\_\+id} and {\ttfamily dimension}, and the other one is with. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_one_max}{OneMax}}() \{}
+\DoxyCodeLine{  IOHprofiler\_set\_problem\_name(\textcolor{stringliteral}{"OneMax"});}
+\DoxyCodeLine{  IOHprofiler\_set\_problem\_type(\textcolor{stringliteral}{"pseudo\_Boolean\_problem"});}
+\DoxyCodeLine{  IOHprofiler\_set\_number\_of\_objectives(1);}
+\DoxyCodeLine{  IOHprofiler\_set\_lowerbound(0);}
+\DoxyCodeLine{  IOHprofiler\_set\_upperbound(1);}
+\DoxyCodeLine{  IOHprofiler\_set\_best\_variables(1);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{class_one_max}{OneMax}}(\textcolor{keywordtype}{int} instance\_id, \textcolor{keywordtype}{int} dimension) \{}
+\DoxyCodeLine{  IOHprofiler\_set\_instance\_id(instance\_id);}
+\DoxyCodeLine{  IOHprofiler\_set\_problem\_name(\textcolor{stringliteral}{"OneMax"});}
+\DoxyCodeLine{  IOHprofiler\_set\_problem\_type(\textcolor{stringliteral}{"pseudo\_Boolean\_problem"});}
+\DoxyCodeLine{  IOHprofiler\_set\_number\_of\_objectives(1);}
+\DoxyCodeLine{  IOHprofiler\_set\_lowerbound(0);}
+\DoxyCodeLine{  IOHprofiler\_set\_upperbound(1);}
+\DoxyCodeLine{  IOHprofiler\_set\_best\_variables(1);}
+\DoxyCodeLine{  Initilize\_problem(dimension);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{  }
+\DoxyCodeLine{\string~\mbox{\hyperlink{class_one_max}{OneMax}}() \{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void} Initilize\_problem(\textcolor{keywordtype}{int} dimension) \{}
+\DoxyCodeLine{  IOHprofiler\_set\_number\_of\_variables(dimension);}
+\DoxyCodeLine{  IOHprofiler\_set\_optimal((\textcolor{keywordtype}{double})dimension);}
+\DoxyCodeLine{\};}
+\end{DoxyCode}
+
+
+The {\itshape internal\+\_\+evaluate} {\bfseries{must}} be implemented as well. It is used during evaluate process, returning a vector of (real) objective values of the corresponding variables {\bfseries{x}}. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{std::vector<double> internal\_evaluate(std::vector<int> x) \{}
+\DoxyCodeLine{  std::vector<double> y;}
+\DoxyCodeLine{  \textcolor{keywordtype}{int} n = x.size();}
+\DoxyCodeLine{  \textcolor{keywordtype}{int} result = 0;}
+\DoxyCodeLine{  \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i != n; ++i) \{}
+\DoxyCodeLine{    result += x[i];}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{  y.push\_back((\textcolor{keywordtype}{double})result);}
+\DoxyCodeLine{  \textcolor{keywordflow}{return} y;}
+\DoxyCodeLine{\};}
+\end{DoxyCode}
+
+
+If you want to register your problem by {\ttfamily problem\+\_\+name} and add it into a suite, please add functions creating instances as following codes. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{static} \mbox{\hyperlink{class_one_max}{OneMax}} * createInstance() \{}
+\DoxyCodeLine{  \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{class_one_max}{OneMax}}();}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{static} \mbox{\hyperlink{class_one_max}{OneMax}} * createInstance(\textcolor{keywordtype}{int} instance\_id, \textcolor{keywordtype}{int} dimension) \{}
+\DoxyCodeLine{  \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{class_one_max}{OneMax}}(instance\_id, dimension);}
+\DoxyCodeLine{\};}
+\end{DoxyCode}
+
+
+To register the problem, you can use the {\itshape geniric\+Generator} in \href{/src/Template/}{\texttt{ I\+O\+Hprofiler\+\_\+class\+\_\+generator}}. For example, you can use the following statement to register and create {\bfseries{\mbox{\hyperlink{class_one_max}{One\+Max}}}} , 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// Register}}
+\DoxyCodeLine{\textcolor{keyword}{static} \mbox{\hyperlink{classregister_in_factory}{registerInFactory<IOHprofiler\_problem<int>}},\mbox{\hyperlink{class_one_max}{OneMax}}> regOneMax(\textcolor{stringliteral}{"OneMax"});}
+\DoxyCodeLine{\textcolor{comment}{// Create}}
+\DoxyCodeLine{std::shared\_ptr<IOHprofiler\_problem<int>> problem = \mbox{\hyperlink{classgeneric_generator}{genericGenerator<IOHprofiler\_problem<int>}}>::instance().create(\textcolor{stringliteral}{"OneMax"});}
+\end{DoxyCode}
+ 
